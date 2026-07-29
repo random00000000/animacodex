@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "assets": [],
+  "species": [],
+  "speciesOverrides": [],
+  "portraitAssignments": [],
+  "battleBackdropAssignments": [],
+  "moves": [],
+  "items": [
+    {
+      "id": "fieldPoultice",
+      "name": "Field Poultice",
+      "category": "healing",
+      "description": "A pressed herb wrap for restoring a small amount of HP during route testing.",
+      "battleUse": {
+        "type": "heal",
+        "hp": 18
+      }
+    },
+    {
+      "id": "rescueCapsule",
+      "name": "Rescue Capsule",
+      "category": "capture",
+      "description": "A basic field capsule that requires a manual bullseye throw before the rescue pulse can resolve.",
+      "battleUse": {
+        "type": "capture",
+        "captureModifier": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "anima-codex",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "content": "node scripts/anima-content-cli.mjs",
+    "validate:content": "node scripts/anima-content-cli.mjs validate",
+    "validate:scenes": "node scripts/validate-scene-data.mjs",
+    "build": "npm run validate:content && tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "phaser": "^3.90.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vite": "^7.1.11"
+  }
+}

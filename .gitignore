@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.gstack/
+docs/_chrome-*-profile/
+docs/_pw-*-profile*/
+docs/.tmp-playwright-*-profile/
+docs/*profile*/
+docs/*.log
+*.tsbuildinfo
