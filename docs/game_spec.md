@@ -119,6 +119,8 @@ Current element-expansion proof: `Stone` is now a live battle element instead of
 
 Current ice-habitat proof: `Ice` is now a live battle element instead of only a visual cue. `Frosthulk` appears in Frostglass Orchard as a massive snow-coated polar bear with ice attacks, ice bond marks from the frostglass well, and an orchard battlefield rule that boosts ice pressure.
 
+Current shoreline-evolution proof: the common coastal `Bellcrab` now grows into `Carillon Pagurus` at level 18 after a steel win and three steel bond marks. Asterwake Shoals' shell tidegrass provides a habitat-authored steel training lane, and the evolved form awakens `Carillon Clamp`, a resonant focus attack that breaks prepared focus and regathers guard after converting an exposed opening.
+
 Target biome directions include:
 
 - Snowfields and frost gardens.
@@ -156,6 +158,8 @@ First version battle model:
 - Switching is strategic.
 - Wild battles and trainer battles use the same foundation.
 - Trainer battles cannot capture.
+- Authored trainer tactics can discourage exact consecutive move repetition when a signature opener would otherwise dominate every switch. This pacing stays data-driven per trainer and preserves the shared enemy move scorer.
+- Authored evolved trainer and wild forms must enter battle with their awakened signature move already equipped even when the base species has a full four-move kit. Player-owned evolutions still preserve the normal field-study replacement choice.
 
 Baseline stats:
 
@@ -213,6 +217,7 @@ Battle presentation should include:
 - Reserved composition lanes so the scene label, battlefield-condition board, and creature plaques do not overlap each other on the painted surface.
 - Imagegen-produced battle backdrops keyed to scene or biome.
 - Clear Vivo portraits, sprites, or illustrated combat poses.
+- Player-side Vivos should prefer a dedicated rear three-quarter portrait when one is authored, while opponents retain their front three-quarter portrait. This two-perspective contract keeps both battlers facing into the arena; forms without a rear asset may temporarily retain the shared portrait fallback while the library is produced.
 - Battle entry must never leave the player in a half-battle state where the DOM command deck is active while the walking scene is still visible. `WorldScene` should hand off to `BattleScene` immediately once combat starts.
 - `BattleScene` owns battle-art streaming. It should render a playable fight immediately with stable fallback bodies/backdrop if needed, then swap in the local battle painting and Vivo portraits as textures settle.
 - Attack selection that feels like a game command surface.
@@ -406,6 +411,7 @@ UI rules:
 - Keep text readable and compact.
 - Avoid scrolling website-like layouts for core gameplay screens.
 - Support keyboard and controller-friendly navigation where practical.
+- Player options now persist independently of save slots and include battle-audio on/off, reduced-motion suppression for interface animation and transitions, and larger menu/HUD text. Do not claim controller support, remapping, color-vision modes, screen-reader support, or full voiceover until those receive separate implementation and acceptance evidence.
 - Align visual language with storybook, field-guide, registry, and government-document motifs.
 - UI polish must support playability, not replace movement, encounters, or battle functionality.
 
@@ -466,6 +472,10 @@ Current playable slice present in the codebase:
 - Electric-sheep proof: `Stormwool` now appears in Coppervine Runoff as a sturdier electric bruiser, using `Static Fleece` to brace and `Thunder Ram` to turn conductive horns into guarded impact pressure
 - Grass-squirrel proof: `Mossquirl` now appears in Lantern Nursery moss beds and Sanctuary Trail sungrass, uses a stored portrait plate, learns squirrel-specific grass setup and skirmish attacks, and can be fought on Sola's team
 - Venom-snake proof: `Venivy` now appears in Moonfen Marsh's lantern shallows, evolves into `Verdaconda` through grass bond growth, gains venom-focused grass attacks, and can be fought as Orla's evolved anaconda-style line
+- Electric-crane proof: `Stormchick Grus` now appears rarely at levels 8-11 in Thunderhead Mesa, learns a functional priority/focus/guard-breaking kit, evolves into `Thunderplume Crane` at level 15 and `Stormspire Grus` at level 32 through electric attunement, and has production portrait art for all three silhouettes
+- Electric-crane aspiration proof: Thunderhead Mesa now culminates in `Storm Tender Kael`, whose lead level 11 `Thunderplume Crane` previews the rare juvenile's first evolution without putting the level 32 apex form into the early route; the lesson opens on the promised crane pressure, asks players to guard through it, and then answer with a focus-style attack. The showcase form is deliberately below its player evolution threshold: level 15 prevented the required counterattack, while an exact three-Vivo route-party test showed level 12 could make the entire two-opponent battle hinge on Mossprig landing one 94%-accuracy attack.
+- Honest guard timing proof: `Guard Howl` carries enough defensive priority to brace before priority-one attacks such as `Plume Jolt`, while Thunderplume's priority-two `Static Step` can still seize the opening setup beat; Kael's lesson therefore protects the player when it reports the guard objective as complete
+- Multi-stage evolution safety: when more than one form transition exists, level-up now selects the highest eligible forward transition and never regresses an apex form to an earlier stage
 - Carnivorous-plant proof: `Snapmaw` now appears in Sporebell Garden as a grass-element trap predator, using `Nectar Lure`, `Trapjaw Snap`, and `Root Gorge` to turn the garden's beauty into actual bite-pressure gameplay
 - Route-stewardship proof: clearing early biome mentors and confiscation-audit checks now gives their taught or defended habitat a persistent calmer read, improving future rescue pulses and slowing wild bolt pressure there so trainer lessons and public custody wins change how a biome behaves after the fight. Current reads cover Sola's nursery, Vale's trail audit reprieve, Nera's trail read, Tovin's burrow, Miren's roost, Iven's ember hollow, and Orla's marsh. Multiple local reads can combine, capped so one route cannot become risk-free.
 - Civic-board proof: `Briar Town` now carries its own `Witness Square` battle rule, so the post-gym confiscation standoff reads as a public neutral-pressure duel instead of borrowing a route or gym rule

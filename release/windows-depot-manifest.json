@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "productName": "Anima Codex",
+  "version": "0.1.0",
+  "platform": "windows",
+  "architecture": "x64",
+  "packaging": "steam-depot-unpacked",
+  "launchExecutable": "windows-depot/Anima Codex.exe",
+  "executableBytes": 225795584,
+  "executableSha256": "1E530AC7C0B98F87CE305AC3672BA9CFCF4CA1C1DC7DFDEF4DBA753DB3920971",
+  "directory": {
+    "fileCount": 76,
+    "bytes": 879307630
+  },
+  "createdAt": "2026-08-01T14:52:24.128Z",
+  "sourceFingerprint": {
+    "algorithm": "SHA-256",
+    "sha256": "03FCA472C80B6993FA67E7E05EA26E96F59D2F9B32CD69E8670AEE7A673718FA",
+    "fileCount": 203,
+    "roots": [
+      "src",
+      "public",
+      "desktop"
+    ],
+    "explicitFiles": [
+      "package.json",
+      "package-lock.json",
+      "tsconfig.json",
+      "tsconfig.app.json",
+      "tsconfig.node.json",
+      "vite.config.ts"
+    ]
+  }
+}

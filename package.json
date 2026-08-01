@@ -1,21 +1,64 @@
 {
   "name": "anima-codex",
+  "description": "A painted creature RPG about rescuing, raising, and freeing engineered lifeforms.",
   "private": true,
   "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "desktop:dev": "npm run build && electron .",
     "content": "node scripts/anima-content-cli.mjs",
     "validate:content": "node scripts/anima-content-cli.mjs validate",
     "validate:scenes": "node scripts/validate-scene-data.mjs",
-    "build": "npm run validate:content && tsc -b && vite build",
-    "preview": "vite preview"
+    "build": "npm run validate:content && npm run validate:scenes && tsc -b && vite build --configLoader runner",
+    "preview": "vite preview",
+    "package:windows": "npm run build && node scripts/package-windows.mjs",
+    "capture:steam": "node scripts/capture-steam-screenshots.mjs",
+    "verify:windows:clean": "node scripts/capture-steam-screenshots.mjs --clean-profile",
+    "verify:windows:persistence": "node scripts/capture-steam-screenshots.mjs --persistence-profile",
+    "verify:windows:resolutions": "node scripts/verify-windows-resolutions.mjs",
+    "benchmark:windows": "node scripts/benchmark-windows-candidate.mjs",
+    "validate:store": "node scripts/validate-steam-store-data.mjs",
+    "release:check": "npm run build && npm run validate:store && npm run verify:windows:persistence && npm run validate:release",
+    "validate:release": "node scripts/validate-release-candidate.mjs"
   },
   "dependencies": {
     "phaser": "^3.90.0"
   },
   "devDependencies": {
+    "@rollup/rollup-win32-x64-msvc": "4.60.2",
+    "electron": "^43.2.0",
+    "electron-builder": "^26.15.3",
+    "fdir": "6.4.6",
+    "tinyglobby": "0.2.15",
     "typescript": "^5.9.3",
     "vite": "^7.1.11"
+  },
+  "main": "desktop/main.cjs",
+  "build": {
+    "appId": "com.animacodex.game",
+    "productName": "Anima Codex",
+    "asar": true,
+    "compression": "store",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "desktop/**/*",
+      "dist/**/*",
+      "package.json"
+    ],
+    "win": {
+      "icon": "build/icon.png",
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "Anima-Codex-${version}-Windows-${arch}.${ext}"
+    }
   }
 }

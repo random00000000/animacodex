@@ -59,6 +59,11 @@ body {
   font: 700 0.76rem "Trebuchet MS", Verdana, sans-serif;
 }
 
+.release-capture .front-door-launcher,
+.release-capture .dev-panel-launcher {
+  display: none;
+}
+
 .dev-panel-launcher {
   position: fixed;
   left: 90px;
@@ -211,6 +216,70 @@ body.battle-active .dev-panel-launcher {
 .game-menu-row.muted {
   grid-template-columns: 130px minmax(0, 1fr);
   opacity: 0.82;
+}
+
+.options-menu {
+  display: grid;
+  gap: 9px;
+}
+
+.option-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 76px;
+  gap: 14px;
+  align-items: center;
+  min-height: 58px;
+  padding: 10px 12px;
+  border: 1px solid rgba(246, 230, 190, 0.18);
+  border-radius: 6px;
+  background: rgba(246, 230, 190, 0.07);
+}
+
+.option-row div {
+  display: grid;
+  gap: 3px;
+}
+
+.option-row strong {
+  color: #f7ecd8;
+  font: 800 0.84rem "Trebuchet MS", Verdana, sans-serif;
+}
+
+.option-row span,
+.options-help {
+  color: #c9d7c2;
+  font: 700 0.75rem/1.35 "Trebuchet MS", Verdana, sans-serif;
+}
+
+.option-row button {
+  min-height: 38px;
+  border: 1px solid rgba(166, 201, 181, 0.5);
+  border-radius: 5px;
+  background: rgba(166, 201, 181, 0.18);
+  color: #f7ecd8;
+  cursor: pointer;
+  font: 800 0.78rem "Trebuchet MS", Verdana, sans-serif;
+}
+
+.option-row button[aria-pressed="true"] {
+  background: rgba(166, 201, 181, 0.35);
+}
+
+.options-help {
+  margin: 2px 0 0;
+}
+
+body.large-text {
+  font-size: 118%;
+}
+
+body.reduced-motion *,
+body.reduced-motion *::before,
+body.reduced-motion *::after {
+  scroll-behavior: auto !important;
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
 }
 
 .front-door-slots {
@@ -965,12 +1034,15 @@ body.battle-active .hud-panel.battle-hud-panel {
   position: fixed;
   left: 12px;
   right: 12px;
-  top: min(66.6667vw, calc(100dvh - 178px));
+  top: min(66.6667vw, calc(100dvh - 206px));
   bottom: 0;
   z-index: 20;
+  width: auto;
+  max-width: none;
   height: auto;
-  min-height: 178px;
-  overflow: visible;
+  min-width: 0;
+  min-height: 206px;
+  overflow: hidden;
   padding: 0;
   border: 0;
   border-radius: 0;
@@ -981,7 +1053,7 @@ body.battle-active .hud-panel.battle-hud-panel {
 
 .battle-rpg-shell {
   display: grid;
-  grid-template-columns: minmax(260px, 1fr) minmax(320px, 1fr);
+  grid-template-columns: minmax(360px, 0.8fr) minmax(560px, 1.2fr);
   grid-template-rows: minmax(0, 1fr);
   gap: 8px;
   width: 100%;
@@ -1046,7 +1118,7 @@ body.battle-active .hud-panel.battle-hud-panel {
   gap: 8px;
   height: 100%;
   margin: 0;
-  overflow-y: auto;
+  overflow: hidden;
   padding: 2px;
 }
 

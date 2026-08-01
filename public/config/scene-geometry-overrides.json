@@ -6575,6 +6575,10 @@
               "weight": 16
             },
             {
+              "speciesId": "stormchickGrus",
+              "weight": 9
+            },
+            {
               "speciesId": "needlehare",
               "weight": 14
             },
@@ -6632,6 +6636,10 @@
             {
               "speciesId": "stormwool",
               "weight": 14
+            },
+            {
+              "speciesId": "stormchickGrus",
+              "weight": 7
             },
             {
               "speciesId": "lumenCorvus",
@@ -7711,7 +7719,7 @@
           "width": 226,
           "height": 140,
           "biome": "shellTidegrass",
-          "attunementElement": "neutral",
+          "attunementElement": "steel",
           "encounterRate": 0.12,
           "stepRange": [
             72,

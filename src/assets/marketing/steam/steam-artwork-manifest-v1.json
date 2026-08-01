@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "status": "local-review-candidates",
+  "createdAt": 1785446813029,
+  "source": "src/assets/marketing/anima-codex-steam-key-art-master-v2.png",
+  "policyBasis": {
+    "source": "Steamworks graphical asset documentation, checked 2026-07-30",
+    "rules": [
+      "Store and library capsules contain game artwork and game title only",
+      "Library hero is artwork only with no text",
+      "Library logo is title-only on a transparent background"
+    ]
+  },
+  "assets": [
+    {
+      "type": "header-capsule",
+      "path": "src/assets/marketing/steam/anima-codex-header-capsule.png",
+      "width": 920,
+      "height": 430,
+      "text": true,
+      "bytes": 1105789,
+      "sha256": "7344395B8A06159A415DE8693BBC1C6657560509269725AB16D13CF10DAED164",
+      "hasAlpha": true
+    },
+    {
+      "type": "small-capsule",
+      "path": "src/assets/marketing/steam/anima-codex-small-capsule.png",
+      "width": 462,
+      "height": 174,
+      "text": true,
+      "bytes": 234125,
+      "sha256": "733308A3E65940A8D244DF7C81984D6C5BE812C43AF982D556A3D743F060EF77",
+      "hasAlpha": true
+    },
+    {
+      "type": "main-capsule",
+      "path": "src/assets/marketing/steam/anima-codex-main-capsule.png",
+      "width": 1232,
+      "height": 706,
+      "text": true,
+      "bytes": 2364625,
+      "sha256": "49CC1FC5343BD88D328FC084B55BC0C6B58964038C7754245ACED4C5C6F0AD13",
+      "hasAlpha": true
+    },
+    {
+      "type": "vertical-capsule",
+      "path": "src/assets/marketing/steam/anima-codex-vertical-capsule.png",
+      "width": 748,
+      "height": 896,
+      "text": true,
+      "bytes": 1771134,
+      "sha256": "2814E28A9B8FCC0C3FA1DF735705B8E5AB4515252232E8E8B8290402C412370C",
+      "hasAlpha": true
+    },
+    {
+      "type": "library-capsule",
+      "path": "src/assets/marketing/steam/anima-codex-library-capsule.png",
+      "width": 600,
+      "height": 900,
+      "text": true,
+      "bytes": 1394168,
+      "sha256": "3F2FBE1418A27470457805DAF7016CF091C322E593C3474AEE0BAA41CF7AE24F",
+      "hasAlpha": true
+    },
+    {
+      "type": "library-header",
+      "path": "src/assets/marketing/steam/anima-codex-library-header.png",
+      "width": 920,
+      "height": 430,
+      "text": true,
+      "bytes": 1105789,
+      "sha256": "7344395B8A06159A415DE8693BBC1C6657560509269725AB16D13CF10DAED164",
+      "hasAlpha": true
+    },
+    {
+      "type": "library-hero",
+      "path": "src/assets/marketing/steam/anima-codex-library-hero.png",
+      "width": 3840,
+      "height": 1240,
+      "text": false,
+      "bytes": 9422293,
+      "sha256": "F6AF828294EEA20EE8D2C23BC0D29643BDC6AC0EDCF11AF2C40A831FFD0C6A85",
+      "hasAlpha": false
+    },
+    {
+      "type": "library-logo",
+      "path": "src/assets/marketing/steam/anima-codex-library-logo.png",
+      "width": 1280,
+      "height": 360,
+      "text": true,
+      "transparent": true,
+      "bytes": 66043,
+      "sha256": "14F843D02534C29FA620C7ED87E9622BDE4517DFF28A2645D8D0B482B0F8407F",
+      "hasAlpha": true
+    }
+  ],
+  "review": [
+    "Corrected every title-bearing asset after owner review found clipped outer letters",
+    "Verified the main capsule and transparent library logo retain complete A and X glyphs with explicit edge margins",
+    "Centered portrait crops to retain Dogemox and handler bond",
+    "Stable authored perspective retained; no motion effects introduced",
+    "Local candidates only; owner approval and upload remain pending"
+  ]
+}

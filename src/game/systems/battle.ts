@@ -185,6 +185,7 @@ export class BattleController {
   private lastCaptureExposureCount = -1;
   private pendingForcedSwitch = false;
   private enemySwitchLock = false;
+  private lastEnemyMoveId?: string;
   private calmSignals = 0;
   private originCalmSignalBondGranted = false;
   private promiseCalmSignalBondGranted = false;
@@ -746,6 +747,7 @@ export class BattleController {
       }
 
       log.push(...this.resolveMove(attacker, defender, step.decision.move));
+      this.lastEnemyMoveId = step.decision.move.id;
       if (defender.currentHp <= 0) {
         break;
       }
@@ -1213,6 +1215,9 @@ export class BattleController {
       decision.type === "switch"
         ? this.performEnemySwitch(decision.targetIndex, decision.summary)
         : this.resolveMove(enemy, player, decision.move);
+    if (decision.type === "move") {
+      this.lastEnemyMoveId = decision.move.id;
+    }
     if (promisePinRead) {
       log.unshift(promisePinRead.log);
       this.presentationEvents.unshift({
@@ -1459,12 +1464,20 @@ export class BattleController {
     const attackerState = this.ensureBattleState(attacker);
     const defenderState = this.ensureBattleState(defender);
     const hpRatio = attacker.currentHp / this.gameState.getMaxHp(attacker);
-    const scoredMoves = moves.map((move) => ({
-      move,
-      score: move.kind === "support"
-        ? this.scoreSupportMove(move, attacker, defender, hpRatio, attackerState, defenderState)
-        : this.scoreAttackMove(move, attacker, defender),
-    }));
+    const scoredMoves = moves.map((move) => {
+      const baseScore =
+        move.kind === "support"
+          ? this.scoreSupportMove(move, attacker, defender, hpRatio, attackerState, defenderState)
+          : this.scoreAttackMove(move, attacker, defender);
+      const repetitionPenalty =
+        tactics?.avoidConsecutiveMove && moves.length > 1 && move.id === this.lastEnemyMoveId
+          ? 50
+          : 0;
+      return {
+        move,
+        score: baseScore - repetitionPenalty,
+      };
+    });
     scoredMoves.sort((left, right) => right.score - left.score);
 
     if (!tactics) {

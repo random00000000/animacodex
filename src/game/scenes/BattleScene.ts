@@ -4,6 +4,8 @@ import { battleBackdropBySceneId } from "../data/assets";
 import {
   creaturePortraitByFormName,
   creaturePortraitBySpeciesId,
+  creatureRearPortraitByFormName,
+  creatureRearPortraitBySpeciesId,
   type CreaturePortraitKey,
 } from "../data/assets";
 import { speciesDex } from "../data/species";
@@ -1058,8 +1060,11 @@ export class BattleScene extends Phaser.Scene {
       }
     }
 
-    for (const vivo of [battle.playerActive, battle.enemyActive]) {
-      const portraitKey = this.getPortraitKey(vivo);
+    for (const [vivo, useRearPortrait] of [
+      [battle.playerActive, true],
+      [battle.enemyActive, false],
+    ] as const) {
+      const portraitKey = this.getPortraitKey(vivo, useRearPortrait);
       if (!portraitKey || this.isTextureReady(portraitKey)) {
         continue;
       }
@@ -1138,7 +1143,7 @@ export class BattleScene extends Phaser.Scene {
       height: 122,
       plaqueSide: "player",
       vivo: player,
-      title: player.nickname,
+      title: this.getBattlePlaqueTitle(player),
       subtitle: this.getPlaqueSubtitle(player),
       hpText: `HP ${player.currentHp}/${this.gameState.getMaxHp(player)}`,
       align: "left",
@@ -1152,7 +1157,7 @@ export class BattleScene extends Phaser.Scene {
       height: 94,
       plaqueSide: "enemy",
       vivo: enemy,
-      title: this.getEnemyPlaqueTitle(enemy),
+      title: this.getBattlePlaqueTitle(enemy),
       subtitle: this.getPlaqueSubtitle(enemy),
       hpText: `HP ${enemy.currentHp}/${this.gameState.getMaxHp(enemy)}`,
       align: "left",
@@ -1274,7 +1279,7 @@ export class BattleScene extends Phaser.Scene {
     return `${currentName} | ${registryName}`;
   }
 
-  private getEnemyPlaqueTitle(vivo: VivoInstance) {
+  private getBattlePlaqueTitle(vivo: VivoInstance) {
     const species = speciesDex[vivo.speciesId];
     if (vivo.formName && vivo.nickname === species.name) {
       return vivo.formName;
@@ -1326,7 +1331,7 @@ export class BattleScene extends Phaser.Scene {
     glowPart.fillColor = species.palette.glow;
     head.fillColor = species.palette.secondary;
 
-    const portraitKey = this.getPortraitKey(vivo);
+    const portraitKey = this.getPortraitKey(vivo, faceRight);
     const hasPortrait = portraitKey ? this.isTextureReady(portraitKey) : false;
     if (hasPortrait && portraitKey) {
       if (this.setImageTextureSafely(portrait, portraitKey)) {
@@ -1365,7 +1370,22 @@ export class BattleScene extends Phaser.Scene {
     portrait.setDisplaySize(frameWidth * scale, frameHeight * scale);
   }
 
-  private getPortraitKey(vivo: VivoInstance): CreaturePortraitKey | undefined {
+  private getPortraitKey(
+    vivo: VivoInstance,
+    useRearPortrait = false,
+  ): CreaturePortraitKey | undefined {
+    if (useRearPortrait && vivo.formName) {
+      const rearPortrait = creatureRearPortraitByFormName[vivo.formName];
+      if (rearPortrait) {
+        return rearPortrait;
+      }
+    }
+    if (useRearPortrait) {
+      const rearPortrait = creatureRearPortraitBySpeciesId[vivo.speciesId];
+      if (rearPortrait) {
+        return rearPortrait;
+      }
+    }
     if (vivo.formName) {
       const formPortrait = creaturePortraitByFormName[vivo.formName];
       if (formPortrait) {
@@ -2298,6 +2318,9 @@ export class BattleScene extends Phaser.Scene {
   }
 
   private getBattleAudioContext(): AudioContext | undefined {
+    if (document.body.dataset.battleAudio === "off") {
+      return undefined;
+    }
     if (this.audioContext) {
       return this.audioContext;
     }

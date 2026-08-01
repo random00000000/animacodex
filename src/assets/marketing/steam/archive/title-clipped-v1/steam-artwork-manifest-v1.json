@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "status": "local-review-candidates",
+  "createdAt": 1785442880245,
+  "source": "src/assets/marketing/anima-codex-steam-key-art-master-v2.png",
+  "policyBasis": {
+    "source": "Steamworks graphical asset documentation, checked 2026-07-30",
+    "rules": [
+      "Store and library capsules contain game artwork and game title only",
+      "Library hero is artwork only with no text",
+      "Library logo is title-only on a transparent background"
+    ]
+  },
+  "assets": [
+    {
+      "type": "header-capsule",
+      "path": "src/assets/marketing/steam/anima-codex-header-capsule.png",
+      "width": 920,
+      "height": 430,
+      "text": true,
+      "bytes": 996508,
+      "sha256": "506F7503418ED7C36791920845B8FB59ADD0EA58B56566B7608C4D79C635E658",
+      "hasAlpha": true
+    },
+    {
+      "type": "small-capsule",
+      "path": "src/assets/marketing/steam/anima-codex-small-capsule.png",
+      "width": 462,
+      "height": 174,
+      "text": true,
+      "bytes": 216747,
+      "sha256": "6679A9247274C865A0B3AC0790B95E937859A24C8AD680DDE90C4AD4023EBE43",
+      "hasAlpha": true
+    },
+    {
+      "type": "main-capsule",
+      "path": "src/assets/marketing/steam/anima-codex-main-capsule.png",
+      "width": 1232,
+      "height": 706,
+      "text": true,
+      "bytes": 2097981,
+      "sha256": "2B2E82FF6FF7B144C2762ED5B2D801250FD57BCDF8D18BBE5C688A673631AECC",
+      "hasAlpha": true
+    },
+    {
+      "type": "vertical-capsule",
+      "path": "src/assets/marketing/steam/anima-codex-vertical-capsule.png",
+      "width": 748,
+      "height": 896,
+      "text": true,
+      "bytes": 1605653,
+      "sha256": "729073C8D45267A6E68C3A9831B2B767F96D05C72E2669F63EC531B0536BBA4B",
+      "hasAlpha": true
+    },
+    {
+      "type": "library-capsule",
+      "path": "src/assets/marketing/steam/anima-codex-library-capsule.png",
+      "width": 600,
+      "height": 900,
+      "text": true,
+      "bytes": 1284353,
+      "sha256": "BC36301C915C18B633C9A4B0AD507AC421F620D09A91E2765B22908A8ACF81D2",
+      "hasAlpha": true
+    },
+    {
+      "type": "library-header",
+      "path": "src/assets/marketing/steam/anima-codex-library-header.png",
+      "width": 920,
+      "height": 430,
+      "text": true,
+      "bytes": 996508,
+      "sha256": "506F7503418ED7C36791920845B8FB59ADD0EA58B56566B7608C4D79C635E658",
+      "hasAlpha": true
+    },
+    {
+      "type": "library-hero",
+      "path": "src/assets/marketing/steam/anima-codex-library-hero.png",
+      "width": 3840,
+      "height": 1240,
+      "text": false,
+      "bytes": 9422293,
+      "sha256": "F6AF828294EEA20EE8D2C23BC0D29643BDC6AC0EDCF11AF2C40A831FFD0C6A85",
+      "hasAlpha": false
+    },
+    {
+      "type": "library-logo",
+      "path": "src/assets/marketing/steam/anima-codex-library-logo.png",
+      "width": 1280,
+      "height": 360,
+      "text": true,
+      "transparent": true,
+      "bytes": 38442,
+      "sha256": "554569B34A973BF5B70E54025BB4EB3D186EFB30E1A295514150754ADF8E4B34",
+      "hasAlpha": true
+    }
+  ],
+  "review": [
+    "Corrected wide-title safe margins after contact-sheet review",
+    "Centered portrait crops to retain Dogemox and handler bond",
+    "Stable authored perspective retained; no motion effects introduced",
+    "Local candidates only; owner approval and upload remain pending"
+  ]
+}

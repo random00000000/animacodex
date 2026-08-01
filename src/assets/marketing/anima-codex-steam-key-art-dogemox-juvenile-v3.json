@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "asset": "src/assets/marketing/anima-codex-steam-key-art-dogemox-juvenile-v3.png",
+  "role": "Dogemox juvenile key-art exploration",
+  "status": "internal-review",
+  "dimensions": {
+    "width": 1672,
+    "height": 941
+  },
+  "bytes": 2467232,
+  "sha256": "308FB04BF970BC9BBE9EF84E14A9A9B3E76FC6FDFD42BFFD703CFBD23FB5884C",
+  "review": {
+    "strengths": [
+      "Dogemox reads immediately as a young starter through the compact body, short muzzle, and oversized paws.",
+      "The serious expression and contained amber biology preserve future-threat intent.",
+      "The stable storybook staging, upper-left title space, handler bond, evolved silhouettes, and patrol pressure remain legible."
+    ],
+    "constraints": [
+      "Do not replace the selected v2 master or regenerate its validated Steam derivatives without explicit brand review.",
+      "No publication or Steamworks upload is authorized."
+    ]
+  },
+  "generation": {
+    "mode": "OpenAI built-in image generation edit",
+    "source": "src/assets/marketing/anima-codex-steam-key-art-master-v1.png",
+    "intent": "Correct the foreground Dogemox from an adult-wolf read to a guarded juvenile starter while preserving composition."
+  }
+}

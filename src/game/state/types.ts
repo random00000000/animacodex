@@ -324,6 +324,7 @@ export interface TrainerTactics {
   style: "steady" | "opportunist" | "adaptive";
   switchOnDisadvantage?: boolean;
   preferredFinisherSpeciesId?: string;
+  avoidConsecutiveMove?: boolean;
 }
 
 export interface TrainerRewardVivo {
