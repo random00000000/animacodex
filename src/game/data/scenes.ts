@@ -1037,7 +1037,52 @@ export const sceneDex: Record<string, SceneDefinition> = {
         ],
       },
     ],
-    trainers: [],
+    trainers: [
+      {
+        id: "sporebellWardenTamsin",
+        x: 248,
+        y: 536,
+        width: 44,
+        height: 58,
+        name: "Garden Warden Tamsin",
+        intro:
+          "Mossprig learns shelter first. Briarback learns when shelter must become force. Brace the first maul, then open the mantle before it closes again.",
+        rewardText:
+          "Tamsin ties a green ribbon beside the warning stakes. The garden is now marked as a safe Flora Mustela growth route.",
+        introDialogue: [
+          {
+            speaker: "Garden Warden Tamsin",
+            text: "This one grew up carrying frightened nursery rescues beneath its briars. Do not mistake protection for gentleness.",
+          },
+          {
+            speaker: "Garden Warden Tamsin",
+            text: "Weather the first charge. When the mantle opens to strike, answer with restraint instead of panic.",
+          },
+        ],
+        tactics: {
+          style: "opportunist",
+          avoidConsecutiveMove: true,
+        },
+        battleGoals: [
+          {
+            type: "useGuard",
+            count: 1,
+            label: "Weather the briar charge",
+            hint: "Use a guard move before Briarlock Maul tears through the line.",
+          },
+          {
+            type: "landAttackStyle",
+            attackStyle: "impact",
+            count: 1,
+            label: "Answer the opened mantle",
+            hint: "Land one impact strike after weathering Briarback's root-wrapped charge.",
+          },
+        ],
+        team: [
+          { speciesId: "mossprig", level: 7, formName: "Briarback Mustela" },
+        ],
+      },
+    ],
   },
   cadenceLabAnnex: {
     id: "cadenceLabAnnex",
@@ -1215,7 +1260,7 @@ export const sceneDex: Record<string, SceneDefinition> = {
         ],
       },
     ],
-    trainers: [],
+      trainers: [],
   },
   briarGym: {
     id: "briarGym",
@@ -2571,7 +2616,62 @@ export const sceneDex: Record<string, SceneDefinition> = {
         },
       },
     ],
-    trainers: [],
+    trainers: [
+      {
+        id: "ravineKeeperOrsa",
+        x: 554,
+        y: 536,
+        width: 44,
+        height: 58,
+        name: "Ravine Keeper Orsa",
+        intro:
+          "Faultcrown learned to hold this crossing when the prism shelves began to split. Brace the first stampede, then let the ravine moss find the seams in its crown.",
+        rewardText:
+          "Orsa lowers the ravine chain. Faultcrown steps aside, leaving a horn-deep furrow that points toward the open crossing.",
+        introDialogue: [
+          {
+            speaker: "Ravine Keeper Orsa",
+            text: "The ministry called this one unstable. Then the falls shifted, and Faultcrown held three collapsing shelves long enough for every rescue to cross.",
+          },
+          {
+            speaker: "Ravine Keeper Orsa",
+            text: "Power is not the danger. Direction is. Brace its charge, then answer with the living roots already splitting this stone.",
+          },
+        ],
+        rewardDialogue: [
+          {
+            speaker: "Ravine Keeper Orsa",
+            text: "Good. You read the crown instead of fearing it. That is the difference between guiding strength and trying to cage it.",
+          },
+          {
+            speaker: "Ravine Keeper Orsa",
+            text: "The upper shelf is yours. Keep that lesson when the league starts calling every powerful Vivo a public risk.",
+          },
+        ],
+        tactics: {
+          style: "opportunist",
+          avoidConsecutiveMove: true,
+        },
+        battleGoals: [
+          {
+            type: "useGuard",
+            count: 1,
+            label: "Brace the faultline",
+            hint: "Use a guard move before Faultline Stampede breaks your footing.",
+          },
+          {
+            type: "landElementAttack",
+            element: "grass",
+            count: 1,
+            label: "Root through the crown seams",
+            hint: "Land one grass attack after bracing; Mossprig can complete both parts of Orsa's lesson without a sacrificial switch.",
+          },
+        ],
+        team: [
+          { speciesId: "basalthorn", level: 9, formName: "Faultcrown Rhinoceros" },
+        ],
+      },
+    ],
   },
   tideglassGrotto: {
     id: "tideglassGrotto",
@@ -3588,7 +3688,7 @@ export const sceneDex: Record<string, SceneDefinition> = {
         width: 226,
         height: 140,
         biome: "shellTidegrass",
-        attunementElement: "neutral",
+        attunementElement: "steel",
         encounterRate: 0.12,
         stepRange: [72, 124],
         levelRange: [8, 11],
@@ -3641,7 +3741,61 @@ export const sceneDex: Record<string, SceneDefinition> = {
         text: "A warm lantern and half-buried waystone mark the safe edge of the shoal before the starfish beds get too dense.",
       },
     ],
-    trainers: [],
+    trainers: [
+      {
+        id: "shoalKeeperMaris",
+        x: 606,
+        y: 512,
+        width: 42,
+        height: 58,
+        name: "Shoal Keeper Maris",
+        intro:
+          "The little Reedotters here survive by slipping away. Weirfang learned to hold the channel instead. Answer from the tidegrass before it controls the channel, then brace its return cut.",
+        rewardText:
+          "Maris lowers the sluice rake. The shoal's Reedotters watch Weirfang settle beside her instead of scattering into the tidegrass.",
+        introDialogue: [
+          {
+            speaker: "Shoal Keeper Maris",
+            text: "Most handlers see a quick little swimmer and assume it will stay small. They miss the shoulders growing under the wet fur and the blade taking shape in the tail.",
+          },
+          {
+            speaker: "Shoal Keeper Maris",
+            text: "Weirfang is what happens when a Reedotter learns the reeds are worth defending. Answer its first rush from the tidegrass, then brace before the exposed channel lets its return cut scatter your line.",
+          },
+        ],
+        rewardDialogue: [
+          {
+            speaker: "Shoal Keeper Maris",
+            text: "Good. You saw the future threat without treating it like a weapon. That is the kind of handler a young Reedotter might choose to become dangerous beside.",
+          },
+        ],
+        tactics: {
+          style: "opportunist",
+          switchOnDisadvantage: true,
+          preferredFinisherSpeciesId: "reedotter",
+          avoidConsecutiveMove: true,
+        },
+        battleGoals: [
+          {
+            type: "landElementAttack",
+            element: "grass",
+            count: 1,
+            label: "Answer from the tidegrass",
+            hint: "Land one grass attack before Weirfang controls the exposed channel.",
+          },
+          {
+            type: "useGuard",
+            count: 1,
+            label: "Brace the return cut",
+            hint: "Use a guard move after your grass answer so Weirfang's second rush does not scatter your line.",
+          },
+        ],
+        team: [
+          { speciesId: "reedotter", level: 10, formName: "Weirfang Lutra" },
+          { speciesId: "bellcrab", level: 10 },
+        ],
+      },
+    ],
   },
   mireglassSwamp: {
     id: "mireglassSwamp",
@@ -5652,7 +5806,36 @@ export const sceneDex: Record<string, SceneDefinition> = {
         text: "The sanctuary mark is scorched but intact. Someone meant this basin to be passable, not just survived.",
       },
     ],
-    trainers: [],
+    trainers: [
+      {
+        id: "cinderlakeKeeperSera",
+        x: 664,
+        y: 492,
+        width: 42,
+        height: 58,
+        name: "Cinderlake Keeper Sera",
+        intro: "A young Cinderhoof learns speed from the hot shore. Kilncrest learns when not to spend all of that heat at once.",
+        rewardText: "Sera opens the cooling shelf and marks Cinderlake as a safe fire-bond training route.",
+        introDialogue: [
+          { speaker: "Cinderlake Keeper Sera", text: "You have seen young Cinderhooves race these shelves. This is what one becomes after it survives enough heat to stop fearing the brake." },
+          { speaker: "Cinderlake Keeper Sera", text: "Answer Kilncrest from the cool side of the field, then brace when its furnace ribs open. Caldera Trample is strongest when panic leaves a line exposed." },
+        ],
+        rewardDialogue: [
+          { speaker: "Cinderlake Keeper Sera", text: "Good. You did not mistake restraint for weakness. A Cinderhoof raised that way might grow powerful without becoming anyone's siege animal." },
+        ],
+        tactics: {
+          style: "opportunist",
+          avoidConsecutiveMove: true,
+        },
+        battleGoals: [
+          { type: "landElementAttack", element: "water", count: 1, label: "Cool the furnace line", hint: "Land one water attack before Kilncrest controls the hot shore." },
+          { type: "useGuard", count: 1, label: "Brace the adult charge", hint: "Use a guard move after your water answer so Caldera Trample cannot cash in an exposed line." },
+        ],
+        team: [
+          { speciesId: "cinderhoof", level: 9, formName: "Kilncrest Equus" },
+        ],
+      },
+    ],
   },
   cindershoreStrand: {
     id: "cindershoreStrand",
@@ -6253,6 +6436,59 @@ export const sceneDex: Record<string, SceneDefinition> = {
         text: "The vane snaps toward the storm before thunder rolls. Its blue glass feathers point along the safest shelf.",
       },
     ],
-    trainers: [],
+    trainers: [
+      {
+        id: "stormTenderKael",
+        x: 548,
+        y: 504,
+        width: 42,
+        height: 58,
+        name: "Storm Tender Kael",
+        intro:
+          "That little crane in the grass is all nervous speed. Mine has learned where to put the lightning. Show me your line can take the first strike and answer cleanly.",
+        rewardText:
+          "Kael grounds the nearest rod and points toward the charged grass. Stormchicks choose handlers who guide their speed instead of trying to cage it.",
+        introDialogue: [
+          {
+            speaker: "Storm Tender Kael",
+            text: "The wardens call these cranes unstable because they move before a restraint team can blink. That is fear talking, not field knowledge.",
+          },
+          {
+            speaker: "Storm Tender Kael",
+            text: "Thunderplume will take the opening beat. Brace through it, then land a focused answer before the stormgrass throws your timing apart.",
+          },
+        ],
+        rewardDialogue: [
+          {
+            speaker: "Storm Tender Kael",
+            text: "Good. You did not chase its speed; you gave it somewhere safe to land. That is how a Stormchick grows without becoming somebody's weapon.",
+          },
+        ],
+        tactics: {
+          style: "opportunist",
+          switchOnDisadvantage: true,
+          preferredFinisherSpeciesId: "stormchickGrus",
+        },
+        battleGoals: [
+          {
+            type: "useGuard",
+            count: 1,
+            label: "Weather the first flash",
+            hint: "Use a guard move once to hold formation against Thunderplume's priority pressure.",
+          },
+          {
+            type: "landAttackStyle",
+            attackStyle: "focus",
+            count: 1,
+            label: "Answer with a clean line",
+            hint: "Land one focus-style attack after reading the crane's opening tempo.",
+          },
+        ],
+        team: [
+          { speciesId: "stormchickGrus", level: 11, formName: "Thunderplume Crane" },
+          { speciesId: "voltpip", level: 10 },
+        ],
+      },
+    ],
   },
 };

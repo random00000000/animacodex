@@ -7,3 +7,7 @@ docs/.tmp-playwright-*-profile/
 docs/*profile*/
 docs/*.log
 *.tsbuildinfo
+.persona/
+tmp/
+release/*
+!release/*.json

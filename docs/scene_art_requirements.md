@@ -4,6 +4,11 @@ This document locks the expected image style, dimensions, pairing rules, and del
 
 Future agents must follow this before generating or integrating new exploration scenes or fight-scene backdrops.
 
+The measurable camera bands, screen-space staging zones, prompt blocks, and
+perspective QA score are locked in
+[`docs/environment_perspective_standard.md`](environment_perspective_standard.md).
+Use that template for every new generation or perspective correction.
+
 ## Required Asset Pair
 
 Every combat-capable location needs two separate image files:
@@ -40,6 +45,10 @@ Square `1254x1254` assets exist for a few interiors, but new outdoor route, biom
 
 Exploration scene paintings must read as playable top-down boards.
 
+Hard camera gate: use the 50–60° downward exploration band in
+[`docs/environment_perspective_standard.md`](environment_perspective_standard.md);
+"top-down" by itself is not a sufficient production prompt.
+
 Use:
 
 - Top-down or high three-quarter view.
@@ -60,6 +69,12 @@ Avoid:
 ## Battle Backdrop Camera
 
 Battle backdrops must feel like the same place from a different perspective.
+
+Hard camera gate: use the 10–18° downward battle band, upper-third vanishing area,
+and fixed player/enemy staging zones in
+[`docs/environment_perspective_standard.md`](environment_perspective_standard.md).
+Reject any battle candidate that remains high three-quarter even when its style
+and landmarks are otherwise correct.
 
 Use:
 

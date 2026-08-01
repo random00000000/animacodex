@@ -387,6 +387,7 @@ export class WorldScene extends Phaser.Scene {
 
   private drawScene() {
     const scene = this.gameState.getScene();
+    const presentationCapture = document.body.classList.contains("release-capture");
     this.streamCurrentStateAssets();
     this.sceneGraphics.clear();
     if (scene.backgroundArtKey && this.textures.exists(scene.backgroundArtKey)) {
@@ -409,41 +410,43 @@ export class WorldScene extends Phaser.Scene {
       this.sceneGraphics.fillEllipse(GAME_WIDTH * 0.74, GAME_HEIGHT * 0.34, 260, 140);
     }
 
-    this.sceneGraphics.fillStyle(scene.background.detail, scene.backgroundArtKey ? 0.2 : 0.92);
-    for (const obstacle of scene.obstacles) {
-      this.sceneGraphics.fillRoundedRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height, 18);
-    }
+    if (!presentationCapture) {
+      this.sceneGraphics.fillStyle(scene.background.detail, scene.backgroundArtKey ? 0.2 : 0.92);
+      for (const obstacle of scene.obstacles) {
+        this.sceneGraphics.fillRoundedRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height, 18);
+      }
 
-    for (const zone of scene.encounterZones) {
+      for (const zone of scene.encounterZones) {
       const color =
         zone.biome === "ashbrush" || zone.biome === "cinderReeds"
           ? 0xb56f3b
           : zone.biome === "warmMoss"
             ? 0x7aa26a
             : 0x6ca565;
-      this.sceneGraphics.fillStyle(color, scene.backgroundArtKey ? 0.16 : 0.65);
-      this.sceneGraphics.fillRoundedRect(zone.x, zone.y, zone.width, zone.height, 22);
-      this.sceneGraphics.lineStyle(2, 0xe9e1be, scene.backgroundArtKey ? 0.5 : 0.4);
-      this.sceneGraphics.strokeRoundedRect(zone.x, zone.y, zone.width, zone.height, 22);
-    }
+        this.sceneGraphics.fillStyle(color, scene.backgroundArtKey ? 0.16 : 0.65);
+        this.sceneGraphics.fillRoundedRect(zone.x, zone.y, zone.width, zone.height, 22);
+        this.sceneGraphics.lineStyle(2, 0xe9e1be, scene.backgroundArtKey ? 0.5 : 0.4);
+        this.sceneGraphics.strokeRoundedRect(zone.x, zone.y, zone.width, zone.height, 22);
+      }
 
-    for (const exit of scene.exits) {
-      this.sceneGraphics.lineStyle(3, 0xf4ebc7, scene.backgroundArtKey ? 0.36 : 0.5);
-      this.sceneGraphics.strokeRect(exit.x, exit.y, exit.width, exit.height);
-      this.drawExitMarker(exit);
-    }
+      for (const exit of scene.exits) {
+        this.sceneGraphics.lineStyle(3, 0xf4ebc7, scene.backgroundArtKey ? 0.36 : 0.5);
+        this.sceneGraphics.strokeRect(exit.x, exit.y, exit.width, exit.height);
+        this.drawExitMarker(exit);
+      }
 
-    for (const interactable of scene.interactables) {
-      this.sceneGraphics.fillStyle(0xe4d4a2, scene.backgroundArtKey ? 0.1 : 0.2);
-      this.sceneGraphics.fillRoundedRect(interactable.x, interactable.y, interactable.width, interactable.height, 12);
-      this.drawInteractableMarker(interactable);
-    }
+      for (const interactable of scene.interactables) {
+        this.sceneGraphics.fillStyle(0xe4d4a2, scene.backgroundArtKey ? 0.1 : 0.2);
+        this.sceneGraphics.fillRoundedRect(interactable.x, interactable.y, interactable.width, interactable.height, 12);
+        this.drawInteractableMarker(interactable);
+      }
 
-    for (const trainer of scene.trainers) {
-      const defeated = this.gameState.defeatedTrainerIds.has(trainer.id);
-      this.sceneGraphics.fillStyle(defeated ? 0x93b4a1 : 0xc78264, scene.backgroundArtKey ? 0.14 : 0.24);
-      this.sceneGraphics.fillRoundedRect(trainer.x, trainer.y, trainer.width, trainer.height, 12);
-      this.drawTrainerMarker(trainer, defeated);
+      for (const trainer of scene.trainers) {
+        const defeated = this.gameState.defeatedTrainerIds.has(trainer.id);
+        this.sceneGraphics.fillStyle(defeated ? 0x93b4a1 : 0xc78264, scene.backgroundArtKey ? 0.14 : 0.24);
+        this.sceneGraphics.fillRoundedRect(trainer.x, trainer.y, trainer.width, trainer.height, 12);
+        this.drawTrainerMarker(trainer, defeated);
+      }
     }
 
     this.updateText();

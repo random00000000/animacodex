@@ -281,6 +281,9 @@ export class GameState {
     };
     if (options?.formName) {
       this.applyFormName(vivo, options.formName);
+      if (!nickname) {
+        vivo.nickname = options.formName;
+      }
     }
     if (speciesId === "dogemox" && nickname === "Dogemox") {
       vivo.rescueMemory = {
@@ -573,19 +576,26 @@ export class GameState {
         }
       }
 
-      const transformation = species.formTransitions?.find((transition) => {
-        const requiredWins = vivo.winsByElement[transition.requiredWinsInElement] ?? 0;
-        const requiredAttunementElement =
-          transition.requiredAttunementInElement ?? transition.requiredWinsInElement;
-        const requiredAttunement = transition.requiredAttunement ?? 0;
-        const currentAttunement = vivo.attunementByElement[requiredAttunementElement] ?? 0;
-        return (
-          transition.requiredLevel <= vivo.level &&
-          requiredWins >= 1 &&
-          currentAttunement >= requiredAttunement &&
-          vivo.formName !== transition.name
-        );
-      });
+      const transitions = species.formTransitions ?? [];
+      const currentTransitionIndex = transitions.findIndex(
+        (transition) => transition.name === vivo.formName,
+      );
+      const transformation = transitions
+        .map((transition, index) => ({ transition, index }))
+        .filter(({ transition, index }) => {
+          const requiredWins = vivo.winsByElement[transition.requiredWinsInElement] ?? 0;
+          const requiredAttunementElement =
+            transition.requiredAttunementInElement ?? transition.requiredWinsInElement;
+          const requiredAttunement = transition.requiredAttunement ?? 0;
+          const currentAttunement = vivo.attunementByElement[requiredAttunementElement] ?? 0;
+          return (
+            index > currentTransitionIndex &&
+            transition.requiredLevel <= vivo.level &&
+            requiredWins >= 1 &&
+            currentAttunement >= requiredAttunement
+          );
+        })
+        .at(-1)?.transition;
       if (transformation) {
         vivo.formName = transformation.name;
         vivo.element = transformation.newElement;
@@ -604,6 +614,30 @@ export class GameState {
   markVictoryAgainstElement(vivo: VivoInstance, element: ElementType) {
     vivo.winsByElement[element] = (vivo.winsByElement[element] ?? 0) + 1;
     this.grantAttunement(vivo, element, 1);
+  }
+
+  debugPrimeLeadEvolution(formName: string): string[] {
+    const lead = this.getPartyLead();
+    const transition = speciesDex[lead.speciesId].formTransitions?.find(
+      (candidate) => candidate.name === formName,
+    );
+    if (!transition) {
+      return [];
+    }
+
+    lead.level = Math.max(1, transition.requiredLevel - 1);
+    lead.xp = 0;
+    lead.winsByElement[transition.requiredWinsInElement] = Math.max(
+      1,
+      lead.winsByElement[transition.requiredWinsInElement] ?? 0,
+    );
+    const attunementElement =
+      transition.requiredAttunementInElement ?? transition.requiredWinsInElement;
+    lead.attunementByElement[attunementElement] = Math.max(
+      transition.requiredAttunement ?? 0,
+      lead.attunementByElement[attunementElement] ?? 0,
+    );
+    return this.grantExperience(lead, XP_PER_LEVEL);
   }
 
   advanceLeadAttunement(zone: EncounterZone, distance: number) {
@@ -3359,10 +3393,17 @@ export class GameState {
 
     vivo.formName = transition.name;
     vivo.element = transition.newElement;
+    if (transition.awakenMoveId) {
+      this.applyAwakenedMove(vivo, transition.awakenMoveId, true);
+    }
     return true;
   }
 
-  private applyAwakenedMove(vivo: VivoInstance, moveId: string): string[] {
+  private applyAwakenedMove(
+    vivo: VivoInstance,
+    moveId: string,
+    forceAuthoredFormKit = false,
+  ): string[] {
     const move = moveDex[moveId];
     if (!move || vivo.knownMoveIds.includes(moveId)) {
       return [];
@@ -3373,12 +3414,27 @@ export class GameState {
       return [`${vivo.nickname} awakened ${move.name} immediately.`];
     }
 
-    const tackleIndex = vivo.knownMoveIds.indexOf("tackle");
-    if (tackleIndex >= 0) {
+    const basicMoveId = speciesDex[vivo.speciesId].learnset.find((entry) => entry.level === 1)?.moveId;
+    const replaceableMoveId = vivo.knownMoveIds.includes("tackle") ? "tackle" : basicMoveId;
+    const replaceIndex = replaceableMoveId ? vivo.knownMoveIds.indexOf(replaceableMoveId) : -1;
+    if (replaceIndex >= 0 && replaceableMoveId) {
       const nextMoveIds = [...vivo.knownMoveIds];
-      nextMoveIds[tackleIndex] = moveId;
+      nextMoveIds[replaceIndex] = moveId;
       vivo.knownMoveIds = nextMoveIds;
-      return [`${vivo.nickname} awakened ${move.name} immediately, replacing Tackle with its new form's signature attack.`];
+      return [
+        `${vivo.nickname} awakened ${move.name} immediately, replacing ${moveDex[replaceableMoveId].name} with its new form's signature attack.`,
+      ];
+    }
+
+    if (forceAuthoredFormKit && vivo.knownMoveIds.length > 0) {
+      const replacedMoveId = vivo.knownMoveIds[0];
+      vivo.knownMoveIds = [moveId, ...vivo.knownMoveIds.slice(1)];
+      vivo.pendingMoveChoices = vivo.pendingMoveChoices.filter(
+        (choice) => choice.moveId !== moveId,
+      );
+      return [
+        `${vivo.nickname} carries ${move.name} in its authored form kit, replacing ${moveDex[replacedMoveId].name}.`,
+      ];
     }
 
     const alreadyPending = vivo.pendingMoveChoices.some((choice) => choice.moveId === moveId);

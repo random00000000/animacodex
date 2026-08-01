@@ -87,6 +87,9 @@ if (!hudRoot || !gameRoot || !frontDoorOverlay || !frontDoorSlots || !frontDoorS
 }
 
 const searchParams = new URLSearchParams(window.location.search);
+if (searchParams.get("capture") === "1") {
+  document.body.classList.add("release-capture");
+}
 await loadSceneGeometryConfig();
 const hasDebugBoot =
   [...searchParams.keys()].some((key) => key.startsWith("debug")) ||
@@ -95,6 +98,35 @@ const playtestOpenRoutes =
   searchParams.get("admin") === "1" ||
   searchParams.get("debugOpenRoutes") === "1" ||
   searchParams.get("playtestOpenRoutes") === "1";
+type PlayerSettings = {
+  battleAudio: boolean;
+  reducedMotion: boolean;
+  largeText: boolean;
+};
+const SETTINGS_KEY = "anima-codex-player-settings-v1";
+const defaultPlayerSettings: PlayerSettings = {
+  battleAudio: true,
+  reducedMotion: false,
+  largeText: false,
+};
+const loadPlayerSettings = (): PlayerSettings => {
+  try {
+    return { ...defaultPlayerSettings, ...JSON.parse(localStorage.getItem(SETTINGS_KEY) ?? "{}") };
+  } catch {
+    return { ...defaultPlayerSettings };
+  }
+};
+let playerSettings = loadPlayerSettings();
+const applyPlayerSettings = () => {
+  document.body.classList.toggle("reduced-motion", playerSettings.reducedMotion);
+  document.body.classList.toggle("large-text", playerSettings.largeText);
+  document.body.dataset.battleAudio = playerSettings.battleAudio ? "on" : "off";
+};
+const savePlayerSettings = () => {
+  localStorage.setItem(SETTINGS_KEY, JSON.stringify(playerSettings));
+  applyPlayerSettings();
+};
+applyPlayerSettings();
 const gameState = new GameState(hudRoot, {
   enablePersistence: !hasDebugBoot,
   playtestOpenRoutes,
@@ -102,6 +134,9 @@ const gameState = new GameState(hudRoot, {
 let selectedSaveSlot = 1;
 let deleteConfirmOpen = false;
 let activeMenuPane: "fieldLog" | "vivos" | "codex" | "pack" | "options" | "dev" = "fieldLog";
+if (searchParams.get("debugMenu") === "options") {
+  activeMenuPane = "options";
+}
 
 if (playtestOpenRoutes) {
   gameState.setMessage(
@@ -214,7 +249,23 @@ const renderMenuPane = (summary: ReturnType<typeof gameState.getFieldLogSummary>
   }
 
   if (activeMenuPane === "options") {
-    return `<p>Options will hold audio, text speed, and accessibility settings. For now, use the browser and keyboard controls: arrows/WASD to move, Space/Enter to interact.</p>`;
+    return `
+      <div class="options-menu" aria-label="Player settings">
+        <article class="option-row">
+          <div><strong>Battle audio</strong><span>Generated battle cues and confirmation tones.</span></div>
+          <button type="button" data-front-door-action="toggle-setting" data-setting="battleAudio" aria-pressed="${playerSettings.battleAudio}">${playerSettings.battleAudio ? "On" : "Off"}</button>
+        </article>
+        <article class="option-row">
+          <div><strong>Reduced motion</strong><span>Removes interface animation, shake, and decorative transitions.</span></div>
+          <button type="button" data-front-door-action="toggle-setting" data-setting="reducedMotion" aria-pressed="${playerSettings.reducedMotion}">${playerSettings.reducedMotion ? "On" : "Off"}</button>
+        </article>
+        <article class="option-row">
+          <div><strong>Larger text</strong><span>Increases menu and HUD copy for easier reading.</span></div>
+          <button type="button" data-front-door-action="toggle-setting" data-setting="largeText" aria-pressed="${playerSettings.largeText}">${playerSettings.largeText ? "On" : "Off"}</button>
+        </article>
+        <p class="options-help">Keyboard: arrows or WASD to move; Space or Enter to interact. Settings persist independently of save slots.</p>
+      </div>
+    `;
   }
 
   return `
@@ -258,6 +309,13 @@ document.body.addEventListener("click", (event) => {
   } else if (action === "toggle-dev-panel") {
     document.body.classList.toggle("dev-panel-open");
     renderFrontDoor(document.body.classList.contains("dev-panel-open") ? "Dev panel opened." : "Dev panel hidden.");
+  } else if (action === "toggle-setting") {
+    const setting = button.dataset.setting as keyof PlayerSettings | undefined;
+    if (setting && setting in playerSettings) {
+      playerSettings = { ...playerSettings, [setting]: !playerSettings[setting] };
+      savePlayerSettings();
+      renderFrontDoor(`${button.closest(".option-row")?.querySelector("strong")?.textContent ?? "Setting"} updated.`);
+    }
   } else if (action === "continue") {
     deleteConfirmOpen = false;
     const summary = gameState.getFieldLogSummary(selectedSaveSlot);
@@ -303,7 +361,7 @@ document.body.addEventListener("click", (event) => {
   }
 });
 
-setFrontDoorOpen(!hasDebugBoot);
+setFrontDoorOpen(!hasDebugBoot || searchParams.has("debugMenu"));
 
 const debugScene = searchParams.get("debugScene");
 if (debugScene && gameState.getSceneById(debugScene)) {
@@ -323,6 +381,9 @@ if (debugPlayerPosition) {
 
 const debugParty = searchParams.get("debugParty");
 if (debugParty) {
+  if (searchParams.get("debugPartyMode") === "replace") {
+    gameState.party.splice(0, gameState.party.length);
+  }
   for (const entry of debugParty.split(",")) {
     const [speciesId, levelText, nickname] = entry.split(":");
     if (!speciesId || !levelText || !speciesDex[speciesId]) {
@@ -334,6 +395,9 @@ if (debugParty) {
     }
     const vivo = gameState.createVivo(speciesId, level, nickname);
     gameState.addCapturedVivo(vivo);
+  }
+  if (gameState.party.length === 0) {
+    gameState.party.push(gameState.createVivo("dogemox", 4, "Dogemox"));
   }
 }
 
@@ -465,10 +529,18 @@ if (debugLeadForm) {
     (candidate) => candidate.name === debugLeadForm,
   );
   if (transition) {
+    if (lead.nickname === speciesDex[lead.speciesId].name) {
+      lead.nickname = transition.name;
+    }
     lead.formName = transition.name;
     lead.element = transition.newElement;
     lead.currentHp = gameState.getMaxHp(lead);
   }
+}
+
+const debugLeadEvolution = searchParams.get("debugLeadEvolution");
+if (debugLeadEvolution) {
+  gameState.debugPrimeLeadEvolution(debugLeadEvolution);
 }
 
 const debugWildBattle = searchParams.get("debugWildBattle");
@@ -487,7 +559,10 @@ if (debugWildBattle) {
     gameState.battle = new BattleController(gameState, {
       type: "wild",
       enemyTeam: [enemy],
-      label: `${enemy.formName ?? speciesDex[enemy.speciesId].name} emerges for a debug battle.`,
+      label:
+        searchParams.get("capture") === "1"
+          ? `${enemy.formName ?? speciesDex[enemy.speciesId].name} emerges from ${gameState.currentScene.name}.`
+          : `${enemy.formName ?? speciesDex[enemy.speciesId].name} emerges for a debug battle.`,
       fieldCondition: activeZone?.battlefieldCondition ?? gameState.currentScene.battlefieldCondition,
       initialTempo: activeZone ? gameState.getWildBattleInitialTempo(activeZone) : undefined,
     });

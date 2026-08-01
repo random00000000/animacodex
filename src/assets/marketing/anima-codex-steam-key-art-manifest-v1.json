@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "status": "selected-master-source",
+  "selected": "src/assets/marketing/anima-codex-steam-key-art-master-v2.png",
+  "selectedDimensions": {
+    "width": 1672,
+    "height": 941
+  },
+  "selectedBytes": 2506713,
+  "selectedSha256": "F018D9A707C6D86792A0A1F7D38F07D8C6F22C26ACEA2CA17ABA62273E46BD77",
+  "supersedes": "src/assets/marketing/anima-codex-steam-key-art-master-v1.png",
+  "intendedUse": "Source composition for Steam capsule and library crops; textless master only.",
+  "review": [
+    "Stable 16:9 storybook staging and upper-left title-safe space",
+    "Juvenile Dogemox reads bondable, serious, broad-pawed, and engineered",
+    "Handler bond and distant confiscation pressure are both legible",
+    "Warm sanctuary gold and cool containment teal preserve broad value groups",
+    "Final format crops and logo treatment still require review"
+  ],
+  "constraints": [
+    "Do not publish this master directly as a required Steam capsule size",
+    "Do not add text with image generation; use a controlled logo/layout pass",
+    "Preserve stable perspective and avoid motion effects in every crop"
+  ]
+}

@@ -40,7 +40,7 @@ These scenes are already established production or production-proof locations:
 | Basalt Bloom Caldera | cooled volcanic flower crater | fire, grass, stone | volcanic bloom screenshot scene, heat-vine habitat, bloom-fracture battle backdrop |
 | Cinderlake Basin | broad magma lake | fire, stone, grass | magma-lake screenshot scene, Magmadon habitat, lake-rim battle backdrop |
 | Cindershore Strand | black glass-sand magma beach | fire, stone, grass | magma-beach screenshot scene, tide-pool and heatglass shell habitat |
-| Asterwake Shoals | living starfish beach | water, light, neutral | starfish-beach screenshot scene, Bellcrab/Reedotter habitat, five-point tidepool battle backdrop |
+| Asterwake Shoals | living starfish beach | water, light, steel | starfish-beach screenshot scene, Bellcrab/Reedotter habitat, Shoal Keeper Maris’s Weirfang preview, five-point tidepool battle backdrop |
 | Sunspindle Dunes | heat-glass sand crossing | stone, fire, neutral | desert screenshot scene, Basalthorn/Bouldermaw habitat, future sand-form landmark |
 | Redglass Saltpan | surreal dried salt lake | fire, stone, light | pink salt and red mineral-crust screenshot scene, mirage/sun transformation habitat |
 | Thunderhead Mesa | storm desert plateau | electric, stone, future flying | dramatic storm screenshot scene, Voltpip/Stormwool/Lumen Corvus habitat, lightning-rod battle backdrop |
@@ -75,7 +75,7 @@ These are the next scenes that should be created before the world sprawls. They 
 | `clayhornRavine` | Clayhorn Ravine | clay cliffs, fossil roots, hoof-carved switchbacks | earth, steel | Supports bulky herd, burrow, and mineral Vivos after the player learns basic team rotation. |
 | `sporebellGarden` | Sporebell Garden | overgrown flower field with pulsing pollen bells | grass, poison | Implemented as a nursery-side poison-support garden using live grass mechanics for now. |
 | `tidegateCauseway` | Tidegate Causeway | river crossing, sluice gates, wet stone paths | water, electric | Turns water travel into authored scene traversal before any full surf-like system exists. |
-| `asterwakeShoals` | Asterwake Shoals | living starfish beach, five-point tidepool, shell paths | water, light, neutral | Implemented as the first dedicated starfish-beach route branching from Tidegate Causeway. |
+| `asterwakeShoals` | Asterwake Shoals | living starfish beach, five-point tidepool, shell paths | water, light, steel | Implemented as the first dedicated starfish-beach route branching from Tidegate Causeway, with shell-tidegrass steel training for the Bellcrab line. |
 | `mirrorfenFlats` | Mirrorfen Flats | still mirror pools, floating seed pods, silver reeds | water, neutral, future psychic | Implemented as a dreamlike wetland extension branching from Moonfen Marsh, using focus-surge mechanics until psychic exists. |
 | `mireglassSwamp` | Mireglass Swamp | blackwater pools, cypress knees, lantern fungus | water, grass, poison | Implemented as the first dedicated true-swamp route and fight scene. |
 | `magmaheartCaldera` | Magmaheart Caldera | magma rivers, black basalt causeways, obsidian ribs | fire, stone, grass | Implemented as the dedicated magma biome branching from Ember Hollow. |
@@ -341,7 +341,7 @@ Implemented packet:
 - Battle backdrop: lower coastal fight scene with the same crescent starfish driftwood arch, luminous five-point tidepool, caretaker lantern, sanctuary waystone, tidegrass, shell beds, black rocks, and living starfish clusters carried into combat.
 - Runtime metadata: branches from `Tidegate Causeway`, returns through the left beach trail, and uses `starfishNurseryBeds`, `fivePointTidepool`, and `shellTidegrass` encounter zones.
 - Primary element: water.
-- Secondary elements: light and neutral.
+- Secondary elements: light and steel; `shellTidegrass` now grants steel attunement so a locally captured Bellcrab can progress toward `Carillon Pagurus` without losing its shoreline identity.
 - Native hooks: Bellcrab, Reedotter, Tidecalf, Fenlight, Mirejaw, Glarefin, Prismkid, Lanterncat, Glintmoth, Lumen Corvus, Mirecub, Needlehare, and Dogemox.
 - Battlefield condition: `Starwake Tide`, a water boost that makes engineered starfish beds and five-point tide pools carry pressure through the beach.
 - Payoff: a bright coastal screenshot biome that reads as a starfish habitat instead of a generic beach or another wetland.

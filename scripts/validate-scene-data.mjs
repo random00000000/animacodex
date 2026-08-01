@@ -238,12 +238,47 @@ for (const [sceneId, scene] of Object.entries(sceneDex)) {
   }
 
   for (const zone of scene.encounterZones) {
+    if (!Array.isArray(zone.levelRange) || zone.levelRange.length !== 2 || !zone.levelRange.every(Number.isInteger) || zone.levelRange[0] < 1 || zone.levelRange[1] > 100 || zone.levelRange[0] > zone.levelRange[1]) {
+      failures.push(`${sceneId}.${zone.id} has an invalid levelRange; expected two ascending integer levels from 1 to 100`);
+    }
+    if (!Array.isArray(zone.encounterTable) || zone.encounterTable.length === 0) {
+      failures.push(`${sceneId}.${zone.id} has no authored encounter table`);
+    } else {
+      const speciesIds = new Set();
+      for (const entry of zone.encounterTable) {
+        if (typeof entry.speciesId !== "string" || entry.speciesId.length === 0) {
+          failures.push(`${sceneId}.${zone.id} has an encounter with no speciesId`);
+        } else if (speciesIds.has(entry.speciesId)) {
+          failures.push(`${sceneId}.${zone.id} repeats species ${entry.speciesId}; combine its weights into one entry`);
+        }
+        speciesIds.add(entry.speciesId);
+        if (!Number.isFinite(entry.weight) || entry.weight <= 0) {
+          failures.push(`${sceneId}.${zone.id}.${entry.speciesId ?? "unknown"} has a non-positive encounter weight`);
+        }
+      }
+    }
+    if (!Number.isFinite(zone.encounterRate) || zone.encounterRate <= 0 || zone.encounterRate > 1) {
+      failures.push(`${sceneId}.${zone.id} encounterRate must be greater than 0 and at most 1`);
+    }
+    if (!Array.isArray(zone.stepRange) || zone.stepRange.length !== 2 || !zone.stepRange.every(Number.isInteger) || zone.stepRange[0] < 1 || zone.stepRange[0] > zone.stepRange[1]) {
+      failures.push(`${sceneId}.${zone.id} has an invalid stepRange`);
+    }
+
     if (!sampleRect(zone).some((sample) => reachableContains(reachable, sample))) {
       failures.push(`${sceneId}.${zone.id} encounter zone has no reachable point from ${sceneId} spawn`);
     }
   }
 
   for (const trainer of scene.trainers) {
+    if (!Array.isArray(trainer.team) || trainer.team.length < 1 || trainer.team.length > 6) {
+      failures.push(`${sceneId}.${trainer.id} trainer team must contain between 1 and 6 Vivos`);
+    } else {
+      for (const [teamIndex, vivo] of trainer.team.entries()) {
+        if (!Number.isInteger(vivo.level) || vivo.level < 1 || vivo.level > 100) {
+          failures.push(`${sceneId}.${trainer.id}.team[${teamIndex}] has an invalid level`);
+        }
+      }
+    }
     if (!isRequirementShaped(trainer.requirement)) {
       failures.push(`${sceneId}.${trainer.id} has an unsupported trainer visibility requirement shape`);
     }

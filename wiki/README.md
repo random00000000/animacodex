@@ -1,4 +1,325 @@
+# Carlos content pulse - Verdaconda paired battle views
+
+- Replaced Verdaconda's parchment plate with a transparent front portrait and added its dedicated rear player view.
+- Preserved the level-7 venom-constrictor payoff across angles: continuous heavy vine coils, thorn fangs, translucent venom sacs, luminous root-vein belly, leaf hood, moss ridge, and one seedpod tail.
+- Moonfen Keeper Orla's level-7 fixture proves the pair where Venivy is naturally found and Venom Coil Crush awakens, with the lower-left rear view facing the opponent lane.
+
+# Carlos content pulse - Tidehorn Bubalus paired battle views
+
+- Replaced Tidehorn Bubalus's splash-heavy parchment plate with a transparent front portrait and added a dedicated rear player view.
+- Kept the adult wetland guardian visually distinct through symmetric pressure horns, contained living-water reservoirs, heavy hooves, reinforced shoulders, and a planted charge silhouette.
+- Moonfen Keeper Orla's level-7 fixture proves the pair where Tidecalf naturally trains and unlocks Flood Charge, with the lower-left rear view facing the opponent lane.
+
+# Carlos content pulse - Lunaris Bufo paired battle views
+
+- Replaced Lunaris Bufo's painted-background plate with a transparent front portrait and added its dedicated rear player view.
+- Preserved the awakened Moonfen identity across both angles: enormous lantern throat sac, marsh-gold nodes, silver-reed frills, rooted forefeet, and the line's memorable oversized folded hindquarters.
+- Moonfen Keeper Orla's level-6 fixture proves the pair at the exact Moonwell Pulse evolution tier, with the lower-left player view facing the upper-right opponent lane.
+
+# Carlos content pulse - Ironjaw Lupus paired battle views
+
+- Replaced Ironjaw Lupus's bordered parchment plate with a transparent front portrait and added a dedicated rear player portrait.
+- Preserved the level-5 first evolution as a compact steel adolescent rather than Titan Lupus-sized: amber stare, Lockjaw teeth, heavy claws, and organic keratin plates remain readable across both angles.
+- Briar Gym's level-5 Gym Keeper Pella fixture proves the pair at the first-gym practice tier, with player-owned Ironjaw now facing the upper-right opponent lane.
+
+# Carlos content pulse - Astra Corvus paired battle views
+
+- Replaced Astra Corvus's parchment-backed plate with a transparent enemy view and added a dedicated rear player view for the first playable's light evolution.
+- Corrected directional staging before integration: the upper-right enemy points its beak toward the player, while the lower-left ally visibly faces the opponent.
+- Preserved the evolved line's midnight feathers, ivory crystal crown, gold conductor veins, luminous chest prism, and translucent tail fan across both angles. Starglass Roost's level-6 Miren fixture provides the balanced route proof.
+
+# Carlos content pulse - Ignis Canis paired transparent battle views
+
+- Replaced the first-playable fire form's parchment-backed portrait with a clean transparent enemy view and added its dedicated rear player view.
+- Preserved the same guarded juvenile guardian across both perspectives: charcoal coat, ember heat vents, forehead organ, heavy coal paws, visible claws, and one biological flame tail.
+- Both sprites use contracted transparent mattes with no decorative border or halo. Ember Hollow's level-6 Ash Scout Iven fixture remains the progression proof, while player-owned Ignis Canis now faces the upper-right opponent lane.
+
+# Carlos content pulse - Thornvault Sciurus paired battle views
+
+- Completed Mossquirl's level-10 grass evolution with a dedicated transparent rear three-quarter portrait and a cleaned front production cutout.
+- Preserved the evolution's intentionally funny and memorable oversized biology: exactly two huge bark-ringed acorn pressure glands, backed by three thorn-edged shield fronds and heavy root claws.
+- Explicit anatomy review confirmed four attached legs, two ears, one three-frond tail organ, and two acorn glands. The Echobloom Canopy level-10 mirror fixture proves the full paired silhouette where Mossquirl naturally trains.
+
+# Carlos content pulse - Stormspire Grus completes the electric crane line
+
+- Completed the level-32 apex evolution with transparent front and rear three-quarter production portraits, replacing its parchment-backed field-guide plate.
+- Preserved Stormspire's final-form payoff across angles: cathedral-scale wings, spear beak, cobalt-black feather fields, copper conductor lattice, lightning-rod crest, and long storm train.
+- Both portraits passed a two-leg, two-wing attachment review and are wired to the player/enemy battle resolver; the Thunderhead Mesa level-32 mirror fixture proves the complete final-form silhouette.
+
+# Carlos content pulse - Thunderplume Crane paired transparent views
+
+- Replaced Thunderplume's parchment-backed field-guide plate with a clean transparent front view and added a matching rear three-quarter player-battle view.
+- Preserved the level-15 electric sentinel identity across both angles: spear beak, severe amber eye, charcoal-and-cream plumage, copper conductor veins, blue-white crest organs, and gland-tipped storm filaments.
+- Explicit anatomy review confirmed two legs and two folded wings in each portrait. A visible chroma edge in the first rear export was rejected and regenerated on a green key before integration.
+
+# Carlos content pulse - Weirfang Lutra rear battle view
+
+- Completed Reedotter's obtainable level-16 grass evolution with a transparent rear three-quarter portrait, so player-owned Weirfang now faces the upper-right opponent lane.
+- Preserved the river-predator identity across angles: wet dark fur, guarded amber eye, root whiskers, golden-green reed mantle, heavy claws, and one enormous saw-edged living reed tail.
+- Explicit anatomy review confirmed four attached legs, two ears, and one tail before integration; the Asterwake Shoals mirror fixture proves the paired battle silhouette at the intended evolution level.
+
+# Carlos content pulse - Carillon Pagurus rear battle view
+
+- Completed the obtainable level-18 steel evolution with a dedicated transparent rear three-quarter portrait, so player-owned Carillon Pagurus now faces the upper-right opponent lane instead of reusing its front Codex plate.
+- Preserved the mature shoreline-fortress identity across angles: three nested resonant bell chambers, massive asymmetrical crushing claw, tide-worn barnacles, amber living-steel seams, eye stalks, antennae, and grounded hermit-crab anatomy.
+- The paired battle presentation can be previewed against a front-facing Carillon in Asterwake Shoals, the coastal habitat where Bellcrab naturally earns its steel attunement through shell tidegrass.
+
+# Carlos content pulse - Dogemox paired starter portraits
+
+- Replaced Dogemox's background-baked smiling puppy plate with a vigilant transparent front view that emphasizes heavy paws, guarded eyes, shoulder mass, and dangerous future guardian potential.
+- Added a matching transparent rear three-quarter view and species-level rear portrait resolution, so the guaranteed starter now faces opponents correctly from the player's lower-left battle lane.
+
+# Carlos content pulse - Briar Lynx
+
+- Completed Thornkit's level-8 grass evolution with a dedicated transparent full-body imagegen portrait.
+- Added a second matching transparent rear three-quarter portrait and a reusable player-side resolver, so Briar Lynx now faces into battle from the lower-left instead of showing the enemy-facing field-guide angle.
+- Owner anatomy review caught a fifth leg in the first rear plate. The runtime now uses a corrected `briar-lynx-rear-v2.png` silhouette with the far limbs deliberately occluded, and the art bible now requires explicit limb-count review before creature integration.
+- Added `Crownroot Ambush`, a priority 20-power impact strike that rewards Thornkit's existing expose setup by regathering the evolved lynx behind a guard.
+- Expanded the evolution's stat growth across durability, attack, focus, and speed while keeping its placement tied to existing grass habitats and attunement progression.
+
+# Carlos content pulse - Faultcrown Rhinoceros
+
+- Extended the compact first stone opponent `Basalthorn` into `Faultcrown Rhinoceros`, a level-15 evolution earned through one stone victory and three stone habitat marks.
+- Added `Faultline Stampede`, a 24-power guard-breaking charge that relocks Faultcrown's standing-stone shoulders after exploiting an exposed opening.
+- Integrated a transparent full-body imagegen portrait with a ringed faultglass horn, rooted tendons, quarry-scale weight, and a complete readable silhouette.
+- Added a matched transparent rear three-quarter portrait with explicitly verified four-leg anatomy, so player-owned Faultcrown now faces the upper-right opponent while preserving its faultglass horn, standing-stone crown, roots, and moss.
+- Added Ravine Keeper Orsa as Prismfall Ravine's level-9 route capstone. Her Faultcrown lesson asks players to guard its committed stampede and send grass through the crown's stone seams. Live testing replaced the original focus goal because it forced a fragile switch into roughly 38 damage, then lowered the preview from level 10 after the coherent Mossprig line still ended at 10/67 HP.
+
+# Carlos content pulse — Kilncrest Equus
+
+## Carlos content pulse — Briarback Mustela
+
+- Extended the guaranteed first-grass-rescue `Mossprig` line with `Briarback Mustela`, a level-9 evolution earned through a grass win and three grass habitat marks.
+- Added `Briarlock Maul`, a priority guard-breaking signature attack that regathers behind the mature form's thorn mantle after exploiting an exposed target.
+- Integrated a transparent full-body imagegen portrait with root-wrapped limbs, a thorn mantle, seedpod glands, and a hooked branch tail, turning a familiar early rescue into a desirable post-gym guardian.
+- Added a matched transparent rear three-quarter Briarback portrait with verified four-leg anatomy, completing its battle pair while preserving the thorn mantle, seedpod glands, root-wrapped claws, and hooked living branch tail.
+- Garden Warden Tamsin now previews a level-7 Briarback beside Sporebell Garden's level 7-9 warning patch. Her lesson asks the player to guard once and land an impact-style answer, while opportunist pacing prevents repeated Briarlock Maul spam.
+
+- Extended the widely placed `Cinderhoof` / `Ignis Equus` line with `Kilncrest Equus`, a level-16 fire-attunement evolution backed by a transparent production portrait.
+- Added `Caldera Trample`, a mature signature charge that cracks guarded targets and lets Kilncrest regather after exploiting an exposed line.
+- Kept Cinderhoof as an early magma-route capture while moving its adult payoff behind sustained fire-route training, making 19 existing habitat placements more desirable without adding spawn clutter.
+- Added `Cinderlake Keeper Sera` as a level-9 progression-safe preview that teaches water counterplay and guarding before the adult charge. A level-11 first pass was rejected in live testing because it could erase a full plausible route party after the lesson was completed.
+- Added a matched transparent rear three-quarter Kilncrest portrait with verified four-leg anatomy, completing the player/enemy battle pair while preserving the adult form's furnace ribs, vent fins, basalt hide, flame mane, tail, and heavy hooves.
+- Fixed authored evolved opponents so a full base kit cannot silently queue the signature move outside player control; trainer and wild form previews now enter battle with their awakened attack equipped.
+
+# Carlos content pulse — Razorjack Lepus
+
+- Extended the widely encountered `Needlehare` line into `Razorjack Lepus`, a level-7 neutral evolution earned through route-aligned wins and attunement.
+- Added `Cutline Blitz`, a priority guard-breaking signature attack that preserves the line's exposed-target tempo identity while giving the mature form meaningful first-gym utility.
+- Added and wired a transparent imagegen portrait at `src/assets/creatures/razorjack-lepus-portrait-v1.png`, with swept organic blade-quill ears, spring-loaded hindquarters, and amber gland-light cutlines.
+- Kept the content in the shared species, move, portrait, evolution, and encounter systems; the line's existing broad early-world placement now pays off with a capture-worthy progression reward instead of a disconnected new spawn.
+
 # Anima Codex Wiki
+
+## Carlos content pulse — Frosthulk battle pair (2026-08-01)
+
+Frosthulk now uses a clean transparent front portrait and dedicated rear player portrait. Both views preserve its snow-loaded polar-bear mass, organic glacier shoulder plates, blue ice fissures, icicle beard, heavy claws, and guarded temperament. The art supports its existing rare level 5–7 Frostglass Orchard placement and its later level 7–11 Aurorashard Tundra escalation, giving a desirable ice tank correct inward-facing battle staging without changing progression balance.
+
+## Carlos content pulse — Magmadon battle pair (2026-08-01)
+
+Magmadon now uses a border-free transparent front portrait plus a dedicated rear player portrait. The pair preserves the same massive basalt-plated elephant anatomy, restrained magma seams, ember tusks, trunk heat-vent, and single ember-frond tail while giving both battle lanes an inward-facing pose. This upgrades a recurring fire-route encounter already native to Ember Hollow and the connected caldera, lake, shore, and saltpan habitats without changing its authored progression or move balance.
+
+Environment generation now follows the measurable paired-camera contract in
+[`docs/environment_perspective_standard.md`](../docs/environment_perspective_standard.md):
+50–60° exploration boards, 10–18° ground-adjacent battle views, fixed staging
+zones, five same-place anchors, and a 9/10 production QA threshold. Battle drafts
+that retain the exploration camera are explicitly rejected rather than integrated.
+
+The first corrected pair is live: Ember Hollow now resolves battles through
+`emberHollowBattleV2`, a normalized `1536x1024` low-camera backdrop that preserves
+the exploration board's vent shrine, warm-leaved tree, olive moss, cinder reeds,
+heat-seamed basalt, and steaming shelf. The v1 backdrop stays in the manifest as
+a rollback asset while runtime scene mapping points to v2.
+
+Briar Town is the second corrected pair. `briarTownBattleV2` preserves the proven
+low plaza camera while replacing the legacy generic checkpoint with the walking
+scene's creek bridge, blank notice board, curved green roofs, round-window civic
+hall, sanctuary cottage, amber lanterns, flower beds, and autumn canopy. The v1
+backdrop remains registered for rollback; live Briar Town fights now select v2.
+
+Starglass Roost is the third corrected pair. `starglassRoostBattleV2` replaces
+the legacy crystal-ring arena with the exact walking-scene observatory seen from
+the low battle camera: antique brass telescope, broken pale-stone dome ribs,
+amber globe lamps, terrace steps, bench, silvergrass, flowers, twisted cliff tree,
+and blue-green ravine. Runtime mapping selects v2 while retaining v1 for rollback.
+
+Sanctuary Trail is the fourth corrected pair. `sanctuaryTrailBattleV2` uses the
+walking scene's green-to-ember habitat boundary from a standardized low camera:
+golden seed grass, claw-split fallen root, mossy boulders, forked trail, ember
+shrubs, twisted boundary tree, stone shelf, and one caretaker lantern. The v1
+uniform-gold clearing remains registered for rollback; live battles select v2.
+
+Briar Gym is the fifth corrected pair. `briarGymBattleV2` lowers the camera inside
+the exact walking-scene adaptation hall: long green carpet, separate left rope
+practice ring, asymmetric right bench-and-planter lane, compact leader dais,
+arched leaf-bud window, two green banners, mossed stone, timber, vines, and amber
+lamps. The symmetrical v1 arena remains registered for rollback; fights select v2.
+
+Lantern Nursery is the sixth corrected pair. `lanternNurseryBattleV2` shows the
+exact working sanctuary yard from a low camera: offset teal greenhouse, canvas
+care station, small moss ring, irregular log-and-pool pens, cold frame, lantern
+reeds, split paths, caretaker lamps, and autumn trees. The symmetrical v1 arena
+remains registered for rollback; live nursery battles select v2.
+
+Environment pair certification is now tracked in
+[`docs/environment_pair_audit.md`](../docs/environment_pair_audit.md). Glassroot
+Burrow is the first unchanged v1 pair to pass the full standard: both images are
+`1536x1024`, and its low battle view preserves the glassroot cradle, warm lamps,
+teal pools, luminous root drips, moss shelves, mushrooms, and root enclosure.
+
+Moonfen Marsh is the second unchanged v1 pair to pass. Its top-down walking board
+and low battle stage retain the watchtower, root bridges, turquoise still pools,
+silver reeds, lantern blooms, moss lane, and plank crossings. The audit now has
+eight certified environment pairs and 24 awaiting full visual review.
+
+Mirrorfen Flats is the third unchanged v1 pair to pass. Its lower battle camera
+preserves the exploration board's crescent mirror pool, pale mudflat lane,
+floating seed-pod islands, silver reed curtains, amber mirror post, and submerged
+tree silhouette. The audit now has nine certified pairs and 23 pending reviews.
+
+Frostglass Orchard is the fourth unchanged v1 pair to pass. Its lower battle view
+retains the exploration board's frostglass well, crystal-fruit trees, blue-scarf
+scarecrow, broken gate, warm lamp, frostgrass, and packed-snow travel lane. The
+audit now has ten certified pairs and 22 pending reviews.
+
+Aurorashard Tundra is the fifth unchanged v1 pair to pass. Its low battle camera
+retains the crescent crystal ridge, branching blue ice veins, three amber posts,
+frostgrass, bent polar limb, snow lane, and reflected green-pink aurora. The audit
+now has eleven certified pairs and 21 pending reviews.
+
+Coppervine Runoff is the sixth unchanged v1 pair to pass. Its low battle view
+retains the cracked sluice, broken gutter arch, blue runoff, coppervine roots,
+barred drain, half-sunk lamp, and wet-stone maintenance lane. The audit now has
+twelve certified pairs and 20 pending reviews.
+
+Gloamrail Cut is the seventh unchanged v1 pair to pass. Its low battle camera
+retains the wet rails, broken sleepers, bent signal, amber lamps, bramble walls,
+barred crawlspace, and stone trench of the exploration board. The audit now has
+thirteen certified pairs and 19 pending reviews.
+
+Sporebell Garden is the eighth unchanged v1 pair to pass. Its low battle view
+retains the giant bell blooms, warning ribbons, pollinator basin, stone arch,
+violet spore grass, pollen haze, and forked dirt path. The audit now has fourteen
+certified pairs and 18 pending reviews.
+
+Cadence Lab Annex is the ninth unchanged v1 pair to pass. Its low battle camera
+retains the cracked habitat glass, warning-light tree, cable-root nest, violet
+canisters, open door, nursery overgrowth, and fractured tile floor. The audit now
+has fifteen certified pairs and 17 pending reviews.
+
+Mireglass Swamp is the tenth unchanged v1 pair to pass. Its low battle view
+retains the blackwater pool, mossy log bridge, cypress-root arch, lantern fungi,
+glassy algae, half-sunk sanctuary marker, and central mud lane. The audit now has
+sixteen certified pairs and 16 pending reviews.
+
+Sunspindle Dunes is the eleventh unchanged v1 pair to pass. Its low battle view
+retains the fossil-root arch, amber obelisk, blue shade awning, sandstone ribs,
+dry grass, heat-glass crystals, and packed-sand lane. The audit now has seventeen
+certified pairs and 15 pending reviews.
+
+Redglass Saltpan is the twelfth unchanged v1 pair to pass. Its low battle view
+retains the red mineral sheet, pink salt polygons, blue-white mirage seams, shade
+canopy, sanctuary waystone, red crystals, and ruin arches. The audit now has
+eighteen certified pairs and 14 pending reviews.
+
+Quartzroot Vault is the thirteenth unchanged v1 pair to pass. Its low battle view
+retains the heart-root arch, turquoise pool, bronze lanterns, crystal ledges,
+bridge hints, fossil roots, and stone paths. The audit now has nineteen certified
+pairs and 13 pending reviews.
+
+Tideglass Grotto is the fourteenth unchanged v1 pair to pass. Its high walking
+board and low battle stage share seven unmistakable water-cave landmarks without
+introducing a generic arena. The audit now has twenty certified pairs and 12
+pending reviews.
+
+Moonmilk Cavern is the fifteenth unchanged v1 pair to pass. Its high limestone
+walking board and low battle stage preserve seven shared healing-cave landmarks,
+with open combat lanes replacing no authored traversal geometry. The audit now
+has 21 certified pairs and 11 pending reviews.
+
+Prismfall Cavern is the sixteenth unchanged v1 pair to pass. Its lower battle
+camera preserves seven anchors from the horizon-free crystal walking board while
+opening a clean diagonal effects corridor. The audit now has 22 certified pairs
+and ten pending reviews.
+
+Prismfall Ravine is the seventeenth unchanged v1 pair to pass. Its high canyon
+walking board and low battle stage retain seven prismatic route anchors and clear
+combat staging without a generic arena conversion. The audit now has 23
+certified pairs and nine pending reviews.
+
+## 2026-07-30 Carlos Asterwake Weirfang Mentor
+
+- Added Shoal Keeper Maris to Asterwake Shoals as a progression-safe preview of Reedotter's mature `Weirfang Lutra` form.
+- Maris fields a level-10 Weirfang and level-10 Bellcrab against the route's level 8-11 ecology, making the evolved silhouette aspirational without placing a capturable level-16 form too early.
+- Live lesson tuning lowered the showcase Weirfang from level 11 to 10 and corrected the authored order: a level-matched Mossprig answers the opening rush with grass, then braces the exposed follow-up. Guarding first correctly gets cracked by Sluice Rend but prevented the slower required reply from landing.
+- The mentor teaches Weirfang's identity through two battle goals: answer its opening pressure with a grass attack shaped by the tidegrass habitat, then brace the exposed return cut.
+- Authored evolved forms now receive their registered signature move through the shared Vivo factory, so Weirfang enters this showcase with `Sluice Rend` active rather than a juvenile-only kit.
+- Maris uses the shared `avoidConsecutiveMove` trainer tactic so Weirfang demonstrates `Sluice Rend` as a signature opener without repeating it into every switch; the same data-driven pacing control is reusable for future mentor and gym showcases.
+
+## 2026-07-30 Carlos Bellcrab Evolution
+
+- Extended the common shoreline `Ferrum Pagurus` line from `Bellcrab` into `Carillon Pagurus`, a level-18 steel evolution gated by one steel win and three steel bond marks.
+- Added `Carillon Clamp`, a 23-power resonant focus attack that breaks prepared focus and regathers guard when it converts an exposed opening.
+- Replaced the baked parchment plate with a transparent production portrait at [`C:/Users/javie/OneDrive/Documents/AnimaCodex/src/assets/creatures/carillon-pagurus-portrait-v2.png`](C:/Users/javie/OneDrive/Documents/AnimaCodex/src/assets/creatures/carillon-pagurus-portrait-v2.png), giving both stages production battle art that composes cleanly over authored habitats.
+- Reclassified Asterwake Shoals' `shellTidegrass` as a steel-attunement habitat, so its level 8-11 Bellcrab captures have a believable local bond-training path toward the evolved form.
+- Added the deterministic `debugLeadEvolution` proof hook, which primes the authored win and bond requirements before running the normal XP transformation path; this verifies the form change and `Carillon Clamp` awakening together without bypassing progression logic.
+- Closed the final Storm Tender Kael balance gate with the exact replacement fixture: Dogemox completed the guard/focus lesson, Mossprig tolerated one missed Vine Jab and won at 5 HP, and Lanterncat remained unused.
+
+## 2026-07-30: Exact debug-party fixtures
+
+- Added `debugPartyMode=replace` as an opt-in companion to `debugParty=<speciesId:level[:nickname],...>`. Replacement mode clears the default starter before adding valid entries, so route and trainer endurance tests can use an exact authored party instead of silently carrying an extra inactive Dogemox.
+- Existing debug URLs remain append-mode by default. If every requested replacement entry is invalid, the boot restores the level 4 Dogemox fallback so debug tooling cannot leave battle code with an empty party.
+- Carlos's exact-party Storm Tender Kael fixture is now `?debugScene=thunderheadMesa&debugPartyMode=replace&debugParty=dogemox:11:Dogemox,mossprig:10:Mossprig,lanterncat:10:Lanterncat&debugTrainerBattle=stormTenderKael`.
+
+## Release capture status
+
+Peter's 2026-07-30 release pass produced five current native 16:9 Steam screenshot
+candidates from a freshly built unpacked Windows application. The capture host now
+uses an off-screen rendered window, an isolated temporary profile, disabled
+background throttling, and a per-shot timeout so WebGL scenes render consistently
+without leaving stuck capture processes. The battle HUD now spans the viewport in a
+fixed-height two-row command tray, and visual verification confirms that shots 02-05
+have no scrollbars or clipped command copy. Shot 01 remains unapproved because the
+Sanctuary Trail composition exposes translucent authored regions and placeholder-like
+field tokens; replace or presentation-clean that exploration shot next.
+
+## 2026-07-30 Steam Screenshot Capture
+
+- Added deterministic 1920x1080 Steam screenshot capture from the packaged Windows executable.
+- The five-image set in `release/steam-screenshots/` is visually approved: release
+  capture suppresses authoring geometry and tokens, battle panels fit cleanly, and
+  capture copy plus transformed-form names are store-facing.
+
+## 2026-07-30 Carlos Thunderplume Preview Battle
+
+- Added `Storm Tender Kael` to Thunderhead Mesa as a balanced route mentor with a level 10 `Voltpip` and specially trained level 11 `Thunderplume Crane`. The evolved form remains an aspirational preview below the player's level-15 evolution threshold; the level-11 tune prevents the exact three-Vivo route-party test from hinging on Mossprig landing one 94%-accuracy attack.
+- The battle previews the rare Stormchick line's first evolved silhouette and priority/focus identity while reserving level 32 `Stormspire Grus` for later progression.
+- Kael's authored lesson asks the player to guard through the opening electric tempo and land a focus-style counterattack, tying the creature's moveset to a readable field lesson.
+- A live route-level playtest corrected Kael's team order so Thunderplume now leads and delivers the opening pressure promised by the dialogue instead of appearing only after Voltpip switches.
+- A full three-Vivo route-level endurance playtest found the former level 15 Thunderplume knocked out level 11 Dogemox before its required focus reply could resolve. A later exact-party replacement test showed level 12 still made victory hinge on one 94%-accuracy Mossprig attack, so Kael's showcase lead is now level 11 while retaining its evolved silhouette and tactical identity.
+- The same pass raised `Guard Howl` to defensive priority 2, letting it actually cushion Thunderplume's priority-1 strike while still allowing the crane's priority-2 setup to move first.
+
+## 2026-07-29 Carlos Electric Crane Line
+
+- Added the complete three-stage electric crane line `Stormchick Grus` -> `Thunderplume Crane` -> `Stormspire Grus`, with electric-attunement evolution thresholds at levels 15 and 32.
+- Added four functional battle moves: `Static Step`, `Plume Jolt`, `Spear Beak`, and `Stormspire Spear`, using existing priority, focus, guard-break, and follow-up mechanics.
+- Added production field-guide portrait art for every stage under [`C:/Users/javie/OneDrive/Documents/AnimaCodex/src/assets/creatures`](C:/Users/javie/OneDrive/Documents/AnimaCodex/src/assets/creatures).
+- Added rare `Stormchick Grus` encounters to Thunderhead Mesa's level 8-11 charged-dust and stormgrass zones at weights 9 and 7, preserving the route's progression band while making its electric habitat more desirable to revisit.
+- Corrected multi-stage level-up selection so evolved Vivos only move forward through their transition list and apex forms cannot regress.
+
+## 2026-07-29 Steam Store Preparation
+
+- Added `docs/steam_store_page.md` with review-ready store copy, honest feature
+  metadata, a five-shot release-build capture plan, capsule direction, provisional
+  system requirements, and explicit pre-publication decisions.
+- No store data was published and no external Steam action was taken.
+
+## 2026-07-29 Windows Packaging Foundation
+
+- Added a hardened Electron desktop host and reproducible x64 portable Windows package command.
+- `npm run package:windows` validates content, builds the Vite runtime, and writes a versioned executable to `release/`.
+- Added `docs/release_readiness.md` as Peter's durable release outcome tracker.
+- Produced and launch-smoke-tested `release/Anima-Codex-0.1.0-Windows-x64.exe`; the local process stayed healthy for 15 seconds.
 
 ## 2026-05-10 Water Route Portrait Pass
 
@@ -1413,3 +1734,247 @@ This wiki is the durable agent-facing documentation surface for `Anima Codex`.
 - Updated [`C:/Users/Javier/Desktop/CodexCLI/2d-game-engine/projects/anima-codex/src/game/systems/battle.ts`](C:/Users/Javier/Desktop/CodexCLI/2d-game-engine/projects/anima-codex/src/game/systems/battle.ts) so rescue capture now communicates whether a wild Vivo is resisting, wavering, or fragile, and gives a better rescue chance when the target is weakened or left exposed by support play.
 - Added URL-based debug seeding in [`C:/Users/Javier/Desktop/CodexCLI/2d-game-engine/projects/anima-codex/src/main.ts`](C:/Users/Javier/Desktop/CodexCLI/2d-game-engine/projects/anima-codex/src/main.ts) so automation runs can preload a scene, reserve Vivos, and the sanctuary ledger for deterministic screenshots.
 - Captured a new verification screenshot at [`C:/Users/Javier/Desktop/CodexCLI/2d-game-engine/projects/anima-codex/docs/weekly-dev-2026-04-30-reserve-ledger.png`](C:/Users/Javier/Desktop/CodexCLI/2d-game-engine/projects/anima-codex/docs/weekly-dev-2026-04-30-reserve-ledger.png).
+
+## Release 2026-07-30 Desktop Runtime Security Pass
+
+- Upgraded the Windows desktop host to Electron 43.2.0 and refreshed
+  electron-builder and Vite to maintained releases.
+- The shipped dependency audit is now clean (`npm audit --omit=dev`: zero);
+  16 high findings remain isolated to electron-builder's development-only
+  packaging graph, whose npm-proposed forced fix is an obsolete major downgrade.
+- Switched the portable artifact to store-mode compression so the image-heavy
+  package completes predictably instead of stalling in outer 7-Zip compression.
+- `npm run package:windows` passed in 47 seconds and produced
+  [`C:/Users/javie/OneDrive/Documents/AnimaCodex/release/Anima-Codex-0.1.0-Windows-x64.exe`](C:/Users/javie/OneDrive/Documents/AnimaCodex/release/Anima-Codex-0.1.0-Windows-x64.exe)
+  at 827,563,395 bytes with SHA-256
+  `9B9AAC924A2991EE90C5DF9EB9B038C5B63E391C03E48C1E530292DC18D793A0`.
+- The refreshed package remained healthy through a 15-second launch smoke.
+
+## Release 2026-07-30 Windows Icon Pass
+
+- Added a production Dogemox-and-codex application emblem at
+  [`C:/Users/javie/OneDrive/Documents/AnimaCodex/build/anima-codex-icon-source-v1.png`](C:/Users/javie/OneDrive/Documents/AnimaCodex/build/anima-codex-icon-source-v1.png)
+  and wired the builder-facing copy into the Windows package configuration.
+- The icon follows the cozy-biotech storybook art bible: vigilant Dogemox, dark ear
+  silhouette, parchment codex, living DNA sprout, deep teal field, and restrained
+  gold glow with no title text.
+- `npm run package:windows` passed in 54 seconds and refreshed
+  [`C:/Users/javie/OneDrive/Documents/AnimaCodex/release/Anima-Codex-0.1.0-Windows-x64.exe`](C:/Users/javie/OneDrive/Documents/AnimaCodex/release/Anima-Codex-0.1.0-Windows-x64.exe)
+  at 827,963,267 bytes with SHA-256
+  `1174E594CFDBDF94AADC99638287680CDC45F462881A83DD390FB3D1928A7FC6`.
+- Extracted the finished executable's associated icon and visually confirmed the
+  Dogemox head remains readable at the native 32x32 Windows shell size.
+- The packaged app remained responsive through a 15-second launch smoke; all test
+  processes were intentionally terminated afterward.
+
+
+## Release 2026-07-30 Clean-Profile QA Attempt
+
+- Kept the clean-machine outcome open after the managed automation host blocked both
+  workspace shell setup and Electron's GPU subprocess before a first-boot capture.
+- Confirmed that software-rendering flags do not bypass this host-level process
+  restriction; no screenshot was accepted and no product rendering defect was inferred.
+- Recorded the exact failure evidence in
+  [`C:/Users/javie/OneDrive/Documents/AnimaCodex/release/qa/clean-profile-blocker-2026-07-30.json`](C:/Users/javie/OneDrive/Documents/AnimaCodex/release/qa/clean-profile-blocker-2026-07-30.json).
+- The next release QA session must use an unrestricted clean Windows user profile to
+  capture the save-slot front door, start slot 1, confirm input, and verify persistence
+  after relaunch.
+
+
+## Release 2026-07-30 Isolated-Profile QA Harness
+
+- Added `npm run verify:windows:clean` and command-line capture/profile controls to
+  make clean first-boot Windows verification reproducible and machine-readable.
+- The verifier owns its temporary profile, validates its evidence PNG and initialized
+  Chromium state, writes `release/qa/clean-profile-report.json`, and removes the
+  profile after the run.
+- Content validation, TypeScript, and Vite production output passed in this pulse.
+- The managed session blocked electron-builder and the Windows GPU subprocess, so the
+  refreshed package and first-boot screenshot are deliberately not represented as
+  passing. Clean-machine verification remains the next release action.
+
+
+## Release 2026-07-30 Offline Packaging Pass
+
+- Updated [`C:/Users/javie/OneDrive/Documents/AnimaCodex/scripts/package-windows.mjs`](C:/Users/javie/OneDrive/Documents/AnimaCodex/scripts/package-windows.mjs) so electron-builder uses the installed Electron 43.2.0 runtime and existing local caches instead of requiring a GitHub download.
+- The portable package completed successfully at 831,121,924 bytes with SHA-256 `9006CBC224F4D18AFD048879AEC19F777BFC5A8FCAC5CA0E99D0607B7C328387`.
+- Clean-profile visual certification remains open because this managed session terminated Electron's GPU subprocess before first paint with status `0xC0000135`; no screenshot was accepted and no product defect was inferred.
+- Exact blocker evidence is stored at [`C:/Users/javie/OneDrive/Documents/AnimaCodex/release/qa/clean-profile-blocker-2026-07-30.json`](C:/Users/javie/OneDrive/Documents/AnimaCodex/release/qa/clean-profile-blocker-2026-07-30.json).
+
+## Release 2026-07-30 Clean-Profile QA Harness
+
+- Added a reusable `npm run verify:windows:clean` mode to the established Windows
+  capture harness. It creates an empty temporary user profile, captures the genuine
+  first-boot save-slot screen, validates the PNG and runtime profile, writes a JSON
+  report, and removes the temporary profile.
+- Extended the desktop host so release QA can supply isolated user-data and capture
+  settings through environment variables or direct arguments without affecting normal
+  saves or the five approved Steam screenshot presets.
+- Made Windows packaging reuse the installed Electron 43.2.0 distribution and local
+  electron-builder caches, removing repeat-build dependence on GitHub downloads.
+- Content validation, TypeScript, Vite production output, and offline Windows packaging
+  passed. The refreshed portable artifact is 831,121,924 bytes with SHA-256
+  `9006CBC224F4D18AFD048879AEC19F777BFC5A8FCAC5CA0E99D0607B7C328387`.
+- The managed pulse could not complete native visual verification: Electron's GPU
+  subprocess was blocked with `0xC0000135`, and the normal Windows sandbox helper
+  could not start. Treat the refreshed artifact as unpromoted until the clean-profile
+  command passes in a normal Windows session.
+
+## Release 2026-07-30 Progression Integrity Gate
+
+- Production builds now run the full 32-scene route and encounter validator after authored-content validation, before TypeScript and Vite compilation.
+- Encounter zones are rejected when level bands, step ranges, rates, species weights, or encounter tables are invalid; duplicate species entries are also rejected.
+- Trainer battles are rejected when rosters fall outside the one-to-six Vivo limit or use levels outside 1-100.
+- The current curve passed: starter habitats span levels 2-6, optional branches rise through 7-11, and Thunderhead Mesa caps the authored route at levels 10-11.
+- Scene validation, content validation, TypeScript compilation, and the Vite production build all passed. Vite continues to report the known large main-chunk advisory.
+
+## Release 2026-07-30 Current-Content Windows Package
+
+- Refreshed the portable Windows executable after the latest creature content and
+  progression validation changes.
+- The full release pipeline passed: content validation, 32-scene validation,
+  TypeScript, Vite, Electron packaging, and portable artifact creation.
+- The artifact is 832,671,638 bytes with SHA-256
+  `8B4459305E7E45E3CBE6208040535F4C09FA49E659A7C7BEC4DA469E50556B45`.
+- Clean-profile first-boot verification remains the outstanding promotion gate.
+
+## Release 2026-07-30 Clean-Profile Promotion
+
+- The current Windows portable build passed isolated first-boot verification from an
+  empty profile and is now marked promoted in the local release manifest.
+- The 1831x1030 proof shows the genuine three-slot Field Log front door with correct
+  empty and disabled states and no debug UI.
+- The verifier now rejects visually blank PNGs using decoded luminance diversity and
+  non-dark coverage checks; this closed a false-positive path found during the pulse.
+- Promoted artifact SHA-256:
+  `11A3E7363BC11FE6F6189B5E73B4CABCDF2512BA3D2AF9E9322C63F7406CF0AB`.
+
+## Release 2026-07-30 Packaged Save/Relaunch Proof
+
+- Added a deterministic Windows persistence verifier that creates slot 1 through the
+  packaged game, exits, relaunches the same isolated profile, and captures the
+  restored Field Log.
+- The proof restored Moonfen Marsh, one active Vivo, zero reserve, and zero badges;
+  Continue, Load, Save, and Delete were all available after restart.
+- The current promoted executable is 832,674,323 bytes with SHA-256
+  `1470F8CDD7382E0FC7A2BBEB95F5FAFFCC9246C69D7C55043D48C925C0BDFAC4`.
+
+## Release 2026-07-30 Current Candidate and Steam Set
+
+- Rebuilt after the latest Maris/Weirfang balance changes and reran packaged
+  persistence verification successfully.
+- Recaptured all five Steam screenshot candidates from the refreshed executable and
+  visually approved the cohesive set for stable perspective, readable gameplay
+  verbs, distinct biomes, and clean framing.
+- Added a screenshot manifest that records each image's dimensions, byte size, and
+  SHA-256 against executable
+  `BC93E7F21F07F17A4CC69CFC4599B6290BA7601352E25D0946C3F81E3476579D`.
+
+## Release 2026-07-30 Windows Manifest
+
+- Windows packaging now emits a machine-readable artifact manifest containing the release version, target, exact executable filename, byte size, SHA-256, build time, promotion state, and remaining QA gate.
+- The generated manifest was independently checked against the executable: 832,671,749 bytes and SHA-256 `11A3E7363BC11FE6F6189B5E73B4CABCDF2512BA3D2AF9E9322C63F7406CF0AB`.
+- New builds remain unpromoted until clean-profile first-boot verification passes.
+
+## Carlos content pulse: Razorjack Lepus (2026-07-30)
+
+- The widely encountered Needlehare line now evolves into `Razorjack Lepus` at level 9 after a neutral victory and three neutral habitat marks. Existing level 7-10 floating-seedpod, signal-nest, and shade-awning routes provide the intended post-gym growth path without introducing an overleveled wild adult.
+- Evolution awakens `Cutline Volley`, a 22-power priority neutral focus strike that converts exposed openings and grants a strong self-guard on the successful exposed hit.
+- Runtime portrait integration uses the transparent `src/assets/creatures/razorjack-lepus-portrait-v1.png` production cutout through the shared form portrait registry.
+- A matched transparent rear three-quarter portrait now completes Razorjack's battle pair. The player-side view preserves its blade-split ears, amber muscle glands, seedpod tail, powerful hindquarters, and four-leg anatomy while facing the upper-right opponent.
+
+## Release 2026-07-30 Structured Steam Store Data
+
+- Added a validated machine-readable Steamworks handoff with the approved short description, About copy, feature bullets, ordered tags, provisional requirements, and five screenshot records.
+- The validator rejects stale screenshot hashes, malformed copy, encoding corruption, links, invalid tag counts, non-16:9 images, and premature claims for unresolved release decisions.
+- `npm run validate:store` passed: 175-character short description, 15 tags, and five approved screenshots bound to the promoted Windows executable.
+
+## Steam Key-Art Production Proof
+
+The current selected store-art source is `src/assets/marketing/anima-codex-steam-key-art-master-v2.png`, with validation metadata in `src/assets/marketing/anima-codex-steam-key-art-manifest-v1.json`. It establishes the rescue fantasy through juvenile Dogemox, the handler bond, evolved silhouettes, and distant confiscation patrols in a stable cozy-biotech composition. The master is textless; exact capsule crops and logo treatment remain release work.
+
+The internal-review comparison `src/assets/marketing/anima-codex-steam-key-art-dogemox-juvenile-v3.png` tests a stronger starter read with a compact body, shorter muzzle, and oversized paws. It is intentionally not promoted over V2, so the validated Steam derivative hashes remain intact pending brand review.
+
+## Steam Artwork Candidate Set
+
+Exact-format store and library artwork candidates are maintained in `src/assets/marketing/steam/`. The manifest `steam-artwork-manifest-v1.json` records dimensions, hashes, compliance intent, and review status. The set is local-only until branding is approved and an authorized Steamworks upload is requested.
+
+## Unified Release Gate
+
+`npm run validate:release` validates the promoted Windows artifact and all Steam-facing evidence together. It writes `release/qa/release-candidate-report.json`; the current candidate passes 23/23 integrity and readiness checks while preserving unresolved approvals and provisional hardware claims. The full `npm run release:check` workflow now finishes with this gate.
+
+## Carlos content pulse: Thornvault Sciurus
+
+Mossquirl now evolves at level 10 after three grass attunement marks into Thornvault Sciurus, gaining the focus-breaking Thornvault Barrage and a transparent full-body portrait. The form is tuned as the level-10 payoff for Mossquirl raised through Echobloom’s grass-attunement route.
+
+## Current Promoted Windows Candidate
+
+The promoted current-source artifact is `release/Anima-Codex-0.1.0-Windows-x64.exe` with SHA-256 `ACB65C861B752D36179E3B5CC1B0A36EF2E280EBDB814BD21C260592CC535786`. Clean-profile startup, packaged save/relaunch, five GPU-rendered Steam captures, structured store validation, and the 23-check unified gate all pass against this candidate. See `release/windows-portable-manifest.json` and `release/qa/release-candidate-report.json`.
+
+## Local Windows Benchmark
+
+`npm run benchmark:windows` measures three fresh-profile launches of the promoted portable executable and writes `release/qa/windows-local-benchmark.json`. The first reference run recorded a 16.752-second median to verified first render on Windows 10 with a Core i7-10750H and approximately 8 GB RAM, including portable self-extraction. This is not a minimum-spec claim; broader sustained-play hardware coverage remains required.
+
+## Steam Campaign Scope
+
+The promoted candidate is represented as a first-gym campaign. The authored source currently contains one gym leader, Senka, and the release arc closes after that victory and its patrol resolution. Steam validation rejects plural-gym or league promises until matching shipped content exists; see `release/qa/campaign-scope-report.json`.
+
+## Player Options
+
+The field-log Options pane now provides persistent Battle Audio, Reduced Motion, and Larger Text controls. These settings live outside save slots. Packaged proof is recorded in `release/qa/player-settings-report.json`; broader accessibility and controller claims remain intentionally withheld.
+
+## Windows Resolution QA
+
+`npm run verify:windows:resolutions` launches the promoted executable against isolated profiles and validates exact renderer viewports at 1280×720, 1366×768, and 1600×900. Results and hashes live in `release/qa/windows-resolution-report.json`. Full 1080p windowed content, fullscreen, ultrawide, 4K scaling, and multi-monitor transitions remain uncertified.
+
+## Runtime Source Fingerprint
+
+Every Windows package records a SHA-256 fingerprint covering shipped source, public configuration, desktop shell, build configuration, and dependency lockfiles. The unified release validator recomputes it, so a candidate cannot remain green after gameplay, assets, or packaged inputs drift. The implementation is shared by `scripts/package-windows.mjs` and `scripts/validate-release-candidate.mjs` through `scripts/runtime-source-fingerprint.mjs`.
+
+The first production use detected the concurrent Briar Lynx rear-sprite integration, invalidated the older executable, and forced a rebuild. The current promoted candidate is SHA-256 `C85512C0EB52361A3275552B9B2FB5AB50D2DE0EF4CDE1F81E5E2492E66B0028` and passes the expanded 28-check gate against source fingerprint `0469ED17AD74168CCA9D54A6EBF7B448613528430C7A95D804F446716D86DC2A`.
+
+## Steam Artwork Title Safety Correction
+
+Following owner review, all seven title-bearing assets were rebuilt with explicit safe margins. The correction removes the clipped final `X` from the main capsule and restores complete outer glyphs in the transparent library logo; the prior rejected set is archived under `src/assets/marketing/steam/archive/title-clipped-v1/`.
+
+## Latest Current-Source Promotion
+
+The source-fingerprint gate subsequently detected new Copperling and Stormvault Columba production art plus battle-scene changes. The Windows candidate was rebuilt rather than allowing stale evidence to pass. Executable SHA-256 `D63C6D9F602E25E7B31ADC214184A1AD40234DF357364D1460A43D41CAEA8A03` now matches the 168-file runtime fingerprint `0D68B5C468B236A00971DC192FEF05C6E14B3E060710C5E1B1466CC5E0AADC1D` and passes all 28 internal-review checks.
+
+Dogemox later received a matched front/rear production-art pair. The candidate was refreshed again so the packaged battle view and Steam evidence reflect that improvement. The current executable is SHA-256 `2927BE7093B461C7F19270F99A1220F04214AA069AE5C833874B5A6A310D1EE2`, matching runtime fingerprint `E7F6F106C4DD31CE3BF261AC5A53D85C7DFC4011C10FB4E2B760238DE79E1B86`, with 28/28 checks passing.
+
+Briar Lynx's rear anatomy was then corrected and Faultcrown Rhinoceros received its paired rear battle view. The current promoted executable is SHA-256 `3DCEA134C392E003662DD00A796715B30930185B65BDA6F6541D711AA09C0716`, matching runtime fingerprint `9F503B52D0EC720E977D16A66123BEF2312BAC34E0C9F0E9760FCC86B4EF4742`. Packaged capture tooling now tolerates portable extraction delays and transient Chromium profile locks; the full 28-check gate passes.
+
+## Steam-Depot Package
+
+`scripts/package-steam-depot.mjs` creates a direct-launch unpacked Windows directory at `release/windows-depot/`, which models Steam installation more closely than the portable self-extractor. On the current reference host its three-launch median to first render is 17.718 seconds, compared with 31.350 seconds for the portable wrapper. The depot executable and benchmark are fingerprint-bound to current runtime source, and the unified gate now passes 30/30 checks. No Steam upload has occurred.
+
+The current depot and portable candidate also include Razorjack Lepus's authored rear battle view. Both distributions match runtime fingerprint `768F74221882F3C55598B5EE8AD3ACA04D8A223A749555D93E19AE6049634874`; the refreshed depot median is 12.325 seconds and the 30-check gate remains green.
+
+Kilncrest Equus now also uses a dedicated rear battle view. Portable and depot packages match runtime fingerprint `E3CE71A8F8BC996740D327A62C8159486B69FBA215EF97EDFC13292BB4C18B8F`; the depot median is 12.203 seconds and all 30 release checks pass.
+
+Briarback Mustela now also has a dedicated rear battle view in both distributions. They match runtime fingerprint `9AD0413372DD98A18E3F3EFCB86F766FF8D6CEEAA643F36CD4151EEBCA77C911`; the depot median is 11.171 seconds and the 30-check gate passes.
+
+Carillon Pagurus now has its authored rear battle view in both distributions. They match runtime fingerprint `3F718651285C7A4C93AAE34CC73C7CF58A406DC86F485DC42F4D6F6D792C0F92`; the depot median is 10.196 seconds and all 30 checks pass.
+
+Weirfang Lutra now also has its authored rear battle view in portable and depot builds. Both match runtime fingerprint `891337B2F99B0FA128A4F3C850D1D5A50504AD88DF8A278CFE1FD54F20E8E8ED`; the depot median is 17.705 seconds and all 30 checks pass.
+
+Revised Thunderplume Crane and Stormspire Grus front portraits and their dedicated rear views now ship in both distributions. They match runtime fingerprint `DFC6369C5F91F1E8144AFA25B966A1D95170BB37B08749908962F9A9508F4C45`; the depot median is 9.897 seconds and all 30 checks pass.
+
+Thornvault Sciurus's revised portrait and dedicated rear view now ship in both distributions. They match runtime fingerprint `4C2CA35295D2C24E4E65160BEFB84507E80F7FCC1E9722116D4B939763293EE3`; the depot median is 10.376 seconds and all 30 checks pass.
+
+Ignis Canis's revised front/rear pair and the revised Ember Hollow and Briar Town battle backdrops now ship in both distributions. They match runtime fingerprint `E1EBABA18DAFF82AFE0E34F8F125B83E84F3C726B0A2265AF9F505035239E26A`; the depot median is 10.854 seconds and all 30 checks pass.
+
+That snapshot was superseded during final handoff when a new Starglass Roost battle asset arrived before its runtime integration. The source gate is intentionally red until that asset is integrated and a new current-source package is built.
+
+Starglass Roost is now integrated together with revised Sanctuary Trail, Briar Gym, and Lantern Nursery battle stages and Astra Corvus's front/rear pair. Both Windows distributions match runtime fingerprint `E1FD6588586DEE356BDFD5FB87B5D9367883CF13D68F4D56651D8028CBCCC602`; the depot median is 9.831 seconds and all 30 checks pass.
+
+Ironjaw Lupus's revised front/rear pair now ships in both distributions. They match runtime fingerprint `8F9D9A978269B4F17F3AC30305CCF70D089ACF4D4743A5735F922D1B0EFC6CB1`; the depot median is 10.147 seconds and all 30 checks pass.
+
+Lunaris Bufo's revised front portrait and dedicated rear battle view now ship in both distributions. They match the 197-file runtime fingerprint `FB329E773AB223A5CB0CD55F4B405A2268A9CE62D6D786EE6ED48A01212BDC9E`; the depot median is 10.321 seconds and all 30 checks pass.
+
+Tidehorn's revised front portrait and dedicated rear battle view now ship in both distributions. They match the 199-file runtime fingerprint `5426D1A94DF6983B59C8324FA4821F8BB164B436FE860ED9807F847B4200BF74`; the depot median is 10.400 seconds and all 30 checks pass.
+
+Verdaconda's revised front portrait and dedicated rear battle view now ship in both distributions. They match the 201-file runtime fingerprint `0443DCBE079314EA27696557882AD84D1DA3DB5233EF692FCE7C950C98FBC952`; the depot median is 11.757 seconds and all 30 checks pass.
+
+Magmadon's revised front portrait and dedicated rear battle view now ship in both distributions. They match the 203-file runtime fingerprint `03FCA472C80B6993FA67E7E05EA26E96F59D2F9B32CD69E8670AEE7A673718FA`; the depot median is 11.145 seconds and all 30 checks pass.

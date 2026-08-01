@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "productName": "Anima Codex",
+  "version": "0.1.0",
+  "platform": "windows",
+  "architecture": "x64",
+  "packaging": "portable",
+  "artifact": "Anima-Codex-0.1.0-Windows-x64.exe",
+  "bytes": 880261541,
+  "sha256": "DA24B4AE241E5201EF17B2F0B728AA07D17342B3A068A27D9394A67247A55183",
+  "createdAt": "2026-08-01T14:46:28.638Z",
+  "sourceFingerprint": {
+    "algorithm": "SHA-256",
+    "sha256": "03FCA472C80B6993FA67E7E05EA26E96F59D2F9B32CD69E8670AEE7A673718FA",
+    "fileCount": 203,
+    "roots": [
+      "src",
+      "public",
+      "desktop"
+    ],
+    "explicitFiles": [
+      "package.json",
+      "package-lock.json",
+      "tsconfig.json",
+      "tsconfig.app.json",
+      "tsconfig.node.json",
+      "vite.config.ts"
+    ]
+  },
+  "promoted": true,
+  "promotionGate": "npm run verify:windows:clean",
+  "verificationReport": "release/qa/persistence-profile-report.json",
+  "promotion": {
+    "status": "verified",
+    "verifiedAt": "2026-08-01T14:47:50.586Z",
+    "checks": [
+      "clean-profile-startup",
+      "save-persistence"
+    ]
+  }
+}

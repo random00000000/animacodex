@@ -2,6 +2,45 @@
 
 This registry stores locked or semi-locked Vivo species concepts. It should guide art generation, battle data, encounter planning, and Codex entries.
 
+## Dogemox Starter Presentation
+
+- Dogemox now has paired transparent production portraits: a vigilant front three-quarter field-guide/enemy view and a matching rear three-quarter player-battle view.
+- The corrected juvenile design replaces the old smiling pet read with heavy forepaws, guarded amber eyes, a closed mouth, broad shoulders, and organic amber gland lines that imply future guardian strength.
+- The starter remains bondable and warm, but it is visibly not safe by default—the intended foundation for its environmental form system.
+
+## Flora Lynx
+
+- Common line: `Thornkit` -> `Briar Lynx`
+- Element: Grass
+- Evolution: level 8 after one grass victory and two grass habitat marks
+- Runtime payoff: Briar Lynx gains a broader adult stat package and immediately awakens `Crownroot Ambush`, a priority 20-power impact attack that regathers behind a guard after exploiting an exposed opponent
+- Habitat fit: Thornkit already inhabits the grass and overgrowth routes where its required grass battle history and habitat marks accrue naturally
+- Art proof: paired transparent full-body portraits: a front three-quarter field-guide view and a matching rear three-quarter player-battle view with leaf-blade ear tufts, living briar shoulders, seedpod glands, root-wrapped limbs, heavy claws, and a hooked bramble tail
+- Rear-view correction: the original five-leg generation was rejected and replaced by a simplified rear battle silhouette with the far limbs fully occluded, removing the duplicated central belly leg.
+- Design intent: a watchful adolescent forest ambusher that remains bondable but clearly carries dangerous apex-predator potential
+- Avoid: harmless house cat, smiling mascot, generic leaf-covered pet, manufactured armor, or cropped anatomy
+
+## Petra Rhinoceros
+
+- Common line: `Basalthorn` -> `Faultcrown Rhinoceros`
+- Element: Stone
+- Evolution: level 15 after one stone victory and three stone habitat marks
+- Art proof: paired transparent full-body portraits now give Faultcrown a front three-quarter field-guide/enemy view and a matched rear three-quarter player-battle view.
+- Rear-view identity lock: the amber faultglass horn, basalt shoulder crown, amber dorsal crystals, root tendons, and moss seams remain readable while the planted four-leg anatomy faces the upper-right opponent.
+- Habitat fit: Basalthorn appears through quarry shelves, mineral-root crossings, ravines, and stone-route trainer teams; Orsa's level-9 Prismfall preview teaches the evolved line's eventual guard-breaking role without placing level-15 adults in the wild.
+- Avoid: ordinary rhino, manufactured armor, decorative crystal noise, saddle gear, cropped horn or hooves, and anatomically unexplained limbs.
+
+## Velox Lepus
+
+- Common line: `Needlehare` -> `Razorjack Lepus`
+- Element: Neutral
+- Evolution: level 9 after one neutral victory and three neutral habitat marks
+- Runtime payoff: evolution awakens `Cutline Volley`, a 22-power priority focus strike that converts exposed openings into a strong self-guard.
+- Art proof: Razorjack now has paired transparent full-body portraits: a front three-quarter field-guide/enemy view and a matched rear three-quarter player-battle view.
+- Rear-view identity lock: the blade-split reed ears, tawny-and-cream coat, amber muscle-gland lines, dark claws, spring-loaded hindquarters, and layered seedpod tail remain readable while facing the upper-right opponent.
+- Habitat fit: Needlehare is guaranteed before the first gym and remains common through later neutral seedpod, signal-nest, and shade-awning routes; the level-9 evolution is a trained payoff rather than an overleveled wild spawn.
+- Avoid: harmless mascot rabbit, ordinary pet proportions, metal blades, cropped ears or claws, extra ears or tails, and anatomically unexplained limbs.
+
 ## Naming Pattern
 
 Use Latin-like elemental taxonomy for registry names:
@@ -76,6 +115,8 @@ When adding a creature line, define:
 - Evolution direction: grows from a small watchful companion into an elegant luminous raven with stronger prism organs and control/status battle identity
 - Current first-form proof: the juvenile line can now become `Astra Corvus` after light attunement, light-aligned victories, and level growth in the first playable
 - Current world proof: `Roost Watcher Miren` and `Leader Senka` can now field an awakened `Astra Corvus`, so the first playable shows this line as a lived sanctuary form and not only a player-side unlock
+- Current art proof: `Astra Corvus` now has a border-free transparent front/rear production pair. The enemy view points its hooked beak toward the lower-left player lane and exposes the luminous chest prism; the player view faces upper-right and reveals the grown conductor lattice across both folded wings and its coherent crystalline tail fan.
+- Anatomy check: both angles preserve exactly two attached legs, two attached folded wings, one head, one beak, and one tail fan. Contracted alpha mattes remove the chroma edge without adding a sticker outline around the silhouette.
 - Battle role: fast special attacker or evasive status/control line
 - Personality: watchful, clever, aloof, protective once bonded
 - Habitat: dawn forests, high branches, old observatories, rooflines near restricted facilities
@@ -93,6 +134,7 @@ When adding a creature line, define:
 - Battle role: aggressive physical attacker, loyal guard, early starter candidate
 - Relationship to Dogemox: either Dogemox's fire registry form or the official registry name for the fire-aligned Dogemox line; decide later
 - Current world proof: `Ash Scout Iven` can now field an awakened `Ignis Canis`, so the first playable treats the fire-canine bond path as a real sanctuary battle line instead of registry-only theory
+- Current art proof: `Ignis Canis` now has a matched transparent front/rear battle pair. The enemy view presents the guarded face, ember chest organ, heavy coal paws, and four-claw stance; the player view turns the same canine toward the upper-right opponent lane and reveals its engineered spinal heat vents. Both cutouts are border-free, with no parchment, halo, or sticker outline.
 - Personality: brave, loyal, intense, protective
 - Habitat: warm industrial edges, ash grass, old boiler paths, sun-baked fields, fire-gym approach routes
 - Art direction: storybook canine with ember glands, warm internal glow, coal-dark paws, heat-vent fur tufts, and biological flame-like shapes
@@ -151,7 +193,8 @@ When adding a creature line, define:
 - Evolution direction: grows from a patient moonfen broodling into a heavier lantern-marsh sentinel that can calm a line before answering with concentrated light pressure
 - Current first-form proof: Fenlight can now become `Lunaris Bufo` after light attunement, light-aligned victories, and level growth in the first playable, gaining `Moonwell Pulse` as its immediate sentinel-form finisher
 - Current world proof: `Moonfen Marsh` now carries Fenlight as a native rescue and wild line, and `Moonfen Keeper Orla` now fields an awakened `Lunaris Bufo` to prove the wetland's calm-then-burst lesson in live play
-- Current art proof: both `Fenlight` and `Lunaris Bufo` now have stored portrait plates wired into runtime battle presentation, so the full Moonfen line reads as authored creature art instead of dropping to fallback shapes after awakening
+- Current art proof: `Lunaris Bufo` now has a border-free transparent front/rear battle pair. The enemy view exposes its enormous lantern throat sac and rooted forefeet; the player view faces upper-right and reveals the broad marsh-gold node line, translucent reed frills, and massive folded hindquarters that sell the awakened sentinel's defensive weight.
+- Anatomy check: both views preserve one head, one body, two forelegs, and two folded hind legs with coherent webbed feet. Contracted alpha mattes keep the translucent frills readable without a magenta key edge or sticker outline.
 - Battle role: defensive light support and focus striker that guards first, then answers with a steadied luminous burst
 - Personality: patient, alert, strange, quietly brave, protective of frightened smaller rescues
 - Habitat: still pools, lantern-lily shallows, root bridges, and marsh sanctuary watchposts
@@ -216,6 +259,8 @@ When adding a creature line, define:
 - Starting stage: moody wolf puppy with strong paws, amber stare, early grown steel claws, metallic baby teeth, and a defiant bad-boy posture instead of a happy pet expression
 - Evolution direction: starts intentionally modest, then grows into compact `Ironjaw Lupus`, a deceptively not-huge adolescent with clearer steel teeth, claws, foreleg plating, a real first power spike, and immediate `Lockjaw Bite`; later becomes `Titan Lupus`, a massive rideable steel wolf guardian with mount-scale shoulders, heavy grown metal plating, and immediate `Anvil Pounce`
 - Current runtime proof: rare wild Grimweld can now appear in `Glassroot Burrow`, while `Gym Keeper Pella` fields `Ironjaw Lupus` inside Briar Gym's practice ring
+- Current art proof: `Ironjaw Lupus` now has a border-free transparent front/rear battle pair. The enemy view presents its Lockjaw Bite teeth, amber stare, compact adolescent mass, and grown steel-keratin paws; the player view faces upper-right and reveals the shoulder, spine, hip, and tail growth without falling back to Grimweld's juvenile angle.
+- Anatomy check: both views preserve four attached legs, two ears, one head, one muzzle, and one tail. Contracted alpha mattes remove the green-key edge without adding a sticker outline.
 - Battle role: steel impact bruiser and guard breaker that is acceptable but not dominant as a puppy, then becomes good on first evolution by bracing through pressure, cracking guarded stances with `Iron Claw`, breaking focus lines with `Lockjaw Bite`, and later converting openings through `Anvil Pounce`
 - Personality: stubborn, protective, suspicious of handlers, loyal once bonded, difficult to intimidate
 - Habitat: hidden mineral-root dens, sanctuary burrows, old warding halls, and gym practice rings where grown steel claws can bite into stone; `Glassroot Burrow` rootbeds and the `Ironroot Seam` are the current steel attunement path
@@ -229,11 +274,14 @@ When adding a creature line, define:
 - Element: Steel
 - Ancestry influence: hermit crab / shoreline shell guardian
 - Starting stage: compact but dangerous shell-carrier with a heavy resonant dome, serious eye stalks, asymmetrical crushing claw weight, and steel seam glow that reads biological rather than manufactured
-- Current runtime proof: `Bellcrab` is a live wild encounter across `Moonfen Marsh`, `Tideglass Grotto`, `Moonmilk Cavern`, `Tidegate Causeway`, and `Asterwake Shoals`, and now uses a stored portrait plate in battle and roster presentation instead of a generated fallback body
-- Battle role: slow steel guard punisher that braces cleanly, then answers with shell clamps and bite pressure once the attacker overcommits
+- Evolution direction: grows into `Carillon Pagurus`, a broad mature shoreline fortress whose carried shell develops three nested resonant bell chambers, heavier tide-worn ridges, a massive crushing claw, and enough grown-steel mass to hold a whole crossing
+- Current runtime proof: `Bellcrab` is a live wild encounter across `Moonfen Marsh`, `Tideglass Grotto`, `Moonmilk Cavern`, `Tidegate Causeway`, and `Asterwake Shoals`; it can now evolve into `Carillon Pagurus` at level 18 after a steel win and three steel bond marks gathered through habitat training such as Asterwake's shell tidegrass
+- Current art proof: both `Bellcrab` and `Carillon Pagurus` have stored portrait plates wired into battle and roster presentation. Carillon now has a paired transparent set: a front three-quarter field-guide/enemy plate and a rear three-quarter player-battle plate that preserves its three nested resonant bell chambers, oversized crushing claw, eye stalks, antennae, barnacles, and amber living-steel seams.
+- Rear-view anatomy check: the mature hermit-crab body keeps its expected multi-legged decapod read without detached or central duplicate limbs; the visible walking appendages trace back beneath the carried shell, while the shell chambers remain grown biological structures rather than manufactured bells.
+- Battle role: slow steel guard punisher that braces cleanly, answers with shell clamps and bite pressure once the attacker overcommits, then evolves into a focus-breaking fortress through `Carillon Clamp`, which can regather guard after converting an exposed opening
 - Personality: stubborn, defensive, territorial about safe shelves and shell beds, difficult to move once it settles into a lane
 - Habitat: shell paths, tide pools, shallow cave shelves, quiet marsh crossings, and resonant shoreline pockets where steel pressure can feel natural instead of industrial
-- Art direction: cozy-biotech storybook hermit crab with a bell-dome shell, resonant steel ridges, warm lantern seams, heavy claws, and a grounded shoreline silhouette
+- Art direction: cozy-biotech storybook hermit crab with a bell-dome shell, resonant steel ridges, warm lantern seams, heavy claws, and a grounded shoreline silhouette; the mature form should read as a multi-chamber living carillon grown from shell biology, never as manufactured armor
 - Avoid: novelty beach-crab comedy, hard robot plating, or a normal hermit crab with metal bolted onto the shell
 
 ### Aqua Bubalus
@@ -246,11 +294,30 @@ When adding a creature line, define:
 - Evolution direction: grows into `Tidehorn Bubalus`, a broad adult marsh guardian with larger horns, reinforced shoulders, and enough pressure-wave mass to turn a charge into a water attack
 - Current runtime proof: `Tidecalf` is a wild Moonfen Marsh encounter in the silver-reed pools, can gather water attunement from the `Tidehoof Pool`, and can evolve into `Tidehorn Bubalus` through water bond growth and level training
 - Current world proof: `Moonfen Keeper Orla` now fields `Tidehorn Bubalus`, so the adult form can be fought on the same wetland route where the player first finds the calf
+- Current art proof: `Tidehorn Bubalus` now has a border-free transparent front/rear battle pair. The enemy view presents its severe amber stare, symmetrical pressure horns, chest reservoirs, and planted Flood Charge stance; the player view faces upper-right and reveals the reinforced shoulders, paired hip reservoirs, and coherent short tail.
+- Anatomy check: both views preserve four attached load-bearing legs, four heavy hooves, two horns, two ears, one head, and one tail. The water biology remains contained in organic sacs and horn channels, avoiding splash fragments and decorative silhouette borders.
 - Battle role: durable water bruiser that starts with bracing and shoulder-pressure attacks, then becomes a stronger charge fighter with `Horn Surge` and `Flood Charge`
 - Personality: stubborn, suspicious, protective, slow to trust, difficult to push once it plants its hooves
 - Habitat: still pools, silver reeds, flooded herd paths, and marsh sanctuary lanes where heavy hooves can build pressure without tearing the refuge apart
 - Art direction: cozy-biotech storybook buffalo with heavy readable silhouette, living-water organs, wet horn ridges, and field-guide clarity; the calf should be bondable but already visibly powerful
 - Avoid: ordinary farm calf, happy plush mascot, blue color-swap animal, hard armor, or comedic cow energy
+
+### Flora Mustela
+
+- Registry name: `Flora Mustela`
+- Common role: Mossprig first-rescue grass guardian line
+- Element: Grass
+- Ancestry influence: pine marten / wolverine / living briar shelter
+- Starting stage: small serious mustelid with cream face and chest, moss-green pelt, leaf mantle, root-dark paws, seed-bud whiskers, and a living branch tail
+- Current runtime proof: `Mossprig` is the guaranteed Lantern Nursery grass rescue, appears throughout early grass habitats and trainer teams, and teaches opening control through `Root Snare` plus exposed-hit recovery through `Vine Jab`
+- Evolution direction: at level 9 after one grass victory and three grass habitat marks, Mossprig becomes `Briarback Mustela`, a broad low sanctuary guardian with root-wrapped limbs, thorn-edged mantle, seedpod pressure glands, and a hooked branch tail
+- Mature signature: `Briarlock Maul`, a 22-power priority impact that cracks guarded lines and closes the thorn mantle into a partial guard after exploiting exposure
+- Progression intent: the guaranteed early rescue can reach its mature payoff through the existing level 7-10 grass routes after the first gym, giving a familiar partner meaningful longevity without placing wild adults beside juvenile captures
+- Progression preview: Garden Warden Tamsin fields a level-7 `Briarback Mustela` beside Sporebell Garden's level 7-9 warning patch. The solo mentor asks players to guard its opening force and answer with a grounded impact strike, showcasing the adult without adding it to the juvenile wild table.
+- Current art proof: Briarback now has paired transparent full-body portraits, with a front three-quarter field-guide/enemy view and a matched rear three-quarter player view that preserves its cream face, moss pelt, thorn mantle, root-wrapped claws, round seedpod glands, hooked branch tail, and verified four-leg anatomy.
+- Personality: watchful, stubborn, protective of smaller rescues, slow to accept handling, and frighteningly decisive when a threat crosses its shelter line
+- Art direction: mature mustelid anatomy and dangerous weight remain readable beneath integrated organic plant growth; preserve family resemblance without turning the briars into clothing or armor
+- Avoid: mascot ferret softness, cheerful woodland companion poses, ordinary badger with leaves pasted on, hard armor, mechanical vines, or an oversized harmless Mossprig
 
 ### Flora Lutra
 
@@ -260,6 +327,11 @@ When adding a creature line, define:
 - Ancestry influence: otter / reed-runner
 - Starting stage: agile young otter with serious eyes, rootlike whiskers, reed-frond tail mass, wet fur, and enough claw weight to read dangerous instead of playful
 - Current runtime proof: `Reedotter` is a live wild encounter across `Moonfen Marsh`, `Tideglass Grotto`, `Moonmilk Cavern`, `Tidegate Causeway`, and `Asterwake Shoals`, and now uses a stored portrait plate in battle and roster presentation instead of a generated fallback body
+- Evolution direction: at level 16 after one grass victory and three grass bond marks, Reedotter becomes `Weirfang Lutra`, a heavier river hunter with a saw-edged living reed tail and the signature `Sluice Rend` guard-break rush
+- Current art proof: `Weirfang Lutra` now has paired transparent production portraits: a front three-quarter field-guide/enemy view and a rear three-quarter player-battle view. Both preserve the line's serious wetland-predator silhouette, dark wet fur, amber eyes, root whiskers, golden-green reed mantle, heavy claws, and enormous saw-edged living reed tail.
+- Rear-view anatomy check: exactly four legs trace cleanly to the shoulders and hips, with two rounded ears and one sweeping tail; the far paws are partially occluded by the torso and tail rather than duplicated beneath the belly.
+- Progression preview: Shoal Keeper Maris previews a level-10 `Weirfang Lutra` at Asterwake Shoals beside the route’s level 8-11 wild ecology; authored forms receive their registered signature, so this mentor showcase carries `Sluice Rend` without making the evolved form capturable early. The lesson asks a level-matched Mossprig to answer the opening rush with grass, then brace the exposed return cut; reversing that order leaves the attacker exposed before its required reply.
+- Mentor pacing: Maris discourages exact consecutive move repetition, preserving `Sluice Rend` as Weirfang's dangerous signature opener while letting its broader Reedotter kit create playable switch and counterattack windows.
 - Battle role: fast grass skirmisher that steals tempo from the waterline and punishes exposed targets with quick follow-through hits
 - Personality: clever, slippery, territorial, hard to corner, bondable only after the handler proves they can match its pace without overforcing it
 - Habitat: reed beds, still pools, shallow cave channels, tidegrass, shell paths, and marsh-edge crossings where wet roots and grass pressure overlap
@@ -302,7 +374,7 @@ When adding a creature line, define:
 - Element: Ice
 - Ancestry influence: polar bear / glacier guardian
 - Starting stage: no cute cub emphasis; `Frosthulk` should read as a massive, snow-loaded bear that has learned to let ice armor build over its body
-- Current runtime proof: `Frosthulk` is a wild Frostglass Orchard encounter, uses the live `ice` element, gains ice bond marks from the `Frostglass Well`, and benefits from the orchard's ice-boosting battlefield condition
+- Current runtime proof: `Frosthulk` is a rare level 5–7 wild Frostglass Orchard encounter that escalates into the level 7–11 Aurorashard Tundra, uses the live `ice` element, gains ice bond marks from the `Frostglass Well`, and benefits from the orchard's ice-boosting battlefield condition. Its border-free transparent battle pair preserves the same snow-loaded glacier bear from an inward-facing opponent view and a dedicated rear player view.
 - Battle role: slow ice tank and impact bruiser that braces with `Snowmantle Brace`, cracks guards with `Iceclaw Maul`, and converts openings with `Glacier Crash`
 - Personality: calm, stubborn, protective, slow to anger, hard to move once it has settled under its snow mantle
 - Habitat: frostglass orchards, snow-choked caretaker lanes, crystal fruit rows, ice wells, and cold sanctuary paths where snow can gather safely on a living body
@@ -374,11 +446,13 @@ When adding a creature line, define:
 - Element: Fire
 - Ancestry influence: horse / ember-runner
 - Starting stage: young fire horse with readable equine muzzle, hooves, legs, arched neck, and a serious restless posture, plus biological fire organs that make it feel engineered rather than merely burning
-- Current runtime proof: `Cinderhoof` is a wild Ember Hollow encounter in the `cinderReeds`, and `Ash Scout Iven` can field one beside an awakened `Ignis Canis`
-- Battle role: fast physical fire striker that uses `Ember Mane Guard` to brace, `Kiln Gallop` to crack guarded stances, and stronger fire charges as it levels
+- Mature stage: `Kilncrest Equus` at level 16 after fire wins and three fire-attunement marks, broadening into a furnace-ribbed adult charger with an obsidian vent crest and visibly heavier legs
+- Current runtime proof: `Cinderhoof` is distributed through 19 Ember Hollow and magma-route habitat slots, and `Ash Scout Iven` can field one beside an awakened `Ignis Canis`; `Cinderlake Keeper Sera` previews a level-9 `Kilncrest Equus` with its signature move actually equipped, while raising one still requires level 16 and sustained fire-route training
+- Battle role: fast physical fire striker that uses `Ember Mane Guard` to brace and `Kiln Gallop` to crack guarded stances; `Kilncrest Equus` awakens `Caldera Trample`, a stronger guard-breaking charge that regathers after exploiting an exposed line
+- Current art proof: Kilncrest now has paired transparent full-body portraits, with a front three-quarter field-guide/enemy view and a matched rear three-quarter player view that preserves its furnace ribs, obsidian vent fins, basalt hide, flame mane and tail, heavy hooves, and verified four-leg anatomy.
 - Personality: proud, impatient, wary of handlers, loyal only after it trusts the handler can steer heat without cruelty
 - Habitat: basalt pockets, cinder reeds, vent paths, ash grass, and hot sanctuary routes where speed and restraint can be trained together
-- Art direction: cozy-biotech storybook horse with ember glands, coal-dark hooves, heat-vent mane and tail, warm internal glow, and a clean field-guide silhouette
+- Art direction: cozy-biotech storybook horse with ember glands, coal-dark hooves, heat-vent mane and tail, warm internal glow, and a clean field-guide silhouette; the mature form gains organic obsidian heat fins, sequential furnace ribs, and adult charging mass without becoming armored or mechanical
 - Avoid: normal horse with flames pasted on, generic unicorn, saddle or rider, hard armor, robot parts, photoreal racehorse, or horror hellhorse language
 
 ### Ignis Elephas
@@ -388,7 +462,7 @@ When adding a creature line, define:
 - Element: Fire
 - Ancestry influence: elephant / basalt vent grazer
 - Starting stage: no baby emphasis in the first playable; `Magmadon` should read as a massive, patient, dangerous fire-route Vivo with magma stored behind a heavy trunk and basalt-plated shoulders
-- Current runtime proof: `Magmadon` is a wild Ember Hollow encounter in the cinder reeds and warm moss edges, uses a stored portrait plate, and can be fought on `Ash Scout Iven`'s team before the vent path opens
+- Current runtime proof: `Magmadon` is a wild Ember Hollow encounter in the cinder reeds and warm moss edges, can be fought on `Ash Scout Iven`'s team before the vent path opens, and now uses a border-free transparent battle pair. Its front plate presents the trunk heat-vent and ember tusks toward the opposing lane, while the dedicated rear plate carries the same basalt spine, magma seams, and single ember-frond tail into the player's side.
 - Battle role: slow fire bruiser and guard breaker that braces with `Magma Trunk Guard`, fires pressurized magma through `Trunk Magma Jet`, cracks guarded stances with `Basalt Stomp`, and later converts openings with `Lava Deluge`
 - Personality: stern, territorial, protective of vent paths, slow to trust, almost never playful once the ground starts heating
 - Habitat: magma vents, cinder reeds, basalt shelves, warm moss around heat fissures, and ash paths where heavy bodies can cool molten armor between charges
@@ -402,7 +476,10 @@ When adding a creature line, define:
 - Element: Grass
 - Ancestry influence: squirrel / canopy seed-runner
 - Starting stage: juvenile grass squirrel with sharp alert eyes, root-like claws, moss ruff, seed-gland hips, and a fern-frond tail that reads as engineered plant biology rather than a leaf pasted onto a normal squirrel
-- Current runtime proof: `Mossquirl` is a wild encounter in `Lantern Nursery` moss beds and `Sanctuary Trail` sungrass, and `Nursery Tender Sola` can field one in the pre-gym training loop
+- Evolution direction: at level 10 after sustained grass attunement, Mossquirl can become `Thornvault Sciurus`, a low canopy guardian with root claws, acorn pressure glands, and three thorn-edged shield fronds that fire `Thornvault Barrage`
+- Current runtime proof: `Mossquirl` is a wild encounter from `Lantern Nursery` through `Echobloom Canopy`; its level-10 grass-attuned evolution now provides the mid-route payoff
+- Current art proof: `Thornvault Sciurus` now has paired transparent full-body portraits. The front three-quarter field-guide/enemy view and rear three-quarter player view both preserve its three thorn-edged shield fronds, four root-clawed legs, two bark ears, luminous root veins, and the two enormous bark-ringed acorn pressure glands that make the evolution memorable.
+- Rear-view anatomy check: exactly four legs trace to the shoulders and hips, exactly two ears sit on the head, the tail remains one biological organ divided into three shield fronds, and exactly two oversized acorn glands sit symmetrically at the hips without creating extra limb silhouettes.
 - Battle role: fast grass skirmisher that marks targets with `Seedspine Scatter`, converts exposed openings with `Frond Tail Whip`, and later pressures focus lines with `Acorn Sling`
 - Personality: mischievous, nervous, territorial, quick to flee when handled roughly, protective once bonded
 - Habitat: moss beds, sungrass, nursery hedges, root lanes, and canopy-edge sanctuary paths where seed caches and soft ground give it room to spring
@@ -418,6 +495,8 @@ When adding a creature line, define:
 - Starting stage: small venomous grass snake with leaf-hood buds, translucent venom sacs, thorn-like fang roots, vine-scale patterning, and a seed-pod tail marker
 - Evolution direction: grows into `Verdaconda`, a massive anaconda-style grass serpent with heavy vine-muscle coils, larger venom sacs, thorned fangs, and stronger venom attacks
 - Current runtime proof: `Venivy` is a wild Moonfen Marsh encounter in `lanternBloomShallows`, and `Moonfen Keeper Orla` can field evolved `Verdaconda`
+- Current art proof: `Verdaconda` now has a border-free transparent front/rear battle pair. The enemy view presents its thorn fangs, paired translucent venom sacs, heavy luminous belly, and coiled constrictor weight; the player view faces upper-right and reveals the leaf-hood back, moss ridge, continuous coils, and seedpod tail.
+- Anatomy check: both views trace as one continuous serpent body with exactly one head and one seedpod tail tip. The coils remain connected rather than reading as detached loops, and the contracted matte avoids a sticker outline around the leaf-scale silhouette.
 - Battle role: venom-grass skirmisher that starts small and fast with `Venom Sap Bite` and `Toxin Bloom`, then becomes a bulky evolved constrictor with `Venom Coil Crush`
 - Personality: watchful, territorial, defensive of hidden nests, slow to trust, more likely to strike than posture when cornered
 - Habitat: lantern-lily shallows, wet root edges, spore gardens, mossy riverbanks, and other beautiful-but-dangerous grass habitats
@@ -459,8 +538,9 @@ When adding a creature line, define:
 - Element: Stone
 - Ancestry influence: rhinoceros / quarry grazer
 - Starting stage: compact but already heavy rhino with mineral-grown hide plates, basalt horn rings, stone hooves, and a stubborn planted stance
-- Current runtime proof: `Basalthorn` is a live Glassroot Burrow quarry encounter, can receive stone bond marks from the `Basalt Warmstone`, and appears on `Burrow Warden Tovin`'s team as the first stone-element opponent
-- Battle role: slow stone tank that braces with `Stonehide Brace`, cracks guards with `Horn Quake`, and turns clean openings into heavy `Boulder Charge` pressure
+- Evolution direction: at level 15 after one stone victory and three stone habitat marks, Basalthorn becomes `Faultcrown Rhinoceros`, a monumental quarry guardian with standing-stone shoulders, root tendons, and a long faultglass horn grown through stacked basalt rings
+- Current runtime proof: `Basalthorn` is a live Glassroot Burrow quarry encounter, can receive stone bond marks from the `Basalt Warmstone`, and appears on `Burrow Warden Tovin`'s team as the first stone-element opponent; Ravine Keeper Orsa previews a level-9 `Faultcrown Rhinoceros` at the end of Prismfall Ravine through a guard-then-grass battle lesson
+- Battle role: slow stone tank that braces with `Stonehide Brace`, cracks guards with `Horn Quake`, turns clean openings into `Boulder Charge` pressure, and matures into the 24-power guard-breaking `Faultline Stampede`
 - Personality: stubborn, territorial, hard to startle, loyal after trust, more likely to plant its feet than flee
 - Habitat: quarry shelves, mineral-root burrows, warm stone slabs, old cave paths, and sanctuary routes where heavy Vivos can dig in without being seen from patrol roads
 - Art direction: cozy-biotech storybook rhino with biological slate plates, basalt horn growth, amber life-glow in cracks, mossy seams, rootlike tendons, and readable stone weight
@@ -479,6 +559,23 @@ When adding a creature line, define:
 - Habitat: quarry shelves, mineral-root caves, warm basalt slabs, mossy stone dens, and hidden sanctuary tunnels where a huge body can block patrol routes
 - Art direction: cozy-biotech storybook bear with living slate plates grown through fur, moss and root seams, basalt claws, amber mineral glow in chest and paws, and a broad immovable silhouette
 - Avoid: ordinary bear in rock armor, ice/polar bear language, robot bear, hard manufactured plating, horror monster, photoreal zoo naturalism, or smiling plush toy energy
+
+### Fulgur Grus
+
+- Registry name: `Fulgur Grus`
+- Common line: `Stormchick Grus` -> `Thunderplume Crane` -> `Stormspire Grus`
+- Element: Electric
+- Ancestry influence: crane / lightning-rod sentinel
+- Starting stage: wary long-legged juvenile with a lowered spear beak, severe eyes, copper conductor capillaries, and blue-white crest organs that already imply dangerous reach and initiative control
+- Current runtime proof: `Stormchick Grus` is a rare level 8-11 encounter in Thunderhead Mesa's charged dust and stormgrass; `Storm Tender Kael` leads with a specially trained level 11 `Thunderplume Crane` as the route's aspirational mentor battle, tuned so a level 11 Dogemox can guard and resolve the promised focus counterattack without making the full exact-party endurance battle hinge on one follow-up accuracy roll; player-owned Stormchicks evolve at level 15 after three electric attunement marks, then reach `Stormspire Grus` at level 32 after six electric marks
+- Battle role: fragile, very fast focus striker that uses priority setup and attacks to seize tempo, shatter focus, crack guards, and grow into the heavy `Stormspire Spear` finisher
+- Personality: vigilant, aloof, precise, reluctant to waste movement, and willing to bond with handlers who can guide its speed without dulling it
+- Habitat: lightning-rod fields, dry storm grass, wind towers, charged ridges, and high sanctuary routes
+- Art direction: the three-stage production line preserves charcoal-and-cream plumage, grown copper conductors, spear-beak anatomy, and blue-white crest organs while escalating from awkward juvenile to elegant sentinel to towering storm spire. `Thunderplume Crane` now has a paired transparent portrait set: a clean front three-quarter field-guide/enemy view and a rear three-quarter player-battle view with no parchment or scene baked behind either angle.
+- Thunderplume anatomy check: both angles preserve exactly two long legs, two folded wings, one spear beak, one coherent torso, and one trailing crest array; every leg and wing traces to its expected attachment rather than disappearing into or duplicating beneath the plumage.
+- Final-form art proof: `Stormspire Grus` now also has a paired transparent production set, replacing its parchment-backed plate with a full-body front three-quarter view and a matched rear three-quarter player view. The level-32 form preserves its cathedral-scale spread wings, cobalt-black feather fields, copper conductor lattice, lightning-rod crest, spear beak, and trailing storm train across both angles.
+- Stormspire anatomy check: exactly two planted legs connect beneath one torso and exactly two enormous wings connect at the shoulders in each portrait; the rear view keeps the tail train visually separate from both wing roots and does not duplicate joints beneath the body.
+- Avoid: ordinary crane with pasted sparks, robot bird, thunder-god costume, soft chick mascot, comedy proportions, or decorative electricity with no anatomical source
 
 ## Open Species Decisions
 
@@ -503,3 +600,11 @@ When adding a creature line, define:
 - Current base element: Neutral
 - Current runtime role: first route-speed proof and early sanctuary rescue partner
 - Current tactical proof: can join through a scripted `Sanctuary Trail` rescue, then pressure exposed targets with `Feint Hop` before slower battlers can answer
+- Evolution direction: at level 9 after one neutral-aligned victory and three neutral habitat marks, Needlehare becomes `Razorjack Lepus`, a heavier route hunter with blade-split reed ears, spring-loaded hindquarters, and the awakened `Cutline Volley`
+- Progression fit: the level-7 Latch rescue and the level 7-10 neutral seedpod, signal-nest, and shade-awning habitats naturally put evolution within reach during the post-gym route without spawning the mature form too early
+- Battle role after evolution: very fast neutral focus skirmisher; `Cutline Volley` has priority, rewards the line’s exposed-target trait, and regathers behind a strong guard when it connects with an exposed target
+- Mature form: `Razorjack Lepus`
+- Evolution condition: level 7 after at least one neutral-aligned win and 2 neutral attunement earned through route training
+- Mature silhouette: heavier spring-loaded hindquarters, swept organic blade-quill ears, dark foreclaws, and an amber gland-light cutline that makes its future speed dangerous at a glance
+- Signature attack: `Cutline Blitz`, a priority route charge that cracks guard and lets Razorjack regather behind cover when it catches an exposed target
+- Placement intent: the line remains the recurring neutral speed temptation across early sanctuary, trail, burrow, roost, and hollow content; its level-7 evolution turns a familiar rescue into a desirable first-gym tempo specialist rather than adding a disconnected rare spawn
