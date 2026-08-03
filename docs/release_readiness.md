@@ -32,6 +32,18 @@ application identity is available.
 - [ ] Complete first-to-final progression QA
 - [ ] Steamworks depot and launch-option configuration
 
+## 2026-08-02 two-gym release scope
+
+- The playable source now includes two complete campaign chapters: Senka's Briar
+  Steward trial and Tamsin's Sporebell habitat-adaptation trial.
+- Steam store validation now requires both authored leaders, explicitly names the
+  first two gyms in public copy, and continues to reject league or ten-gym claims.
+- The fifth Steam capture preset now presents the newer Sporebell trial so the
+  screenshot set reflects the current campaign ceiling.
+- The previously promoted executable predates this source increment. It remains a
+  historical candidate until the Windows package, isolated-profile checks, depot,
+  benchmark, and five-shot set are refreshed together.
+
 ## Latest verification
 
 2026-07-29:
@@ -506,3 +518,10 @@ human approves composition, spoilers, and store-page suitability.
 - Both packages match the 203-file runtime fingerprint `03FCA472C80B6993FA67E7E05EA26E96F59D2F9B32CD69E8670AEE7A673718FA`.
 - Portable SHA-256: `DA24B4AE241E5201EF17B2F0B728AA07D17342B3A068A27D9394A67247A55183`; depot executable SHA-256: `1E530AC7C0B98F87CE305AC3672BA9CFCF4CA1C1DC7DFDEF4DBA753DB3920971`.
 - Clean boot, persistence, three resolutions, five refreshed Steam captures, store validation, and both benchmarks passed. Depot median: 11.145 seconds; unified gate: 30/30.
+
+## 2026-08-01 — Frosthulk Paired-Art Promotion
+
+- Replaced Frosthulk's bordered plate with a transparent revised front portrait and added its dedicated rear battle view to both Windows distributions.
+- Both packages match the 205-file runtime fingerprint `13F808F31B8319F2AAD614DFE46747277FA94F32881C32AF2E56324C006CEACB`.
+- Portable SHA-256: `C92E2B66A98D4010A5AD76FC48A18B120E7696D9E40634EC43BEEE56CDB5F443`; depot executable SHA-256: `3F498ED877912CCE42D5E83603359883BFE504EEFC2BDAFF6BE2D926635E0456`.
+- Clean boot, persistence, three resolutions, five refreshed Steam captures, store validation, and both benchmarks passed. Depot median: 10.264 seconds; unified gate: 30/30.

@@ -154,6 +154,12 @@ const formatSaveTime = (savedAt?: string) =>
       })
     : "No saved field log";
 
+const formatPlayTime = (totalSeconds: number) => {
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
+};
+
 const renderFrontDoor = (status = "") => {
   const summaries = Array.from({ length: SAVE_SLOT_COUNT }, (_, index) => gameState.getFieldLogSummary(index + 1));
   const summary = summaries[selectedSaveSlot - 1] ?? summaries[0];
@@ -178,7 +184,7 @@ const renderFrontDoor = (status = "") => {
       (slotSummary) => `
         <button type="button" class="${slotSummary.slot === selectedSaveSlot ? "active" : ""}" data-front-door-action="select-slot" data-front-door-slot="${slotSummary.slot}">
           <strong>Slot ${slotSummary.slot}</strong>
-          <span>${slotSummary.hasSave ? `${slotSummary.sceneName} / ${formatSaveTime(slotSummary.savedAt)}` : "Empty"}</span>
+          <span>${slotSummary.hasSave ? `${slotSummary.chapterTitle} / ${formatPlayTime(slotSummary.playTimeSeconds)} / ${formatSaveTime(slotSummary.savedAt)}` : "Empty"}</span>
         </button>
       `,
     )
@@ -214,7 +220,7 @@ const escapeHtml = (value: string) =>
 const renderMenuPane = (summary: ReturnType<typeof gameState.getFieldLogSummary>) => {
   if (activeMenuPane === "fieldLog") {
     return summary.hasSave
-      ? `<p>Slot ${selectedSaveSlot}: ${summary.sceneName}, ${summary.partyCount} active Vivo${summary.partyCount === 1 ? "" : "s"}, ${summary.reserveCount} in reserve, ${summary.badges} badge${summary.badges === 1 ? "" : "s"} (${formatSaveTime(summary.savedAt)}).</p>`
+      ? `<p>Slot ${selectedSaveSlot}: <strong>${summary.chapterTitle}</strong>${summary.chapterComplete ? ` · Chapter complete${summary.chapterCompletedAtSeconds !== undefined ? ` at ${formatPlayTime(summary.chapterCompletedAtSeconds)}` : ""}${summary.chapterPacing ? ` · ${summary.chapterPacing.label}` : ""}` : ""}. ${summary.sceneName}, ${summary.partyCount} active Vivo${summary.partyCount === 1 ? "" : "s"}, ${summary.reserveCount} in reserve, ${summary.badges > 0 ? summary.badgeTitles.join(", ") : "no steward badges"}, evidence: ${summary.stewardshipEvidenceTitles.length > 0 ? summary.stewardshipEvidenceTitles.join(", ") : "none recorded"}, ${formatPlayTime(summary.playTimeSeconds)} active playtime (${formatSaveTime(summary.savedAt)}).</p>`
       : `<p>Slot ${selectedSaveSlot} is empty. Start a new route, then save here to create it.</p>`;
   }
 
@@ -362,6 +368,9 @@ document.body.addEventListener("click", (event) => {
 });
 
 setFrontDoorOpen(!hasDebugBoot || searchParams.has("debugMenu"));
+if (searchParams.get("debugOpenDevPanel") === "1") {
+  document.body.classList.add("dev-panel-open");
+}
 
 const debugScene = searchParams.get("debugScene");
 if (debugScene && gameState.getSceneById(debugScene)) {
@@ -876,6 +885,10 @@ window.__animaCodexDebug = {
 
 window.addEventListener("beforeunload", () => {
   gameState.flushProgressSave();
+});
+
+document.addEventListener("visibilitychange", () => {
+  gameState.setPlaySessionActive(!document.hidden);
 });
 
 new Phaser.Game({

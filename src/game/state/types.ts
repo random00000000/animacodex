@@ -224,6 +224,7 @@ export interface SceneRequirement {
   defeatedTrainerIdsAny?: string[];
   badgeCountAtLeast?: number;
   partyFormCountAtLeast?: number;
+  usedInteractableIdsAll?: string[];
 }
 
 export interface SceneObstacle {

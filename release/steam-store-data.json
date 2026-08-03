@@ -28,7 +28,7 @@
   "primaryGenre": "Creature-collecting RPG",
   "perspective": "2D top-down scene-based exploration",
   "shortDescription": "Rescue engineered creatures called Vivos, explore a hand-painted storybook world, and build a bonded team for tactical turn-based battles against the forces confiscating them.",
-  "aboutThisGame": "The government has decided that Vivos are too dangerous to remain free.\n\nIn Anima Codex, you begin with Dogemox, a young engineered lifeform whose future depends on the places it survives and the bond you build together. Travel through a connected world of authored paintings, find Vivos in their natural habitats, and protect them from becoming tools of the people hunting them.\n\nRaise a team shaped by its journey. Vivos are more than animals with an element attached. Their biology, attacks, and forms reflect their habitat and training history. Exposure to fire, light, steel, water, and other forces can open new transformations.\n\nFight with intent. Battle one-on-one with a party of up to six Vivos. Speed, elemental matchups, impact and focus attacks, guards, setup moves, switching, and battlefield conditions all matter. Read an opponent's plan, create an opening, and choose when to press an advantage or protect a partner.\n\nRescue instead of simply collecting. Calm frightened Vivos, judge when trust is possible, and bring rescued companions into your active team or sanctuary reserve. Every rescue preserves a memory of where and how that bond began.\n\nExplore a painted world. Walk through scene-sized illustrations connected by trails, caves, marshes, gardens, town gates, and hidden habitat routes. Each place pairs its encounter ecology with a matching illustrated battle arena, creating a consistent storybook world without a moving 3D camera.\n\nStand between Vivos and confiscation. Train for tactical trials, challenge specialist trainers, and overcome Briar Town's first gym to prove that power guided by trust does not belong to the state. Your roster, rescues, transformations, and victories shape the argument for Vivo freedom.",
+  "aboutThisGame": "The government has decided that Vivos are too dangerous to remain free.\n\nIn Anima Codex, you begin with Dogemox, a young engineered lifeform whose future depends on the places it survives and the bond you build together. Travel through a connected world of authored paintings, find Vivos in their natural habitats, and protect them from becoming tools of the people hunting them.\n\nRaise a team shaped by its journey. Vivos are more than animals with an element attached. Their biology, attacks, and forms reflect their habitat and training history. Exposure to fire, light, steel, water, and other forces can open new transformations.\n\nFight with intent. Battle one-on-one with a party of up to six Vivos. Speed, elemental matchups, impact and focus attacks, guards, setup moves, switching, and battlefield conditions all matter. Read an opponent's plan, create an opening, and choose when to press an advantage or protect a partner.\n\nRescue instead of simply collecting. Calm frightened Vivos, judge when trust is possible, and bring rescued companions into your active team or sanctuary reserve. Every rescue preserves a memory of where and how that bond began.\n\nExplore a painted world. Walk through scene-sized illustrations connected by trails, caves, marshes, gardens, town gates, and hidden habitat routes. Each place pairs its encounter ecology with a matching illustrated battle arena, creating a consistent storybook world without a moving 3D camera.\n\nStand between Vivos and confiscation. Train for tactical trials and overcome the first two gyms: prove disciplined stewardship in Briar Town, then carry that lesson into Sporebell Garden's habitat-adaptation trial. Your roster, rescues, transformations, and victories shape the argument for Vivo freedom.",
   "featureBullets": [
     "Explore connected, hand-painted top-down scenes and elemental habitats.",
     "Rescue and raise engineered lifeforms with serious, dangerous potential.",
@@ -36,7 +36,7 @@
     "Fight tactical 1v1 battles with switching, support moves, and type matchups.",
     "Learn attacks through leveling and make explicit four-move loadout choices.",
     "Transform Vivos through environmental exposure, battle history, and bond milestones.",
-    "Challenge authored trainers and Briar Town's first gym through readable tactical lessons.",
+    "Challenge authored trainers and the first two gyms through readable tactical lessons.",
     "Continue across three local save slots with automatic route-progress saving."
   ],
   "tags": [
@@ -74,10 +74,10 @@
     }
   },
   "screenshotManifest": "release/steam-screenshots/manifest.json",
-  "screenshotArtifactSha256": "DA24B4AE241E5201EF17B2F0B728AA07D17342B3A068A27D9394A67247A55183",
+  "screenshotArtifactSha256": "C92E2B66A98D4010A5AD76FC48A18B120E7696D9E40634EC43BEEE56CDB5F443",
   "unresolvedDecisions": [
     "Developer and publisher legal display names",
-    "Approval that the implemented first-gym campaign is the intended commercial release scope",
+    "Approval that the implemented two-gym preview is the intended commercial release scope",
     "Release-date strategy",
     "Early Access decision",
     "Controller support claim",

@@ -672,6 +672,12 @@ export const sceneDex: Record<string, SceneDefinition> = {
         targetX: 128,
         targetY: 536,
         label: "Step into Sporebell Garden",
+        requirement: {
+          defeatedTrainerId: "townPatrolRhis",
+        },
+        blockedLabel: "Garden quarantine",
+        blockedText:
+          "The garden route stays sealed until Briar's confiscation patrol is driven away and the sanctuary can document habitat work safely.",
       },
     ],
     encounterZones: [
@@ -1063,6 +1069,11 @@ export const sceneDex: Record<string, SceneDefinition> = {
           style: "opportunist",
           avoidConsecutiveMove: true,
         },
+        battleRequirement: {
+          usedInteractableIdsAll: ["warningLightTree"],
+        },
+        blockedText:
+          "Tamsin sends you through Cadence Lab Annex first. Study the living Warning Light Tree, then return with evidence that you read the habitat before testing its guardian.",
         battleGoals: [
           {
             type: "useGuard",
@@ -1079,7 +1090,8 @@ export const sceneDex: Record<string, SceneDefinition> = {
           },
         ],
         team: [
-          { speciesId: "mossprig", level: 7, formName: "Briarback Mustela" },
+          { speciesId: "venivy", level: 11 },
+          { speciesId: "mossprig", level: 13, formName: "Briarback Mustela" },
         ],
       },
     ],

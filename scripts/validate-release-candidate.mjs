@@ -80,12 +80,12 @@ check(
 check(
   "campaign-scope-honesty",
   campaignScope.status === "passed" &&
-    campaignScope.releaseScope === "first-gym-campaign" &&
+    campaignScope.releaseScope === "two-gym-preview" &&
     campaignScope.artifactSha256 === windows.sha256 &&
-    campaignScope.authoredGymLeaderIds?.length === 1 &&
-    campaignScope.publicCopyNamesFirstGym === true &&
+    campaignScope.authoredGymLeaderIds?.length === 2 &&
+    campaignScope.publicCopyNamesFirstTwoGyms === true &&
     campaignScope.publicCopyAvoidsLaterCampaignClaims === true,
-  "campaign scope evidence is missing, stale, or exceeds the implemented first-gym release",
+  "campaign scope evidence is missing, stale, or exceeds the implemented two-gym preview",
 );
 const settingsEvidence = await verifyFile(
   playerSettings.evidence?.path,

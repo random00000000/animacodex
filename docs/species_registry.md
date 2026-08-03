@@ -158,12 +158,14 @@ When adding a creature line, define:
 ### Fulgur Columba
 
 - Registry name: `Fulgur Columba`
-- Common role: Voltpip electric pigeon
+- Common role: `Voltpip` -> `Stormvault Columba` electric pigeon line
 - Element: Electric
 - Ancestry influence: pigeon / storm-roost city bird
 - Starting stage: small, cute, round electric pigeon with soft chest feathers, nervous bright eyes, and one wing visibly storing a dangerous discharge
-- Current runtime proof: `Voltpip` is a wild Coppervine Runoff encounter, uses the live `electric` element, gathers electric bond pressure from charged runoff habitats, and appears in battle through a stored portrait plate
-- Battle role: fragile focus striker with intentionally narrow move identity: `Static Peck` is weak and ordinary, while `Stormcache Bolt` is the one powerful electric attack that defines why handlers seek it
+- Evolution direction: at level 11 after an electric victory and three electric habitat marks, Voltpip becomes `Stormvault Columba`, a broad adolescent pigeon whose enlarged asymmetric flight-feather vault is fed by three wing-root capacitors
+- Current runtime proof: `Voltpip` remains a level-appropriate Coppervine Runoff catch and gathers electric bond pressure from its charged habitats; the evolved form stays trained-only in the current slice and awakens `Skyvault Bolt`
+- Current art proof: `Stormvault Columba` has a border-free transparent front/rear battle pair. Its enemy view aims lower-left with the enlarged storm wing fanned behind three cyan capacitors; its dedicated player view faces upper-right and preserves the same three-node wing anatomy, copper-blue back veins, two attached wings, two taloned legs, and tail fan.
+- Battle role: fragile focus striker with intentionally narrow move identity: `Static Peck` remains ordinary, `Stormcache Bolt` proves the juvenile's dangerous storage organ, and the evolved 31-power `Skyvault Bolt` is the same single-discharge idea scaled into a stronger focus-line shatter
 - Personality: sweet, skittish, curious, eager to bond, but likely to panic-release its stored charge if cornered
 - Habitat: charged gutters, coppervine mats, blue runoff pools, half-sunk lantern posts, and storm-wet rooflines where living conductive roots hum through water
 - Art direction: cozy-biotech storybook pigeon with a cute round silhouette, soft gray and cream feathers, organic copper-blue feather veins, small shoulder charge organs, and one raised charged wing
@@ -172,12 +174,14 @@ When adding a creature line, define:
 ### Fulgur Ovis
 
 - Registry name: `Fulgur Ovis`
-- Common role: Stormwool electric sheep
+- Common role: `Stormwool` -> `Tempestram Ovis` electric sheep line
 - Element: Electric
 - Ancestry influence: sheep / storm-grazer
 - Starting stage: young but sturdy sheep with a serious face, dense static-charged wool, cloven hooves, and conductive horns that imply it can ram harder than its cute shape suggests
-- Current runtime proof: `Stormwool` is a wild Coppervine Runoff encounter, uses the live `electric` element, gathers electric bond pressure in charged pools and coppervine mats, and appears in battle through a stored portrait plate
-- Battle role: sturdy electric guard-breaker that braces with `Static Fleece` and pressures guarded targets with `Thunder Ram`
+- Evolution direction: at level 10 after an electric victory and three electric habitat marks, Stormwool becomes `Tempestram Ovis`, a broad storm ram whose twin spherical flank capacitors store enough ball lightning to power a full-body charge
+- Current runtime proof: `Stormwool` is a level-appropriate wild Coppervine Runoff encounter and gathers electric bond pressure in charged pools and coppervine mats; its new evolution awakens `Ball Lightning Stampede` rather than placing the mature form into the early wild table
+- Current art proof: `Tempestram Ovis` has a border-free transparent front/rear battle pair. The enemy view lowers its twin spiral horns toward the lower-left lane; the player view faces upper-right and clearly reveals both enormous ball-lightning flank glands, four coherent legs, cloven hooves, short tail, and thundercloud wool mantle.
+- Battle role: sturdy electric guard-breaker that braces with `Static Fleece`, pressures guarded targets with `Thunder Ram`, then cracks harder targets and regathers static guard through `Ball Lightning Stampede`
 - Personality: stubborn, bondable, easily startled by sudden noise, but difficult to move once its wool is charged and its hooves are planted
 - Habitat: charged runoff meadows, coppervine mats, wet gutter reeds, storm-warmed stone, and old sanctuary grazing pockets where static can collect in wool
 - Art direction: cozy-biotech storybook sheep with cream wool, charcoal face and legs, copper-blue conductive horn ridges, shoulder and chest charge organs, and blue-white sparks crawling through wool curls
@@ -209,8 +213,8 @@ When adding a creature line, define:
 - Ancestry influence: goat kid / mountain caprine
 - Starting stage: juvenile light goat with a compact body, sturdy legs, watchful eyes, and short translucent prism horns that already imply future charge force
 - Evolution direction: grows from a cautious luminous kid into a harder-driving prism ram line that steadies itself behind a guard before answering with concentrated light bursts
-- Current runtime proof: Prismkid is a live wild encounter in `Moonfen Marsh` and `Starglass Roost`, and `Roost Watcher Miren` now fields an evolved `Prismur` so the line's route payoff appears in live battle content before the player unlocks it
-- Current art proof: both `Prismkid` and `Prismur` now have stored portrait plates wired into runtime battle and roster presentation, so the full `Lumen Capra` line no longer falls back to generated body plates
+- Current runtime proof: Prismkid is a live wild encounter in `Moonfen Marsh` and `Starglass Roost`; at level 7 after a light-aligned win and two light attunement marks it evolves into `Prismur` with `Prism Ram`, while `Roost Watcher Miren` previews that payoff at route-appropriate strength
+- Current art proof: `Prismur` now has a border-free transparent front/rear battle pair. The enemy view lowers its heavier chest and two faceted ram horns toward the lower-left lane; the dedicated player view faces upper-right and reveals both horn curves, prism shoulder and hip organs, planted cloven hooves, and compact tail.
 - Battle role: guarded light bruiser that can settle first, then convert the calmer line into focused pressure
 - Personality: cautious, stubborn, alert, quietly brave, more likely to hold ground than flee once it commits
 - Habitat: moonlit marsh edges, prism-clear uplands, observatory grazing lanes, and other calm luminous routes
@@ -227,7 +231,8 @@ When adding a creature line, define:
 - Starting stage: juvenile light feline with oversized paws, tall translucent ears, sharp cheek fur, luminous whisker roots, and a crouched posture that implies future panther force
 - Evolution direction: grows from a tense sanctuary-edge stalker into `Lantern Panthera`, a sleek young panther guardian with heavier shoulders, stronger prism organs, and a more controlled predatory silhouette
 - Current runtime proof: Lanterncat is a live wild encounter on the light-route tables in `Starglass Roost`, the later silvergrass routes, and the current observatory branch, giving those scenes a more overtly dangerous juvenile predator line
-- Current art proof: both `Lanterncat` and `Lantern Panthera` now have stored portrait plates wired into runtime battle presentation, so the line no longer falls back to generated combat bodies when it appears or awakens
+- Current runtime proof: `Lanterncat` evolves into `Lantern Panthera` at level 9 after a light-aligned win and three light attunement marks, awakening its own `Prismfang Pounce` instead of borrowing the corvid line's `Aurora Dive`
+- Current art proof: `Lantern Panthera` now has a border-free transparent front/rear battle pair. The enemy view pounces toward the lower-left lane with its throat light and golden claws exposed; the dedicated player view faces upper-right and reveals both prism shoulder organs, the rosette back, powerful hips, and single lantern-tipped tail.
 - Battle role: fast light predator that turns focused setup into sharp burst pressure while keeping a threatening, watchful identity instead of a pure caster read
 - Personality: guarded, intelligent, poised, not openly affectionate, but fiercely protective once it chooses a handler
 - Habitat: observatory ledges, silvergrass lanes, lantern-lit ruins, and other quiet luminous routes where a young predator can watch before it commits
@@ -242,8 +247,8 @@ When adding a creature line, define:
 - Ancestry influence: panther / wildcat
 - Starting stage: juvenile shadow panther with oversized paws, a low stalking posture, a void-dark chest organ, and dim violet veinwork that makes it look restrained rather than decorative
 - Evolution direction: grows from a tense sanctuary-burrow stalker into `Noctis Panthera`, a sleeker adolescent shadow hunter with firmer shoulders, longer whisker organs, and stronger pressure on exposed targets
-- Current runtime proof: `Shadecub` is now a live rare wild encounter in the `umbraRoots` pocket inside `Glassroot Burrow`, can gain shadow attunement from the `Umbra Knot`, and can awaken into `Noctis Panthera` through shadow victories, attunement, and level growth
-- Current art proof: both `Shadecub` and `Noctis Panthera` now have stored portrait plates wired into runtime battle presentation, roster cards, and admin creature audits
+- Current runtime proof: `Shadecub` is a live rare wild encounter in the `umbraRoots` pocket inside `Glassroot Burrow`; at level 8 after a shadow-aligned win and two shadow attunement marks from training such as the `Umbra Knot`, it awakens into `Noctis Panthera` with `Void Latch`
+- Current art proof: `Noctis Panthera` now has a border-free transparent front/rear battle pair. The enemy view stalks toward the lower-left lane with its void chest organ exposed; the dedicated player view faces upper-right and reveals the violet vein lattice across its shoulder blades, hips, and single shadow-fringed tail.
 - Battle role: fast shadow predator that opens with setup pressure, then punishes exposed or focus-reliant targets with sharp follow-through attacks
 - Personality: guarded, patient, territorial, deeply observant, and calmer when a handler stops pushing lantern light into its cover
 - Habitat: root-cradle burrows, blackout reed tunnels, dim sanctuary pockets, and other routes where shadow pressure feels like shelter rather than corruption
@@ -258,14 +263,28 @@ When adding a creature line, define:
 - Ancestry influence: wolf / guardian canine
 - Starting stage: moody wolf puppy with strong paws, amber stare, early grown steel claws, metallic baby teeth, and a defiant bad-boy posture instead of a happy pet expression
 - Evolution direction: starts intentionally modest, then grows into compact `Ironjaw Lupus`, a deceptively not-huge adolescent with clearer steel teeth, claws, foreleg plating, a real first power spike, and immediate `Lockjaw Bite`; later becomes `Titan Lupus`, a massive rideable steel wolf guardian with mount-scale shoulders, heavy grown metal plating, and immediate `Anvil Pounce`
-- Current runtime proof: rare wild Grimweld can now appear in `Glassroot Burrow`, while `Gym Keeper Pella` fields `Ironjaw Lupus` inside Briar Gym's practice ring
-- Current art proof: `Ironjaw Lupus` now has a border-free transparent front/rear battle pair. The enemy view presents its Lockjaw Bite teeth, amber stare, compact adolescent mass, and grown steel-keratin paws; the player view faces upper-right and reveals the shoulder, spine, hip, and tail growth without falling back to Grimweld's juvenile angle.
+- Current runtime proof: rare wild Grimweld appears from the level 5–7 Glassroot Burrow steel pockets into level 6–11 quarry and rail routes. It becomes `Ironjaw Lupus` at level 5 after two steel attunement marks, then reaches mount-scale `Titan Lupus` at level 8 after four marks and awakens `Anvil Pounce`; `Gym Keeper Pella` previews the first evolution inside Briar Gym's practice ring.
+- Current art proof: both evolved stages now have border-free transparent front/rear battle pairs. `Titan Lupus` lowers its mount-scale shoulders toward the lower-left enemy lane with steel fangs and grown keratin plates exposed; its dedicated player view faces upper-right and reveals the rider-safe back valley, plated hips, four coherent paws, and single heavy tail.
 - Anatomy check: both views preserve four attached legs, two ears, one head, one muzzle, and one tail. Contracted alpha mattes remove the green-key edge without adding a sticker outline.
 - Battle role: steel impact bruiser and guard breaker that is acceptable but not dominant as a puppy, then becomes good on first evolution by bracing through pressure, cracking guarded stances with `Iron Claw`, breaking focus lines with `Lockjaw Bite`, and later converting openings through `Anvil Pounce`
 - Personality: stubborn, protective, suspicious of handlers, loyal once bonded, difficult to intimidate
 - Habitat: hidden mineral-root dens, sanctuary burrows, old warding halls, and gym practice rings where grown steel claws can bite into stone; `Glassroot Burrow` rootbeds and the `Ironroot Seam` are the current steel attunement path
 - Art direction: cozy-biotech storybook wolf with organic steel keratin, plated paws, steel teeth, heavy claws, and bondable but dangerous guardian presence
 - Avoid: happy puppy mascot, normal wolf with metal pasted on, mecha wolf, robot armor, chains, collars, saddles, or horror monster language
+
+### Ferrum Testudo
+
+- Registry name: `Ferrum Testudo`
+- Common role: `Rivetshell` -> `Bastion Testudo` -> `Citadel Testudo` living-steel tortoise line
+- Element: Steel
+- Evolution direction: at level 7 after a steel victory and two steel habitat marks, Rivetshell becomes `Bastion Testudo`, a broad adolescent mobile barricade with interlocking grown-metal shell plates and one enormous organic shoulder clamp. A later level-12, four-mark `Citadel Testudo` stage remains the line's next production target.
+- Current runtime proof: Rivetshell remains a rare level-appropriate catch in the foundry route family; Bastion stays trained-only and now awakens the distinct `Bastion Clamp` rather than relearning its juvenile clamp attack.
+- Current art proof: `Bastion Testudo` has a border-free transparent front/rear production pair. The enemy view faces lower-left with its stern beak, massive attached shoulder clamp, cyan living seams, four coherent legs, and short tail visible; the player view faces upper-right and lets the interlocking back plates dominate without losing the same clamp, limb count, or tail.
+- Battle role: slow steel anchor that uses `Rivet Guard` to punish contact, tears guarded lines open with `Bastion Clamp`, and regathers its own shell guard after converting an exposed opening.
+- Habitat fit: rare in Foundry Horizon's slag channels and fabrication threshold, where repeated steel exposure naturally supplies the two marks required at the level-7 chapter band.
+- Personality: stubborn, watchful, deliberate, and quietly protective; it blocks a route before it attacks and only yields ground to a trusted handler.
+- Art direction: cozy-biotech tortoise with biologically grown slate-and-iron keratin plates, restrained cyan seam organs, monumental weight, and no manufactured armor language.
+- Avoid: ordinary turtle with metal pasted on, robot tank, castle ornament, saddle, weapon mount, smiling mascot, extra limbs, cropped anatomy, border, or sticker outline.
 
 ### Ferrum Pagurus
 
@@ -360,7 +379,8 @@ When adding a creature line, define:
 - Ancestry influence: bear / blackwater swamp guardian
 - Starting stage: young intimidating `Mirecub` with heavy paws, guarded eyes, wet dark fur, lily-pad markings, moss patches, and enough claw weight to read dangerous even before it grows
 - Evolution direction: grows into `Bogmantle Ursus`, a formidable adult swamp bear with roots, moss, lily pads, and wet plants integrated into its coat while blue-green water channels show that it remains a water creature rather than a pure grass creature
-- Current runtime proof: `Mirecub` is a wild encounter in Moonfen Marsh and Mireglass Swamp, has production portrait art for both stages, can evolve through water attunement and level training, and can appear in battle with its evolved `Bogmantle Ursus` portrait
+- Current runtime proof: `Mirecub` is a wild encounter in Moonfen Marsh and Mireglass Swamp; at level 7 after a water-aligned win and three water attunement marks it evolves into `Bogmantle Ursus`, immediately awakening `Bogmantle Crash`
+- Current art proof: `Bogmantle Ursus` now has a border-free transparent front/rear battle pair. The enemy view plants its huge root-wrapped claws toward the lower-left lane; the dedicated player view faces upper-right and reveals the wet lily mantle, compact tail, rooted hips, and turquoise biological waterways across its back.
 - Battle role: durable water bruiser that starts with `Bogwater Hide` and `Reedroot Swipe`, then grows into heavier blackwater maul pressure and the evolved `Bogmantle Crash`
 - Personality: watchful, stubborn, protective, slow to trust, more likely to stare down a handler than flee
 - Habitat: blackwater pools, silver reeds, glassy algae mats, cypress knees, lily pads, and half-sunk sanctuary markers where swamp plants grow into wet fur without replacing its water identity
@@ -389,7 +409,7 @@ When adding a creature line, define:
 - Ancestry influence: penguin / ice-realm skirmisher
 - Starting stage: small but dangerous ice penguin with a wicked glare, frostglass crest, hooked ice beak, blade-like flippers, tiny talons, and a plotting forward lean
 - Evolution direction: grows into `Dreadfin Spheniscus`, a larger evil ice-realm penguin with a taller frostglass crown, heavier talons, serrated blade flippers, and a commander-like predatory stance
-- Current runtime proof: `Glarefin` is a wild Frostglass Orchard encounter across the frostgrass rows, crystal boughs, caretaker frost, and overgrown leaf blind, using a stored portrait plate, live ice moves, and an ice-bond evolution into `Dreadfin Spheniscus`
+- Current runtime proof: `Glarefin` is a wild Frostglass Orchard encounter across the frostgrass rows, crystal boughs, caretaker frost, and overgrown leaf blind. At level 8 after an ice-aligned win and three ice attunement marks it awakens into `Dreadfin Spheniscus`, now supported by a border-free transparent front portrait and dedicated rear player view; the level-9 learnset and awakening both grant `Dreadfin Execution` so the visual payoff arrives with its guard-cracking signature.
 - Battle role: fast ice skirmisher that exposes with `Wicked Glare`, cracks guards with `Shard Flipper`, breaks focus with `Spite Slide`, and gains evolved guard-breaking pressure through `Dreadfin Execution`
 - Personality: mean, clever, territorial, petty about losing ground, bondable only after a handler proves they can guide its spite without letting it bully weaker Vivos
 - Habitat: frostglass orchards, ice wells, crystal-fruit rows, blue snowdrifts, and colder hidden paths where small predators can skate under larger Vivos
@@ -403,7 +423,7 @@ When adding a creature line, define:
 - Element: Ice
 - Ancestry influence: walrus / ice-realm territorial bruiser
 - Starting stage: adult-sized frost-fat walrus with a huge low body, brutal frostglass tusks, ice-whisker mass, glacier back plates, and a mean stare that reads as dangerous rather than cute
-- Current runtime proof: `Gloomtusk` is a rare wild Frostglass Orchard encounter across the frostgrass rows, crystal boughs, caretaker frost, and overgrown leaf blind, using a stored portrait plate and live ice moves
+- Current runtime proof: `Gloomtusk` is a rare level 5–7 Frostglass Orchard encounter that continues into level 7–11 Aurorashard Tundra pressure. Its border-free transparent battle pair replaces the old framed plate and removes mechanical-looking implants, preserving the same massive walrus through organic cold-gland rings, glacier back growth, ice whiskers, frostglass tusks, and dedicated inward-facing front/rear views.
 - Battle role: slow ice bruiser that braces with `Blubber Brace`, cracks guarded targets with `Tusk Ram`, and converts openings with `Iceberg Bellyflop`
 - Personality: intimidating, territorial, stubborn, greedy about space, bondable only when a handler can redirect its bullying mass into protection
 - Habitat: frostglass orchards, ice wells, blue snowdrifts, frozen caretaker lanes, and deep cold wallows where its body can gather ice without slowing its charge
@@ -418,7 +438,8 @@ When adding a creature line, define:
 - Ancestry influence: snow leopard / ice-realm ambush cat
 - Starting stage: baby snow leopard cub that is still intimidating, with a low stalking posture, oversized paws, cold blue eyes, small fangs, frostglass whisker organs, and ice-spine buds that promise a larger predator later
 - Evolution direction: grows into `Frostmane Uncia`, a larger fluffy but intimidating snow leopard with a thick mane ruff, huge tail, glacier plates along the spine, longer ice claws, and a calmer apex-predator stare
-- Current runtime proof: `Snowshade` is a wild Frostglass Orchard encounter across frostgrass, crystal boughs, caretaker frost, and the overgrown leaf blind; it can evolve into `Frostmane Uncia` through ice wins, ice attunement, and level training
+- Current runtime proof: `Snowshade` is a wild Frostglass Orchard encounter across frostgrass, crystal boughs, caretaker frost, and the overgrown leaf blind; at level 7 after an ice-aligned win and three ice attunement marks it evolves into `Frostmane Uncia`, immediately awakening `Frostmane Rend`
+- Current art proof: `Frostmane Uncia` now has a border-free transparent front/rear battle pair. The enemy view crouches toward the lower-left lane with its calm apex stare and long ice claws exposed; the dedicated player view faces upper-right and reveals the glacier-plated spine, enormous tail, heavy hindquarters, and coherent four-leg anatomy.
 - Battle role: ice ambush skirmisher that exposes with `Snowveil Stalk`, cracks guards with `Rime Claw`, follows openings with `Frost Pounce`, and gains `Frostmane Rend` on evolution
 - Personality: moody, watchful, proud, territorial, bondable through patient handling but never harmless or puppy-like
 - Habitat: frostglass orchards, snow-choked paths, blue-shadowed crystal ridges, ice wells, and hidden high ledges where it can stalk from above
@@ -525,6 +546,7 @@ When adding a creature line, define:
 - Ancestry influence: tiger / ambush panther
 - Starting stage: no baby stage; `Leafstalker` is always a fully adult, high-level apex Vivo with a living ghillie-suit coat
 - Current runtime proof: `Leafstalker` is a rare level 11-13 encounter in the overgrown Frostglass Orchard leaf blind and has a one-time level 12 scripted rescue fight at the moving leaf blind
+- Production art proof: `Leafstalker` now has a matched border-free transparent pair: a lower-left-facing enemy portrait and a dedicated rear three-quarter player view that looks toward the upper-right battle lane. Both preserve the same adult tiger anatomy, living fern coat, seedpod organs, stripe map, and territorial expression.
 - Battle role: high-level grass bruiser that braces with `Ghillie Prowl`, cracks guards with `Leaf Rend`, and finishes with `Canopy Maul`
 - Personality: patient, territorial, disciplined, difficult to read, willing to bond only with a handler who respects its first charge
 - Habitat: overgrown frostgrass lanes, leaf blinds, abandoned orchard rows, and other cold green places where a huge predator can hide in plain sight

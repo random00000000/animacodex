@@ -420,9 +420,9 @@ const shots = [
       "capture=1&debugScene=magmaheartCaldera&debugLeadForm=Ignis%20Canis&debugWildBattle=magmadon:24&debugBattleTempo=player:focused",
   },
   {
-    file: "05-briar-gym.png",
+    file: "05-sporebell-gym.png",
     query:
-      "capture=1&debugScene=briarGym&debugParty=thornkit:16,mossprig:16&debugTrainerBattle=gymLeaderSenka&debugBattleTempo=player:guarded,enemy:focused",
+      "capture=1&debugScene=sporebellGarden&debugParty=thornkit:13,mossprig:13&debugTrainerBattle=sporebellWardenTamsin&debugBattleTempo=player:guarded,enemy:focused",
   },
 ];
 

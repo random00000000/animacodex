@@ -2,8 +2,8 @@ import sanctuaryTrailPaintedUrl from "../../assets/environment/sanctuary-trail-p
 import emberHollowPaintedUrl from "../../assets/environment/ember-hollow-painted-v1.png";
 import briarTownPaintedUrl from "../../assets/environment/briar-town-painted-v1.png";
 import starglassRoostPaintedUrl from "../../assets/environment/starglass-roost-painted-v1.png";
-import briarGymPaintedUrl from "../../assets/environment/briar-gym-painted-v1.png";
-import lanternNurseryPaintedUrl from "../../assets/environment/lantern-nursery-painted-v1.png";
+import briarGymPaintedUrl from "../../assets/environment/briar-gym-painted-v2.png";
+import lanternNurseryPaintedUrl from "../../assets/environment/lantern-nursery-painted-v2.png";
 import glassrootBurrowPaintedUrl from "../../assets/environment/glassroot-burrow-painted-v1.png";
 import moonfenMarshPaintedUrl from "../../assets/environment/moonfen-marsh-painted-v1.png";
 import mirrorfenFlatsPaintedUrl from "../../assets/environment/mirrorfen-flats-painted-v1.png";
@@ -25,9 +25,9 @@ import echobloomCanopyPaintedUrl from "../../assets/environment/echobloom-canopy
 import lumenveilGrovePaintedUrl from "../../assets/environment/lumenveil-grove-painted-v1.png";
 import tidegateCausewayPaintedUrl from "../../assets/environment/tidegate-causeway-painted-v1.png";
 import asterwakeShoalsPaintedUrl from "../../assets/environment/asterwake-shoals-painted-v1.png";
-import thunderheadMesaPaintedUrl from "../../assets/environment/thunderhead-mesa-painted-v1.png";
+import thunderheadMesaPaintedUrl from "../../assets/environment/thunderhead-mesa-painted-v2.png";
 import magmaheartCalderaPaintedUrl from "../../assets/environment/magmaheart-caldera-painted-v1.png";
-import basaltBloomCalderaPaintedUrl from "../../assets/environment/basalt-bloom-caldera-painted-v1.png";
+import basaltBloomCalderaPaintedUrl from "../../assets/environment/basalt-bloom-caldera-painted-v2.png";
 import cinderlakeBasinPaintedUrl from "../../assets/environment/cinderlake-basin-painted-v1.png";
 import cindershoreStrandPaintedUrl from "../../assets/environment/cindershore-strand-painted-v1.png";
 import sanctuaryTrailBattleUrl from "../../assets/battle/sanctuary-trail-battle-v1.png";
@@ -63,6 +63,7 @@ import echobloomCanopyBattleUrl from "../../assets/battle/echobloom-canopy-battl
 import lumenveilGroveBattleUrl from "../../assets/battle/lumenveil-grove-battle-v1.png";
 import tidegateCausewayBattleUrl from "../../assets/battle/tidegate-causeway-battle-v1.png";
 import asterwakeShoalsBattleUrl from "../../assets/battle/asterwake-shoals-battle-v1.png";
+import asterwakeShoalsBattleV2Url from "../../assets/battle/asterwake-shoals-battle-v2.png";
 import thunderheadMesaBattleUrl from "../../assets/battle/thunderhead-mesa-battle-v1.png";
 import magmaheartCalderaBattleUrl from "../../assets/battle/magmaheart-caldera-battle-v1.png";
 import basaltBloomCalderaBattleUrl from "../../assets/battle/basalt-bloom-caldera-battle-v1.png";
@@ -87,18 +88,23 @@ import lunarisBufoRearUrl from "../../assets/creatures/lunaris-bufo-rear-v1.png"
 import grimweldPortraitUrl from "../../assets/creatures/grimweld-portrait-v1.png";
 import ironjawLupusPortraitUrl from "../../assets/creatures/ironjaw-lupus-portrait-v2.png";
 import ironjawLupusRearUrl from "../../assets/creatures/ironjaw-lupus-rear-v1.png";
-import titanLupusPortraitUrl from "../../assets/creatures/titan-lupus-portrait-v1.png";
+import titanLupusPortraitUrl from "../../assets/creatures/titan-lupus-portrait-v2.png";
+import titanLupusRearUrl from "../../assets/creatures/titan-lupus-rear-v1.png";
 import prismkidPortraitUrl from "../../assets/creatures/prismkid-portrait-v1.png";
-import prismurPortraitUrl from "../../assets/creatures/prismur-portrait-v1.png";
+import prismurPortraitUrl from "../../assets/creatures/prismur-portrait-v2.png";
+import prismurRearUrl from "../../assets/creatures/prismur-rear-v1.png";
 import lanterncatPortraitUrl from "../../assets/creatures/lanterncat-portrait-v1.png";
-import lanternPantheraPortraitUrl from "../../assets/creatures/lantern-panthera-portrait-v1.png";
+import lanternPantheraPortraitUrl from "../../assets/creatures/lantern-panthera-portrait-v2.png";
+import lanternPantheraRearUrl from "../../assets/creatures/lantern-panthera-rear-v1.png";
 import tidecalfPortraitUrl from "../../assets/creatures/tidecalf-portrait-v1.png";
 import tidehornPortraitUrl from "../../assets/creatures/tidehorn-portrait-v2.png";
 import tidehornRearUrl from "../../assets/creatures/tidehorn-rear-v1.png";
 import mirecubPortraitUrl from "../../assets/creatures/mirecub-portrait-v1.png";
-import bogmantleUrsusPortraitUrl from "../../assets/creatures/bogmantle-ursus-portrait-v1.png";
+import bogmantleUrsusPortraitUrl from "../../assets/creatures/bogmantle-ursus-portrait-v2.png";
+import bogmantleUrsusRearUrl from "../../assets/creatures/bogmantle-ursus-rear-v1.png";
 import shadecubPortraitUrl from "../../assets/creatures/shadecub-portrait-v1.png";
-import noctisPantheraPortraitUrl from "../../assets/creatures/noctis-panthera-portrait-v1.png";
+import noctisPantheraPortraitUrl from "../../assets/creatures/noctis-panthera-portrait-v2.png";
+import noctisPantheraRearUrl from "../../assets/creatures/noctis-panthera-rear-v1.png";
 import cinderhoofPortraitUrl from "../../assets/creatures/cinderhoof-portrait-v1.png";
 import kilncrestEquusPortraitUrl from "../../assets/creatures/kilncrest-equus-portrait-v1.png";
 import kilncrestEquusRearUrl from "../../assets/creatures/kilncrest-equus-rear-v1.png";
@@ -110,7 +116,8 @@ import briarLynxRearUrl from "../../assets/creatures/briar-lynx-rear-v2.png";
 import venivyPortraitUrl from "../../assets/creatures/venivy-portrait-v1.png";
 import verdacondaPortraitUrl from "../../assets/creatures/verdaconda-portrait-v2.png";
 import verdacondaRearUrl from "../../assets/creatures/verdaconda-rear-v1.png";
-import leafstalkerPortraitUrl from "../../assets/creatures/leafstalker-portrait-v1.png";
+import leafstalkerPortraitUrl from "../../assets/creatures/leafstalker-portrait-v2.png";
+import leafstalkerRearUrl from "../../assets/creatures/leafstalker-rear-v1.png";
 import snapmawPortraitUrl from "../../assets/creatures/snapmaw-portrait-v1.png";
 import basalthornPortraitUrl from "../../assets/creatures/basalthorn-portrait-v1.png";
 import faultcrownRhinocerosPortraitUrl from "../../assets/creatures/faultcrown-rhinoceros-portrait-v1.png";
@@ -120,20 +127,29 @@ import mirejawPortraitUrl from "../../assets/creatures/mirejaw-portrait-v1.png";
 import frosthulkPortraitUrl from "../../assets/creatures/frosthulk-portrait-v2.png";
 import frosthulkRearUrl from "../../assets/creatures/frosthulk-rear-v1.png";
 import glarefinPortraitUrl from "../../assets/creatures/glarefin-portrait-v1.png";
-import dreadfinSpheniscusPortraitUrl from "../../assets/creatures/dreadfin-spheniscus-portrait-v1.png";
-import gloomtuskPortraitUrl from "../../assets/creatures/gloomtusk-portrait-v1.png";
+import dreadfinSpheniscusPortraitUrl from "../../assets/creatures/dreadfin-spheniscus-portrait-v2.png";
+import dreadfinSpheniscusRearUrl from "../../assets/creatures/dreadfin-spheniscus-rear-v1.png";
+import gloomtuskPortraitUrl from "../../assets/creatures/gloomtusk-portrait-v2.png";
+import gloomtuskRearUrl from "../../assets/creatures/gloomtusk-rear-v1.png";
 import snowshadeCubPortraitUrl from "../../assets/creatures/snowshade-cub-portrait-v1.png";
-import frostmaneLeopardPortraitUrl from "../../assets/creatures/frostmane-leopard-portrait-v1.png";
+import frostmaneUnciaPortraitUrl from "../../assets/creatures/frostmane-uncia-portrait-v2.png";
+import frostmaneUnciaRearUrl from "../../assets/creatures/frostmane-uncia-rear-v1.png";
 import rimeboarPortraitUrl from "../../assets/creatures/rimeboar-portrait-v1.png";
 import magmadonPortraitUrl from "../../assets/creatures/magmadon-portrait-v2.png";
 import magmadonRearUrl from "../../assets/creatures/magmadon-rear-v1.png";
 import voltpipPortraitUrl from "../../assets/creatures/voltpip-portrait-v1.png";
+import stormvaultColumbaPortraitUrl from "../../assets/creatures/stormvault-columba-portrait-v1.png";
+import stormvaultColumbaRearUrl from "../../assets/creatures/stormvault-columba-rear-v1.png";
 import stormwoolPortraitUrl from "../../assets/creatures/stormwool-portrait-v1.png";
+import tempestramOvisPortraitUrl from "../../assets/creatures/tempestram-ovis-portrait-v1.png";
+import tempestramOvisRearUrl from "../../assets/creatures/tempestram-ovis-rear-v1.png";
 import stormchickGrusPortraitUrl from "../../assets/creatures/stormchick-grus-portrait-v1.png";
 import thunderplumeCranePortraitUrl from "../../assets/creatures/thunderplume-crane-portrait-v2.png";
 import thunderplumeCraneRearUrl from "../../assets/creatures/thunderplume-crane-rear-v1.png";
 import stormspireGrusPortraitUrl from "../../assets/creatures/stormspire-grus-portrait-v2.png";
 import stormspireGrusRearUrl from "../../assets/creatures/stormspire-grus-rear-v1.png";
+import bastionTestudoPortraitUrl from "../../assets/creatures/bastion-testudo-portrait-v1.png";
+import bastionTestudoRearUrl from "../../assets/creatures/bastion-testudo-rear-v1.png";
 import bellcrabPortraitUrl from "../../assets/creatures/bellcrab-portrait-v1.png";
 import carillonPagurusPortraitUrl from "../../assets/creatures/carillon-pagurus-portrait-v2.png";
 import carillonPagurusRearUrl from "../../assets/creatures/carillon-pagurus-rear-v1.png";
@@ -231,6 +247,7 @@ const builtInBattleBackdropManifest = {
   lumenveilGroveBattleV1: lumenveilGroveBattleUrl,
   tidegateCausewayBattleV1: tidegateCausewayBattleUrl,
   asterwakeShoalsBattleV1: asterwakeShoalsBattleUrl,
+  asterwakeShoalsBattleV2: asterwakeShoalsBattleV2Url,
   thunderheadMesaBattleV1: thunderheadMesaBattleUrl,
   magmaheartCalderaBattleV1: magmaheartCalderaBattleUrl,
   basaltBloomCalderaBattleV1: basaltBloomCalderaBattleUrl,
@@ -272,7 +289,7 @@ export const battleBackdropBySceneId: Partial<Record<string, BattleBackdropKey>>
   echobloomCanopy: "echobloomCanopyBattleV1",
   lumenveilGrove: "lumenveilGroveBattleV1",
   tidegateCauseway: "tidegateCausewayBattleV1",
-  asterwakeShoals: "asterwakeShoalsBattleV1",
+  asterwakeShoals: "asterwakeShoalsBattleV2",
   thunderheadMesa: "thunderheadMesaBattleV1",
   magmaheartCaldera: "magmaheartCalderaBattleV1",
   basaltBloomCaldera: "basaltBloomCalderaBattleV1",
@@ -307,17 +324,22 @@ const builtInCreaturePortraitManifest = {
   ironjawLupusPortraitV1: ironjawLupusPortraitUrl,
   ironjawLupusRearV1: ironjawLupusRearUrl,
   titanLupusPortraitV1: titanLupusPortraitUrl,
+  titanLupusRearV1: titanLupusRearUrl,
   prismkidPortraitV1: prismkidPortraitUrl,
   prismurPortraitV1: prismurPortraitUrl,
+  prismurRearV1: prismurRearUrl,
   lanterncatPortraitV1: lanterncatPortraitUrl,
   lanternPantheraPortraitV1: lanternPantheraPortraitUrl,
+  lanternPantheraRearV1: lanternPantheraRearUrl,
   tidecalfPortraitV1: tidecalfPortraitUrl,
   tidehornPortraitV1: tidehornPortraitUrl,
   tidehornRearV1: tidehornRearUrl,
   mirecubPortraitV1: mirecubPortraitUrl,
   bogmantleUrsusPortraitV1: bogmantleUrsusPortraitUrl,
+  bogmantleUrsusRearV1: bogmantleUrsusRearUrl,
   shadecubPortraitV1: shadecubPortraitUrl,
   noctisPantheraPortraitV1: noctisPantheraPortraitUrl,
+  noctisPantheraRearV1: noctisPantheraRearUrl,
   cinderhoofPortraitV1: cinderhoofPortraitUrl,
   kilncrestEquusPortraitV1: kilncrestEquusPortraitUrl,
   kilncrestEquusRearV1: kilncrestEquusRearUrl,
@@ -329,7 +351,8 @@ const builtInCreaturePortraitManifest = {
   venivyPortraitV1: venivyPortraitUrl,
   verdacondaPortraitV1: verdacondaPortraitUrl,
   verdacondaRearV1: verdacondaRearUrl,
-  leafstalkerPortraitV1: leafstalkerPortraitUrl,
+  leafstalkerPortraitV2: leafstalkerPortraitUrl,
+  leafstalkerRearV1: leafstalkerRearUrl,
   snapmawPortraitV1: snapmawPortraitUrl,
   basalthornPortraitV1: basalthornPortraitUrl,
   faultcrownRhinocerosPortraitV1: faultcrownRhinocerosPortraitUrl,
@@ -340,19 +363,28 @@ const builtInCreaturePortraitManifest = {
   frosthulkRearV1: frosthulkRearUrl,
   glarefinPortraitV1: glarefinPortraitUrl,
   dreadfinSpheniscusPortraitV1: dreadfinSpheniscusPortraitUrl,
+  dreadfinSpheniscusRearV1: dreadfinSpheniscusRearUrl,
   gloomtuskPortraitV1: gloomtuskPortraitUrl,
+  gloomtuskRearV1: gloomtuskRearUrl,
   snowshadeCubPortraitV1: snowshadeCubPortraitUrl,
-  frostmaneLeopardPortraitV1: frostmaneLeopardPortraitUrl,
+  frostmaneUnciaPortraitV2: frostmaneUnciaPortraitUrl,
+  frostmaneUnciaRearV1: frostmaneUnciaRearUrl,
   rimeboarPortraitV1: rimeboarPortraitUrl,
   magmadonPortraitV1: magmadonPortraitUrl,
   magmadonRearV1: magmadonRearUrl,
   voltpipPortraitV1: voltpipPortraitUrl,
+  stormvaultColumbaPortraitV1: stormvaultColumbaPortraitUrl,
+  stormvaultColumbaRearV1: stormvaultColumbaRearUrl,
   stormwoolPortraitV1: stormwoolPortraitUrl,
+  tempestramOvisPortraitV1: tempestramOvisPortraitUrl,
+  tempestramOvisRearV1: tempestramOvisRearUrl,
   stormchickGrusPortraitV1: stormchickGrusPortraitUrl,
   thunderplumeCranePortraitV1: thunderplumeCranePortraitUrl,
   thunderplumeCraneRearV1: thunderplumeCraneRearUrl,
   stormspireGrusPortraitV1: stormspireGrusPortraitUrl,
   stormspireGrusRearV1: stormspireGrusRearUrl,
+  bastionTestudoPortraitV1: bastionTestudoPortraitUrl,
+  bastionTestudoRearV1: bastionTestudoRearUrl,
   bellcrabPortraitV1: bellcrabPortraitUrl,
   carillonPagurusPortraitV2: carillonPagurusPortraitUrl,
   carillonPagurusRearV1: carillonPagurusRearUrl,
@@ -383,7 +415,7 @@ export const creaturePortraitBySpeciesId: Partial<Record<string, CreaturePortrai
   cinderhoof: "cinderhoofPortraitV1",
   mossquirl: "mossquirlPortraitV1",
   venivy: "venivyPortraitV1",
-  leafstalker: "leafstalkerPortraitV1",
+  leafstalker: "leafstalkerPortraitV2",
   snapmaw: "snapmawPortraitV1",
   basalthorn: "basalthornPortraitV1",
   bouldermaw: "bouldermawPortraitV1",
@@ -407,6 +439,8 @@ export const creaturePortraitBySpeciesId: Partial<Record<string, CreaturePortrai
 };
 
 export const creaturePortraitByFormName: Partial<Record<string, CreaturePortraitKey>> = {
+  "Stormvault Columba": "stormvaultColumbaPortraitV1",
+  "Tempestram Ovis": "tempestramOvisPortraitV1",
   "Ignis Canis": "ignisCanisPortraitV1",
   "Astra Corvus": "astraCorvusPortraitV1",
   "Briarback Mustela": "briarbackMustelaPortraitV1",
@@ -420,9 +454,10 @@ export const creaturePortraitByFormName: Partial<Record<string, CreaturePortrait
   "Noctis Panthera": "noctisPantheraPortraitV1",
   Verdaconda: "verdacondaPortraitV1",
   "Dreadfin Spheniscus": "dreadfinSpheniscusPortraitV1",
-  "Frostmane Uncia": "frostmaneLeopardPortraitV1",
+  "Frostmane Uncia": "frostmaneUnciaPortraitV2",
   "Thunderplume Crane": "thunderplumeCranePortraitV1",
   "Stormspire Grus": "stormspireGrusPortraitV1",
+  "Bastion Testudo": "bastionTestudoPortraitV1",
   "Carillon Pagurus": "carillonPagurusPortraitV2",
   "Weirfang Lutra": "weirfangLutraPortraitV1",
   "Razorjack Lepus": "razorjackLepusPortraitV1",
@@ -438,15 +473,19 @@ export const creaturePortraitByFormName: Partial<Record<string, CreaturePortrait
 };
 
 export const creatureRearPortraitByFormName: Partial<Record<string, CreaturePortraitKey>> = {
+  "Stormvault Columba": "stormvaultColumbaRearV1",
+  "Tempestram Ovis": "tempestramOvisRearV1",
   Verdaconda: "verdacondaRearV1",
   "Tidehorn Bubalus": "tidehornRearV1",
   "Lunaris Bufo": "lunarisBufoRearV1",
   "Ironjaw Lupus": "ironjawLupusRearV1",
+  "Titan Lupus": "titanLupusRearV1",
   "Astra Corvus": "astraCorvusRearV1",
   "Ignis Canis": "ignisCanisRearV1",
   "Thornvault Sciurus": "thornvaultSciurusRearV1",
   "Stormspire Grus": "stormspireGrusRearV1",
   "Thunderplume Crane": "thunderplumeCraneRearV1",
+  "Bastion Testudo": "bastionTestudoRearV1",
   "Weirfang Lutra": "weirfangLutraRearV1",
   "Carillon Pagurus": "carillonPagurusRearV1",
   "Briarback Mustela": "briarbackMustelaRearV1",
@@ -456,8 +495,16 @@ export const creatureRearPortraitByFormName: Partial<Record<string, CreaturePort
   "Kilncrest Equus": "kilncrestEquusRearV1",
   Magmadon: "magmadonRearV1",
   Frosthulk: "frosthulkRearV1",
+  Gloomtusk: "gloomtuskRearV1",
+  "Dreadfin Spheniscus": "dreadfinSpheniscusRearV1",
+  "Frostmane Uncia": "frostmaneUnciaRearV1",
+  "Bogmantle Ursus": "bogmantleUrsusRearV1",
+  "Noctis Panthera": "noctisPantheraRearV1",
+  "Lantern Panthera": "lanternPantheraRearV1",
+  Prismur: "prismurRearV1",
 };
 
 export const creatureRearPortraitBySpeciesId: Partial<Record<string, CreaturePortraitKey>> = {
   dogemox: "dogemoxRearV1",
+  leafstalker: "leafstalkerRearV1",
 };

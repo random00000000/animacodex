@@ -33,11 +33,14 @@ if (data.developerPublisher !== null) failures.push("developerPublisher must rem
 if (data.releaseModel !== null) failures.push("releaseModel must remain null until approved");
 if (data.controllerSupport !== "unverified-do-not-claim") failures.push("controller support must remain unclaimed until acceptance passes");
 if (data.requirements?.status !== "provisional-unbenchmarked") failures.push("system requirements must remain provisional until benchmarked");
-const gymLeaderIds = [...new Set([...sceneSource.matchAll(/\bid:\s*"((?:gymLeader)[^"]+)"/g)].map((match) => match[1]))];
+const shippedGymLeaderIds = ["gymLeaderSenka", "sporebellWardenTamsin"];
+const authoredGymLeaderIds = shippedGymLeaderIds.filter((id) =>
+  new RegExp(`\\bid:\\s*"${id}"`).test(sceneSource),
+);
 const publicStoreCopy = [data.shortDescription, data.aboutThisGame, ...(data.featureBullets ?? [])].join("\n");
-if (gymLeaderIds.length !== 1) failures.push(`first-gym release scope expects exactly one authored gym leader, found ${gymLeaderIds.length}`);
-if (/\bgyms\b|\bleague\b/i.test(publicStoreCopy)) failures.push("public store copy overpromises content beyond the implemented first-gym campaign");
-if (!/\bfirst gym\b/i.test(publicStoreCopy)) failures.push("public store copy must state the implemented first-gym scope");
+if (authoredGymLeaderIds.length !== shippedGymLeaderIds.length) failures.push(`two-gym preview expects ${shippedGymLeaderIds.length} authored gym leaders, found ${authoredGymLeaderIds.length}`);
+if (/\bleague\b|\bten gyms\b|\b10 gyms\b/i.test(publicStoreCopy)) failures.push("public store copy overpromises content beyond the implemented two-gym preview");
+if (!/\bfirst two gyms\b/i.test(publicStoreCopy)) failures.push("public store copy must state the implemented first-two-gyms scope");
 if (screenshots.artifactSha256 !== windows.sha256 || data.screenshotArtifactSha256 !== windows.sha256) failures.push("Steam screenshots are not bound to the current Windows artifact");
 if (!Array.isArray(screenshots.screenshots) || screenshots.screenshots.length !== 5) failures.push("exactly five approved Steam screenshots are required");
 for (const shot of screenshots.screenshots ?? []) {
@@ -55,10 +58,10 @@ const scopeReport = {
   schemaVersion: 1,
   generatedAt: new Date().toISOString(),
   status: failures.some((failure) => /gym|league|scope/i.test(failure)) ? "failed" : "passed",
-  releaseScope: "first-gym-campaign",
-  authoredGymLeaderIds: gymLeaderIds,
-  publicCopyNamesFirstGym: /\bfirst gym\b/i.test(publicStoreCopy),
-  publicCopyAvoidsLaterCampaignClaims: !/\bgyms\b|\bleague\b/i.test(publicStoreCopy),
+  releaseScope: "two-gym-preview",
+  authoredGymLeaderIds,
+  publicCopyNamesFirstTwoGyms: /\bfirst two gyms\b/i.test(publicStoreCopy),
+  publicCopyAvoidsLaterCampaignClaims: !/\bleague\b|\bten gyms\b|\b10 gyms\b/i.test(publicStoreCopy),
   artifactSha256: windows.sha256
 };
 await fs.mkdir(path.dirname(scopeReportPath), { recursive: true });

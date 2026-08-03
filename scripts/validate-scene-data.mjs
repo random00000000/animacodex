@@ -62,7 +62,8 @@ const isRequirementShaped = (requirement) =>
   Array.isArray(requirement.defeatedTrainerIdsAll) ||
   Array.isArray(requirement.defeatedTrainerIdsAny) ||
   typeof requirement.badgeCountAtLeast === "number" ||
-  typeof requirement.partyFormCountAtLeast === "number";
+  typeof requirement.partyFormCountAtLeast === "number" ||
+  Array.isArray(requirement.usedInteractableIdsAll);
 
 const traversable = (scene, x, y) =>
   x >= 20 &&

@@ -84,6 +84,8 @@ Use:
 - Soft but readable background landmarks.
 - Enough empty ground for creature portraits, hit reactions, HP plaques, command surfaces, and effects.
 - Matching lighting, palette, and landmarks from the exploration painting.
+- Matching authored time of day, weather, key-light direction, shadow softness,
+  and dominant temperature. Unexplained day/night changes fail pair cohesion.
 
 The battle view should not be a generic arena. It must preserve the location identity from the walking scene.
 

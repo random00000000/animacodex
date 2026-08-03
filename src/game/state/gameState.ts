@@ -43,6 +43,80 @@ const FIRST_GYM_ROUTE_MENTOR_IDS = [
   "moonfenKeeperOrla",
 ] as const;
 
+type CampaignChapterId =
+  | "openingRescue"
+  | "gym1Preparation"
+  | "gym1Trial"
+  | "gym1Aftermath"
+  | "gym1Complete"
+  | "gym2FieldStudy"
+  | "gym2Trial"
+  | "gym2Complete";
+
+type CampaignBadgeId = "briarSteward" | "sporebellAdaptation";
+type StewardshipEvidenceId =
+  | "sanctuaryRescueRecord"
+  | "briarDefenseTestimony"
+  | "habitatAdaptationStudy";
+
+interface CampaignProgression {
+  chapterId: CampaignChapterId;
+  chapterNumber: number;
+  chapterTitle: string;
+  objective: string;
+  summary: string;
+  complete: boolean;
+}
+
+type CampaignPacingStatus = "unmeasured" | "tooFast" | "onTarget" | "tooSlow";
+
+interface CampaignPacingAssessment {
+  status: CampaignPacingStatus;
+  label: string;
+  actualSeconds?: number;
+  minimumSeconds: number;
+  maximumSeconds: number;
+}
+
+const CAMPAIGN_CHAPTER_TITLES: Record<CampaignChapterId, string> = {
+  openingRescue: "A Vivo Needs Shelter",
+  gym1Preparation: "The Briar Stewardship Trial",
+  gym1Trial: "The Briar Stewardship Trial",
+  gym1Aftermath: "The Seizure Ledger",
+  gym1Complete: "Briar Holds Its Ground",
+  gym2FieldStudy: "The Garden Breathes",
+  gym2Trial: "The Garden Breathes",
+  gym2Complete: "Sporebell Trusts the Wild",
+};
+
+const CAMPAIGN_BADGE_TITLES: Record<CampaignBadgeId, string> = {
+  briarSteward: "Briar Steward Badge",
+  sporebellAdaptation: "Sporebell Adaptation Badge",
+};
+
+const TRAINER_BADGE_REWARDS: Partial<Record<string, CampaignBadgeId>> = {
+  gymLeaderSenka: "briarSteward",
+  sporebellWardenTamsin: "sporebellAdaptation",
+};
+
+const STEWARDSHIP_EVIDENCE_TITLES: Record<StewardshipEvidenceId, string> = {
+  sanctuaryRescueRecord: "Sanctuary Rescue Record",
+  briarDefenseTestimony: "Briar Defense Testimony",
+  habitatAdaptationStudy: "Habitat Adaptation Study",
+};
+
+const TRAINER_EVIDENCE_REWARDS: Partial<Record<string, StewardshipEvidenceId>> = {
+  townPatrolRhis: "briarDefenseTestimony",
+  sporebellWardenTamsin: "habitatAdaptationStudy",
+};
+
+const CAMPAIGN_COMPLETION_TARGETS: Partial<
+  Record<CampaignChapterId, { minimumSeconds: number; maximumSeconds: number }>
+> = {
+  gym1Complete: { minimumSeconds: 3 * 60 * 60, maximumSeconds: 5 * 60 * 60 },
+  gym2Complete: { minimumSeconds: 5 * 60 * 60, maximumSeconds: 8 * 60 * 60 },
+};
+
 const randomId = () => Math.random().toString(36).slice(2, 10);
 
 interface SaveSnapshot {
@@ -64,6 +138,11 @@ interface SaveSnapshot {
   currentMessage: string;
   defeatedTrainerIds: string[];
   badges: number;
+  badgeIds?: CampaignBadgeId[];
+  stewardshipEvidenceIds?: StewardshipEvidenceId[];
+  campaignChapterId?: CampaignChapterId;
+  playTimeSeconds?: number;
+  campaignMilestones?: Partial<Record<CampaignChapterId, number>>;
   encounterStepBudgets: Partial<Record<string, number>>;
   encounterMoodByZoneId: Partial<Record<string, number>>;
   pendingFieldCallByZoneId?: Partial<Record<string, number>>;
@@ -106,7 +185,13 @@ export class GameState {
   activeEncounterZoneId?: string;
   battle?: BattleController;
   defeatedTrainerIds = new Set<string>();
-  badges = 0;
+  badgeIds = new Set<CampaignBadgeId>();
+  stewardshipEvidenceIds = new Set<StewardshipEvidenceId>();
+  campaignChapterId: CampaignChapterId = "openingRescue";
+  private persistedPlayTimeSeconds = 0;
+  private playSessionStartedAt = Date.now();
+  private playSessionActive = true;
+  campaignMilestones: Partial<Record<CampaignChapterId, number>> = {};
   lastBattleSummary?: string;
   latestTrainerDebrief?: TrainerBattleDebrief;
   latestWildDebrief?: WildEncounterDebrief;
@@ -160,6 +245,10 @@ export class GameState {
 
   getPartyLead(): VivoInstance {
     return this.party[0];
+  }
+
+  get badges(): number {
+    return this.badgeIds.size;
   }
 
   getMove(moveId: string): MoveDefinition {
@@ -224,6 +313,14 @@ export class GameState {
     if (
       requirement.partyFormCountAtLeast !== undefined &&
       this.getAwakenedPartyCount() < requirement.partyFormCountAtLeast
+    ) {
+      return false;
+    }
+
+    if (
+      requirement.usedInteractableIdsAll?.some(
+        (interactableId) => !this.usedInteractableIds.has(interactableId),
+      )
     ) {
       return false;
     }
@@ -714,6 +811,7 @@ export class GameState {
     }
 
     if (needsRender) {
+      this.refreshCampaignChapter();
       this.renderHud();
       this.scheduleProgressSave();
     }
@@ -724,18 +822,31 @@ export class GameState {
   markTrainerDefeated(trainerId: string) {
     if (!this.defeatedTrainerIds.has(trainerId)) {
       this.defeatedTrainerIds.add(trainerId);
+      const badgeReward = TRAINER_BADGE_REWARDS[trainerId];
+      if (badgeReward) {
+        this.badgeIds.add(badgeReward);
+      }
+      const evidenceReward = TRAINER_EVIDENCE_REWARDS[trainerId];
+      if (evidenceReward) {
+        this.stewardshipEvidenceIds.add(evidenceReward);
+      }
       if (trainerId === "gymLeaderSenka") {
-        this.badges += 1;
         this.currentMessage =
           "Senka's lantern badge holds, but Briar's first confiscation patrol is already leaning on the town notice board. Return to the square and hold the line.";
       } else if (trainerId === "townPatrolRhis") {
         this.currentMessage =
-          "The first patrol backed down and released its seized runner. Briar Town is holding steady again while the sanctuary plans the next route outward.";
+          "The first patrol backed down. Sporebell Garden is open through Lantern Nursery; cross it and document the living habitat inside Cadence Lab Annex.";
+        this.recordCampaignMilestone("gym1Complete");
+      } else if (trainerId === "sporebellWardenTamsin") {
+        this.currentMessage =
+          "Tamsin records the habitat study and awards Sporebell's adaptation badge. The sanctuary now carries proof that free Vivos can stabilize living environments.";
+        this.recordCampaignMilestone("gym2Complete");
       } else if (trainerId === "trailAuditorVale") {
         this.currentMessage =
           "Trail Auditor Vale closed the seizure ledger for now. The sanctuary route still needs a mentor lesson, an awakened form, and a clean first-gym plan.";
       }
     }
+    this.refreshCampaignChapter();
     this.renderHud();
     this.scheduleProgressSave();
   }
@@ -877,6 +988,106 @@ export class GameState {
     return true;
   }
 
+  debugAuditCampaignProgression(): {
+    status: "passed" | "failed";
+    cases: Array<{ name: string; expected: CampaignChapterId; actual: CampaignChapterId; passed: boolean }>;
+    pacingCases: Array<{
+      name: string;
+      expected: CampaignPacingStatus;
+      actual: CampaignPacingStatus;
+      passed: boolean;
+    }>;
+  } {
+    const unawakenedParty = this.party.map((vivo) => ({ ...vivo, formName: undefined }));
+    const awakenedParty = unawakenedParty.map((vivo, index) =>
+      index === 0 ? { ...vivo, formName: "Audit Form" } : vivo,
+    );
+    const scenarios: Array<{
+      name: string;
+      trainers: string[];
+      party: VivoInstance[];
+      usedInteractables?: string[];
+      expected: CampaignChapterId;
+    }> = [
+      { name: "opening", trainers: [], party: unawakenedParty, expected: "openingRescue" },
+      {
+        name: "nursery lesson",
+        trainers: ["nurseryTenderSola"],
+        party: unawakenedParty,
+        expected: "gym1Preparation",
+      },
+      {
+        name: "mentor without awakening",
+        trainers: ["nurseryTenderSola", "trailAuditorVale"],
+        party: unawakenedParty,
+        expected: "gym1Preparation",
+      },
+      {
+        name: "mentor plus awakening",
+        trainers: ["trailAuditorVale"],
+        party: awakenedParty,
+        expected: "gym1Trial",
+      },
+      {
+        name: "Senka cleared",
+        trainers: ["gymLeaderSenka"],
+        party: awakenedParty,
+        expected: "gym1Aftermath",
+      },
+      {
+        name: "Rhis cleared",
+        trainers: ["gymLeaderSenka", "townPatrolRhis"],
+        party: awakenedParty,
+        expected: "gym2FieldStudy",
+      },
+      {
+        name: "Cadence field study",
+        trainers: ["gymLeaderSenka", "townPatrolRhis"],
+        party: awakenedParty,
+        usedInteractables: ["warningLightTree"],
+        expected: "gym2Trial",
+      },
+      {
+        name: "Tamsin cleared",
+        trainers: ["gymLeaderSenka", "townPatrolRhis", "sporebellWardenTamsin"],
+        party: awakenedParty,
+        usedInteractables: ["warningLightTree"],
+        expected: "gym2Complete",
+      },
+    ];
+    const cases = scenarios.map((scenario) => {
+      const actual = this.evaluateCampaignChapterState(
+        new Set(scenario.trainers),
+        scenario.party,
+        new Set(scenario.usedInteractables ?? []),
+      );
+      return { ...scenario, actual, passed: actual === scenario.expected };
+    });
+    const pacingCases = [
+      { name: "Gym 1 unmeasured", chapterId: "gym1Complete" as const, seconds: undefined, expected: "unmeasured" as const },
+      { name: "Gym 1 below lower bound", chapterId: "gym1Complete" as const, seconds: 3 * 60 * 60 - 1, expected: "tooFast" as const },
+      { name: "Gym 1 at lower bound", chapterId: "gym1Complete" as const, seconds: 3 * 60 * 60, expected: "onTarget" as const },
+      { name: "Gym 1 at upper bound", chapterId: "gym1Complete" as const, seconds: 5 * 60 * 60, expected: "onTarget" as const },
+      { name: "Gym 1 above upper bound", chapterId: "gym1Complete" as const, seconds: 5 * 60 * 60 + 1, expected: "tooSlow" as const },
+      { name: "Gym 2 unmeasured", chapterId: "gym2Complete" as const, seconds: undefined, expected: "unmeasured" as const },
+      { name: "Gym 2 below lower bound", chapterId: "gym2Complete" as const, seconds: 5 * 60 * 60 - 1, expected: "tooFast" as const },
+      { name: "Gym 2 at lower bound", chapterId: "gym2Complete" as const, seconds: 5 * 60 * 60, expected: "onTarget" as const },
+      { name: "Gym 2 at upper bound", chapterId: "gym2Complete" as const, seconds: 8 * 60 * 60, expected: "onTarget" as const },
+      { name: "Gym 2 above upper bound", chapterId: "gym2Complete" as const, seconds: 8 * 60 * 60 + 1, expected: "tooSlow" as const },
+    ].map(({ name, chapterId, seconds, expected }) => {
+      const actual = this.assessCampaignPacing(chapterId, seconds)?.status ?? "unmeasured";
+      return { name, expected, actual, passed: actual === expected };
+    });
+    return {
+      status:
+        cases.every((entry) => entry.passed) && pacingCases.every((entry) => entry.passed)
+          ? "passed"
+          : "failed",
+      cases: cases.map(({ name, expected, actual, passed }) => ({ name, expected, actual, passed })),
+      pacingCases,
+    };
+  }
+
   debugResolveRescueEncounter(interactableId: string): boolean {
     const interactable = Object.values(sceneDex)
       .flatMap((scene) => scene.interactables)
@@ -886,6 +1097,7 @@ export class GameState {
     }
 
     this.resolvedRescueEncounterIds.add(interactableId);
+    this.stewardshipEvidenceIds.add("sanctuaryRescueRecord");
     this.sceneVersion += 1;
     this.renderHud();
     return true;
@@ -2120,14 +2332,13 @@ export class GameState {
       this.hudRoot.innerHTML = battleMarkup;
       return;
     } else {
-      const gymStatus = this.getGoalBanner();
-      const goalTitle = this.getGoalTitle();
+      const campaign = this.getCampaignProgression();
       battleMarkup = `
         <div class="hud-section">
-          <p class="hud-label">Current Goal</p>
-          <h2 class="hud-title">${goalTitle}</h2>
+          <p class="hud-label">Campaign · Chapter ${campaign.chapterNumber}</p>
+          <h2 class="hud-title">${campaign.objective}</h2>
           <p class="hud-copy">${this.currentMessage}</p>
-          <div class="banner">${gymStatus}</div>
+          <div class="banner"><strong>${campaign.chapterTitle}</strong> · ${campaign.summary}</div>
         </div>
       `;
     }
@@ -2261,6 +2472,16 @@ export class GameState {
     partyCount: number;
     reserveCount: number;
     badges: number;
+    badgeIds: CampaignBadgeId[];
+    badgeTitles: string[];
+    stewardshipEvidenceIds: StewardshipEvidenceId[];
+    stewardshipEvidenceTitles: string[];
+    chapterId: CampaignChapterId;
+    chapterTitle: string;
+    chapterComplete: boolean;
+    playTimeSeconds: number;
+    chapterCompletedAtSeconds?: number;
+    chapterPacing?: CampaignPacingAssessment;
   } {
     const normalizedSlot = this.normalizeSaveSlot(slot);
     const fallback = {
@@ -2271,6 +2492,18 @@ export class GameState {
       partyCount: this.party.length,
       reserveCount: this.reserve.length,
       badges: this.badges,
+      badgeIds: this.getBadgeIds(),
+      badgeTitles: this.getBadgeIds().map((badgeId) => CAMPAIGN_BADGE_TITLES[badgeId]),
+      stewardshipEvidenceIds: this.getStewardshipEvidenceIds(),
+      stewardshipEvidenceTitles: this.getStewardshipEvidenceIds().map(
+        (evidenceId) => STEWARDSHIP_EVIDENCE_TITLES[evidenceId],
+      ),
+      chapterId: this.getCampaignProgression().chapterId,
+      chapterTitle: this.getCampaignProgression().chapterTitle,
+      chapterComplete: this.getCampaignProgression().complete,
+      playTimeSeconds: this.getPlayTimeSeconds(),
+      chapterCompletedAtSeconds: this.campaignMilestones[this.getCampaignProgression().chapterId],
+      chapterPacing: this.getCampaignPacingAssessment(),
     };
 
     if (!this.enablePersistence) {
@@ -2287,6 +2520,11 @@ export class GameState {
       if (snapshot.version !== 1 || !scene) {
         return fallback;
       }
+      const chapterId = this.evaluateCampaignChapterState(
+        new Set(snapshot.defeatedTrainerIds ?? []),
+        snapshot.party ?? [],
+        new Set(snapshot.usedInteractableIds ?? []),
+      );
       return {
         persistenceEnabled: true,
         hasSave: true,
@@ -2295,7 +2533,22 @@ export class GameState {
         sceneName: scene.name,
         partyCount: snapshot.party?.length ?? 0,
         reserveCount: snapshot.reserve?.length ?? 0,
-        badges: typeof snapshot.badges === "number" ? snapshot.badges : 0,
+        badges: this.getSnapshotBadgeIds(snapshot).length,
+        badgeIds: this.getSnapshotBadgeIds(snapshot),
+        badgeTitles: this.getSnapshotBadgeIds(snapshot).map(
+          (badgeId) => CAMPAIGN_BADGE_TITLES[badgeId],
+        ),
+        stewardshipEvidenceIds: this.getSnapshotStewardshipEvidenceIds(snapshot),
+        stewardshipEvidenceTitles: this.getSnapshotStewardshipEvidenceIds(snapshot).map(
+          (evidenceId) => STEWARDSHIP_EVIDENCE_TITLES[evidenceId],
+        ),
+        chapterId,
+        chapterTitle: CAMPAIGN_CHAPTER_TITLES[chapterId],
+        chapterComplete: chapterId === "gym1Complete" || chapterId === "gym2Complete",
+        playTimeSeconds:
+          typeof snapshot.playTimeSeconds === "number" ? Math.max(0, snapshot.playTimeSeconds) : 0,
+        chapterCompletedAtSeconds: snapshot.campaignMilestones?.[chapterId],
+        chapterPacing: this.assessCampaignPacing(chapterId, snapshot.campaignMilestones?.[chapterId]),
       };
     } catch {
       return fallback;
@@ -2327,7 +2580,12 @@ export class GameState {
     this.activeEncounterZoneId = undefined;
     this.battle = undefined;
     this.defeatedTrainerIds = new Set<string>();
-    this.badges = 0;
+    this.badgeIds = new Set<CampaignBadgeId>();
+    this.stewardshipEvidenceIds = new Set<StewardshipEvidenceId>();
+    this.campaignChapterId = "openingRescue";
+    this.persistedPlayTimeSeconds = 0;
+    this.playSessionStartedAt = Date.now();
+    this.campaignMilestones = {};
     this.lastBattleSummary = undefined;
     this.latestTrainerDebrief = undefined;
     this.latestWildDebrief = undefined;
@@ -2364,12 +2622,24 @@ export class GameState {
       this.sanctuaryState.selectedReserveIndex !== undefined
         ? this.reserve[this.sanctuaryState.selectedReserveIndex]?.nickname
         : undefined;
+    const campaign = this.getCampaignProgression();
+    const chapterPacing = this.getCampaignPacingAssessment();
+    const badgeNames = this.getBadgeIds().map((badgeId) => CAMPAIGN_BADGE_TITLES[badgeId]);
+    const evidenceNames = this.getStewardshipEvidenceIds().map(
+      (evidenceId) => STEWARDSHIP_EVIDENCE_TITLES[evidenceId],
+    );
 
     return `
       <div class="hud-section">
         <p class="hud-label">Sanctuary Ledger</p>
         <h2 class="hud-title">Rotate the active six</h2>
         <p class="hud-copy">Use Briar Town's reserve ledger to promote rescued Vivos into the field before trainer and gym battles.</p>
+        <div class="banner"><strong>Chapter ${campaign.chapterNumber}: ${campaign.chapterTitle}</strong> · ${campaign.objective}${campaign.complete ? " · Chapter complete" : ""}</div>
+        <p class="hud-mini">Active route time: ${this.formatPlayTime(this.getPlayTimeSeconds())}</p>
+        ${campaign.complete && this.campaignMilestones[campaign.chapterId] !== undefined ? `<p class="hud-mini">Chapter cleared at ${this.formatPlayTime(this.campaignMilestones[campaign.chapterId] ?? 0)}.</p>` : ""}
+        ${campaign.complete && chapterPacing ? `<p class="hud-mini">Pacing: ${chapterPacing.label}.</p>` : ""}
+        <p class="hud-mini">Steward badges: ${badgeNames.length > 0 ? badgeNames.join(", ") : "none yet"}.</p>
+        <p class="hud-mini">Stewardship evidence: ${evidenceNames.length > 0 ? evidenceNames.join(", ") : "none recorded"}.</p>
         <p class="hud-mini">Active choice: ${activeChoice ?? "none"} | Reserve choice: ${reserveChoice ?? "none"}</p>
         <div class="battle-moves">
           <button class="battle-button alt" data-world-action="swap-sanctuary-slot">Swap selected Vivos<small>Trade one active roster slot for a reserve partner.</small></button>
@@ -2977,6 +3247,8 @@ export class GameState {
     }
 
     try {
+      this.refreshCampaignChapter();
+      this.syncPlayTime();
       const snapshot: SaveSnapshot = {
         version: 1,
         currentSceneId: this.currentSceneId,
@@ -2987,6 +3259,11 @@ export class GameState {
         currentMessage: this.currentMessage,
         defeatedTrainerIds: [...this.defeatedTrainerIds],
         badges: this.badges,
+        badgeIds: this.getBadgeIds(),
+        stewardshipEvidenceIds: this.getStewardshipEvidenceIds(),
+        campaignChapterId: this.campaignChapterId,
+        playTimeSeconds: this.persistedPlayTimeSeconds,
+        campaignMilestones: { ...this.campaignMilestones },
         encounterStepBudgets: { ...this.encounterStepBudgets },
         encounterMoodByZoneId: { ...this.encounterMoodByZoneId },
         pendingFieldCallByZoneId: { ...this.pendingFieldCallByZoneId },
@@ -3046,12 +3323,30 @@ export class GameState {
           : this.recoveryAnchor;
       this.currentMessage = snapshot.currentMessage || this.currentMessage;
       this.defeatedTrainerIds = new Set(snapshot.defeatedTrainerIds ?? []);
-      this.badges = typeof snapshot.badges === "number" ? snapshot.badges : 0;
+      this.badgeIds = new Set(this.getSnapshotBadgeIds(snapshot));
+      this.stewardshipEvidenceIds = new Set(this.getSnapshotStewardshipEvidenceIds(snapshot));
+      this.usedInteractableIds = new Set(snapshot.usedInteractableIds ?? []);
+      this.campaignChapterId = this.evaluateCampaignChapter();
+      this.persistedPlayTimeSeconds =
+        typeof snapshot.playTimeSeconds === "number" ? Math.max(0, snapshot.playTimeSeconds) : 0;
+      this.playSessionStartedAt = Date.now();
+      this.campaignMilestones = { ...(snapshot.campaignMilestones ?? {}) };
+      if (
+        this.defeatedTrainerIds.has("townPatrolRhis") &&
+        this.campaignMilestones.gym1Complete === undefined
+      ) {
+        this.campaignMilestones.gym1Complete = this.persistedPlayTimeSeconds;
+      }
+      if (
+        this.defeatedTrainerIds.has("sporebellWardenTamsin") &&
+        this.campaignMilestones.gym2Complete === undefined
+      ) {
+        this.campaignMilestones.gym2Complete = this.persistedPlayTimeSeconds;
+      }
       this.encounterStepBudgets = snapshot.encounterStepBudgets ?? {};
       this.encounterMoodByZoneId = snapshot.encounterMoodByZoneId ?? {};
       this.pendingFieldCallByZoneId = snapshot.pendingFieldCallByZoneId ?? {};
       this.rescuePromiseByZoneId = snapshot.rescuePromiseByZoneId ?? {};
-      this.usedInteractableIds = new Set(snapshot.usedInteractableIds ?? []);
       this.resolvedRescueEncounterIds = new Set(snapshot.resolvedRescueEncounterIds ?? []);
       this.lastBattleSummary = snapshot.lastBattleSummary;
       this.latestTrainerDebrief = snapshot.latestTrainerDebrief;
@@ -3530,6 +3825,7 @@ export class GameState {
     if (activeEncounter.hideAfterResolution) {
       this.resolvedRescueEncounterIds.add(activeEncounter.interactableId);
     }
+    this.stewardshipEvidenceIds.add("sanctuaryRescueRecord");
     this.activeRescueEncounter = undefined;
     this.sceneVersion += 1;
     return {
@@ -3573,44 +3869,235 @@ export class GameState {
     return element.charAt(0).toUpperCase() + element.slice(1);
   }
 
-  private getGoalTitle(): string {
-    if (!this.defeatedTrainerIds.has("nurseryTenderSola")) {
-      return "Explore the open sanctuary routes and build a stronger team.";
-    }
-
-    if (!this.isFirstGymReady()) {
-      return "Awaken one route-tested bond before Senka's trial.";
-    }
-
-    if (!this.defeatedTrainerIds.has("gymLeaderSenka")) {
-      return "Beat the first gym through rescue-bond strategy.";
-    }
-
-    if (!this.defeatedTrainerIds.has("townPatrolRhis")) {
-      return "Drive off the confiscation patrol in Briar Town.";
-    }
-
-    return "Carry the sanctuary forward.";
+  getCampaignProgression(): CampaignProgression {
+    const chapterId = this.evaluateCampaignChapter();
+    const chapters: Record<CampaignChapterId, Omit<CampaignProgression, "chapterId">> = {
+      openingRescue: {
+        chapterNumber: 1,
+        chapterTitle: CAMPAIGN_CHAPTER_TITLES.openingRescue,
+        objective: "Explore the open sanctuary routes and build a stronger team.",
+        summary:
+          "Briar's outer trail is open. Learn the nursery rescue lesson, find wild Vivos, and decide who will stand beside Dogemox.",
+        complete: false,
+      },
+      gym1Preparation: {
+        chapterNumber: 1,
+        chapterTitle: CAMPAIGN_CHAPTER_TITLES.gym1Preparation,
+        objective: "Awaken one route-tested bond before Senka's trial.",
+        summary: this.getFirstGymReadinessBanner(),
+        complete: false,
+      },
+      gym1Trial: {
+        chapterNumber: 1,
+        chapterTitle: CAMPAIGN_CHAPTER_TITLES.gym1Trial,
+        objective: "Beat the first gym through rescue-bond strategy.",
+        summary: "Leader Senka awaits inside Briar Gym.",
+        complete: false,
+      },
+      gym1Aftermath: {
+        chapterNumber: 1,
+        chapterTitle: CAMPAIGN_CHAPTER_TITLES.gym1Aftermath,
+        objective: "Drive off the confiscation patrol in Briar Town.",
+        summary:
+          "A confiscation patrol has reached Briar's notice board. Hold the line and reclaim the seized Vivo.",
+        complete: false,
+      },
+      gym1Complete: {
+        chapterNumber: 1,
+        chapterTitle: CAMPAIGN_CHAPTER_TITLES.gym1Complete,
+        objective: "Carry the sanctuary forward.",
+        summary:
+          "Gym 1 and its aftermath are complete. The next campaign chapter will open the route beyond Briar.",
+        complete: true,
+      },
+      gym2FieldStudy: {
+        chapterNumber: 2,
+        chapterTitle: CAMPAIGN_CHAPTER_TITLES.gym2FieldStudy,
+        objective: "Study how living habitats adapt inside Cadence Lab Annex.",
+        summary:
+          "Rhis is gone and Sporebell Garden is open from Lantern Nursery. Cross the garden, inspect the living Warning Light Tree in Cadence Lab Annex, then report back to Tamsin.",
+        complete: false,
+      },
+      gym2Trial: {
+        chapterNumber: 2,
+        chapterTitle: CAMPAIGN_CHAPTER_TITLES.gym2Trial,
+        objective: "Return to Sporebell Garden and pass Tamsin's adaptation trial.",
+        summary:
+          "The Warning Light Tree proves containment biology can choose its own stable rhythm. Tamsin is ready to test whether your team can protect that adaptation without controlling it.",
+        complete: false,
+      },
+      gym2Complete: {
+        chapterNumber: 2,
+        chapterTitle: CAMPAIGN_CHAPTER_TITLES.gym2Complete,
+        objective: "Carry Sporebell's habitat evidence toward the next sanctuary.",
+        summary:
+          "Tamsin's trial is complete. The Sporebell Adaptation Badge and Habitat Adaptation Study now strengthen the public case for free Vivos.",
+        complete: true,
+      },
+    };
+    return { chapterId, ...chapters[chapterId] };
   }
 
-  private getGoalBanner(): string {
-    if (!this.defeatedTrainerIds.has("nurseryTenderSola")) {
-      return "Briar's outer trail is open. Try Lantern Nursery for a gentler rescue lesson, Sanctuary Trail for wild Vivos, Glassroot Burrow for cave encounters, Moonfen Marsh for calmer captures, Starglass Roost for light growth, or Ember Hollow for fire pressure.";
-    }
+  private evaluateCampaignChapter(): CampaignChapterId {
+    return this.evaluateCampaignChapterState(
+      this.defeatedTrainerIds,
+      this.party,
+      this.usedInteractableIds,
+    );
+  }
 
-    if (!this.isFirstGymReady()) {
-      return this.getFirstGymReadinessBanner();
+  private evaluateCampaignChapterState(
+    defeatedTrainerIds: ReadonlySet<string>,
+    party: VivoInstance[],
+    usedInteractableIds: ReadonlySet<string>,
+  ): CampaignChapterId {
+    if (defeatedTrainerIds.has("sporebellWardenTamsin")) {
+      return "gym2Complete";
     }
-
-    if (!this.defeatedTrainerIds.has("gymLeaderSenka")) {
-      return "Leader Senka still awaits inside Briar Gym.";
+    if (defeatedTrainerIds.has("townPatrolRhis") && usedInteractableIds.has("warningLightTree")) {
+      return "gym2Trial";
     }
-
-    if (!this.defeatedTrainerIds.has("townPatrolRhis")) {
-      return "A confiscation patrol has arrived at Briar's notice board. Hold the line and reclaim the seized Vivo.";
+    if (defeatedTrainerIds.has("townPatrolRhis")) {
+      return "gym2FieldStudy";
     }
+    if (defeatedTrainerIds.has("gymLeaderSenka")) {
+      return "gym1Aftermath";
+    }
+    const hasRouteMentor = FIRST_GYM_ROUTE_MENTOR_IDS.some((trainerId) =>
+      defeatedTrainerIds.has(trainerId),
+    );
+    const hasAwakenedForm = party.some((vivo) => Boolean(vivo.formName));
+    if (hasRouteMentor && hasAwakenedForm) {
+      return "gym1Trial";
+    }
+    if (defeatedTrainerIds.has("nurseryTenderSola")) {
+      return "gym1Preparation";
+    }
+    return "openingRescue";
+  }
 
-    return "First gym trial cleared and the first patrol turned back. Briar Town is holding its ground.";
+  private refreshCampaignChapter() {
+    this.campaignChapterId = this.evaluateCampaignChapter();
+  }
+
+  private recordCampaignMilestone(chapterId: CampaignChapterId) {
+    if (this.campaignMilestones[chapterId] !== undefined) return;
+    this.syncPlayTime();
+    this.campaignMilestones[chapterId] = this.persistedPlayTimeSeconds;
+  }
+
+  setPlaySessionActive(active: boolean) {
+    if (this.playSessionActive === active) {
+      return;
+    }
+    this.syncPlayTime();
+    this.playSessionActive = active;
+    this.playSessionStartedAt = Date.now();
+  }
+
+  getPlayTimeSeconds(): number {
+    const activeSeconds = this.playSessionActive
+      ? Math.max(0, Math.floor((Date.now() - this.playSessionStartedAt) / 1000))
+      : 0;
+    return this.persistedPlayTimeSeconds + activeSeconds;
+  }
+
+  getCampaignMilestones(): Partial<Record<CampaignChapterId, number>> {
+    return { ...this.campaignMilestones };
+  }
+
+  getBadgeIds(): CampaignBadgeId[] {
+    return [...this.badgeIds];
+  }
+
+  getStewardshipEvidenceIds(): StewardshipEvidenceId[] {
+    return [...this.stewardshipEvidenceIds];
+  }
+
+  private getSnapshotBadgeIds(snapshot: Partial<SaveSnapshot>): CampaignBadgeId[] {
+    const savedIds = (snapshot.badgeIds ?? []).filter(
+      (badgeId): badgeId is CampaignBadgeId => badgeId in CAMPAIGN_BADGE_TITLES,
+    );
+    if (savedIds.length > 0) {
+      return [...new Set(savedIds)];
+    }
+    const migratedIds: CampaignBadgeId[] = [];
+    if (
+      snapshot.defeatedTrainerIds?.includes("gymLeaderSenka") ||
+      (typeof snapshot.badges === "number" && snapshot.badges > 0)
+    ) {
+      migratedIds.push("briarSteward");
+    }
+    if (
+      snapshot.defeatedTrainerIds?.includes("sporebellWardenTamsin") ||
+      (typeof snapshot.badges === "number" && snapshot.badges > 1)
+    ) {
+      migratedIds.push("sporebellAdaptation");
+    }
+    return migratedIds;
+  }
+
+  private getSnapshotStewardshipEvidenceIds(
+    snapshot: Partial<SaveSnapshot>,
+  ): StewardshipEvidenceId[] {
+    const savedIds = (snapshot.stewardshipEvidenceIds ?? []).filter(
+      (evidenceId): evidenceId is StewardshipEvidenceId =>
+        evidenceId in STEWARDSHIP_EVIDENCE_TITLES,
+    );
+    if (savedIds.length > 0) {
+      return [...new Set(savedIds)];
+    }
+    const migratedIds: StewardshipEvidenceId[] = [];
+    if ((snapshot.resolvedRescueEncounterIds?.length ?? 0) > 0) {
+      migratedIds.push("sanctuaryRescueRecord");
+    }
+    if (snapshot.defeatedTrainerIds?.includes("townPatrolRhis")) {
+      migratedIds.push("briarDefenseTestimony");
+    }
+    if (snapshot.defeatedTrainerIds?.includes("sporebellWardenTamsin")) {
+      migratedIds.push("habitatAdaptationStudy");
+    }
+    return migratedIds;
+  }
+
+  getCampaignPacingAssessment(
+    chapterId: CampaignChapterId = this.getCampaignProgression().chapterId,
+  ): CampaignPacingAssessment | undefined {
+    return this.assessCampaignPacing(chapterId, this.campaignMilestones[chapterId]);
+  }
+
+  private assessCampaignPacing(
+    chapterId: CampaignChapterId,
+    actualSeconds?: number,
+  ): CampaignPacingAssessment | undefined {
+    const target = CAMPAIGN_COMPLETION_TARGETS[chapterId];
+    if (!target) return undefined;
+    const targetLabel = `${this.formatPlayTime(target.minimumSeconds)}-${this.formatPlayTime(target.maximumSeconds)}`;
+    if (actualSeconds === undefined) {
+      return { ...target, status: "unmeasured", label: `${targetLabel} target; not yet measured` };
+    }
+    const status: CampaignPacingStatus =
+      actualSeconds < target.minimumSeconds
+        ? "tooFast"
+        : actualSeconds > target.maximumSeconds
+          ? "tooSlow"
+          : "onTarget";
+    const verdict =
+      status === "tooFast" ? "faster than target" : status === "tooSlow" ? "slower than target" : "on target";
+    return { ...target, actualSeconds, status, label: `${targetLabel} target; ${verdict}` };
+  }
+
+  private syncPlayTime() {
+    if (this.playSessionActive) {
+      this.persistedPlayTimeSeconds = this.getPlayTimeSeconds();
+    }
+    this.playSessionStartedAt = Date.now();
+  }
+
+  private formatPlayTime(totalSeconds: number): string {
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
   }
 
   private getAwakenedPartyCount(): number {

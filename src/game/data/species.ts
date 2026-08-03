@@ -125,6 +125,24 @@ const builtInSpeciesDex: Record<string, SpeciesDefinition> = {
     learnset: [
       { level: 1, moveId: "staticPeck" },
       { level: 4, moveId: "stormcacheBolt" },
+      { level: 11, moveId: "skyvaultBolt" },
+    ],
+    formTransitions: [
+      {
+        formId: "stormvault",
+        name: "Stormvault Columba",
+        requiredLevel: 11,
+        requiredWinsInElement: "electric",
+        requiredAttunementInElement: "electric",
+        requiredAttunement: 3,
+        newElement: "electric",
+        statBonuses: {
+          hp: 1,
+          focus: 3,
+          speed: 1,
+        },
+        awakenMoveId: "skyvaultBolt",
+      },
     ],
   },
   stormwool: {
@@ -154,6 +172,24 @@ const builtInSpeciesDex: Record<string, SpeciesDefinition> = {
       { level: 1, moveId: "tackle" },
       { level: 3, moveId: "staticFleece" },
       { level: 5, moveId: "thunderRam" },
+      { level: 10, moveId: "ballLightningStampede" },
+    ],
+    formTransitions: [
+      {
+        formId: "tempestram",
+        name: "Tempestram Ovis",
+        requiredLevel: 10,
+        requiredWinsInElement: "electric",
+        requiredAttunementInElement: "electric",
+        requiredAttunement: 3,
+        newElement: "electric",
+        statBonuses: {
+          hp: 2,
+          attack: 2,
+          defense: 2,
+        },
+        awakenMoveId: "ballLightningStampede",
+      },
     ],
   },
   needlehare: {
@@ -1143,6 +1179,7 @@ const builtInSpeciesDex: Record<string, SpeciesDefinition> = {
       { level: 3, moveId: "rivetGuard" },
       { level: 4, moveId: "shellClamp" },
       { level: 7, moveId: "ironClaw" },
+      { level: 7, moveId: "bastionClamp" },
     ],
     formTransitions: [
       {
@@ -1157,7 +1194,7 @@ const builtInSpeciesDex: Record<string, SpeciesDefinition> = {
           hp: 2,
           defense: 3,
         },
-        awakenMoveId: "shellClamp",
+        awakenMoveId: "bastionClamp",
       },
       {
         formId: "citadel",
@@ -1357,6 +1394,7 @@ const builtInSpeciesDex: Record<string, SpeciesDefinition> = {
       { level: 3, moveId: "prismVeil" },
       { level: 4, moveId: "gleamPeck" },
       { level: 7, moveId: "prismScreech" },
+      { level: 9, moveId: "prismfangPounce" },
     ],
     formTransitions: [
       {
@@ -1372,7 +1410,7 @@ const builtInSpeciesDex: Record<string, SpeciesDefinition> = {
           focus: 2,
           speed: 2,
         },
-        awakenMoveId: "auroraDive",
+        awakenMoveId: "prismfangPounce",
       },
     ],
   },
@@ -1663,6 +1701,7 @@ const builtInSpeciesDex: Record<string, SpeciesDefinition> = {
       { level: 3, moveId: "reedGuard" },
       { level: 4, moveId: "starNibble" },
       { level: 6, moveId: "prismScreech" },
+      { level: 7, moveId: "prismRam" },
     ],
     formTransitions: [
       {
