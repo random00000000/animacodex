@@ -242,6 +242,26 @@ Fight-scene UI should lean JRPG-style:
 
 ## Progression
 
+The implementation sequence, chapter gates, time targets, balance guardrails, and ending acceptance criteria are maintained in [`progression_roadmap.md`](progression_roadmap.md). The current runtime is a Gym 2 chapter-complete slice, not the full campaign ending.
+
+Campaign chapter status has one runtime owner in `GameState`: trainer results and readiness state feed the campaign evaluator, while the field log and save snapshot consume its result. Do not duplicate chapter rules in renderer or UI code.
+
+Save-slot cards and sanctuary-ledger progression summaries must consume `GameState` chapter metadata. They may present chapter title, objective, and completion state, but must never maintain their own badge or trainer requirement tables.
+
+`npm run validate:campaign` is the deterministic progression contract check and is part of the production build. Any new chapter boundary must add at least one expected-state case to the shared `GameState` audit.
+
+Campaign pacing must use the active-playtime value in the shared save contract. Hidden-window time is excluded; save-slot and sanctuary summaries may format this value but must not maintain their own clocks.
+
+Each completed campaign chapter records its first completion time in the shared campaign milestone map. Replays must not overwrite the original clear time, and older complete saves must migrate from cumulative active time when no milestone exists.
+
+Chapter pacing verdicts must also come from `GameState`. Gym 1 currently targets 3–5 active hours from a fresh save through the Rhis aftermath; save and sanctuary renderers may display the shared verdict but must not duplicate that timing band or comparison logic.
+
+Campaign badges are stored as unique IDs in `GameState`; badge count is a derived compatibility/display value. Gym trainer rewards add their mapped ID idempotently, and older saves with only a count or trainer-clear state migrate through the shared snapshot reader. UI surfaces may display badge titles but must not award or infer them independently.
+
+Stewardship evidence is stored as unique IDs beside campaign badges. Authored scripted rescues award the Sanctuary Rescue Record and the Gym 1 aftermath awards Briar Defense Testimony through their existing resolution paths. Save and sanctuary surfaces consume shared titles; older saves derive evidence from resolved rescue and trainer flags. The final league must evaluate these durable records alongside badges.
+
+Gym 2 begins only after Patrol Rhis opens Sporebell Garden. The player must inspect Cadence Lab Annex's Warning Light Tree before Garden Warden Tamsin accepts the adaptation trial. Tamsin's two-Vivo level 11–13 team awards the Sporebell Adaptation Badge and Habitat Adaptation Study through the shared badge/evidence paths. Chapter evaluation, milestone timing, route gating, battle gating, saving, and legacy derivation must remain authoritative in `GameState` and scene requirements.
+
 Long-term progression target:
 
 - Levels 1-100.

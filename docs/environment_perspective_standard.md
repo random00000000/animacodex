@@ -95,6 +95,10 @@ Score each candidate before integration. Every hard gate must pass.
 - Exploration has no horizon and at least 70% readable ground.
 - Battle has a low camera, visible depth toward the upper third, and two empty lanes.
 - At least three shared anchors, including the hero landmark.
+- Lighting continuity: both views use the same authored time of day, weather,
+  key-light direction, and dominant temperature unless the scene packet defines
+  a runtime-visible transition between them. An unexplained day/night swap fails
+  pair cohesion even when landmarks and cameras pass.
 - No people, creatures, text, UI, logo, watermark, or invented arena markings.
 
 ### Review score (10 points)
@@ -120,6 +124,19 @@ runtime assets.
    the new location's landmarks.
 6. Run the hard gates and score at runtime crop size.
 7. Save non-destructively as `-v2` or later until runtime integration is verified.
+
+## Lighting Continuity Block
+
+Append this block to every paired battle prompt:
+
+```text
+Lighting lock: reproduce the exploration reference's authored time of day,
+weather, key-light direction, shadow softness, dominant color temperature, and
+water/sky exposure. Local emissive landmarks may remain luminous but must not
+change the global time of day. Do not reinterpret daylight as sunset, dusk,
+night, moonlight, or storm light unless the scene packet explicitly requires a
+runtime-visible transition.
+```
 
 ## First Audit Finding: Ember Hollow
 

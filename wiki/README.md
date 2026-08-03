@@ -111,6 +111,18 @@
 
 # Anima Codex Wiki
 
+## Latest creature production pass (2026-08-02)
+
+- Leafstalker's rare level 11-13 Frostglass Orchard role is unchanged, but its legacy single plate has been replaced by a matched transparent front/rear battle pair. Enemy and player views now face inward as the same adult living-ghillie tiger, with four traceable legs per angle and no decorative border or background.
+
+## Carlos content pulse — Dreadfin evolution battle pair (2026-08-01)
+
+The level-8 Glarefin awakening now has a clean transparent `Dreadfin Spheniscus` front portrait and dedicated rear player portrait. Both views preserve the evolved form's predatory penguin stance, swept frostglass crown, biological cold-gland clusters, hooked beak, heavy talons, and twin serrated ice flippers. The paired staging makes the visual evolution arrive alongside `Dreadfin Execution`, its 26-power guard-cracking signature attack, while keeping both battle lanes aimed inward.
+
+## Carlos content pulse — Gloomtusk battle pair (2026-08-01)
+
+Gloomtusk now uses a clean transparent front portrait and dedicated rear player portrait. The pair removes the old framed presentation and mechanical-looking implants, replacing them with biological cold-gland rings while preserving the massive slate walrus body, glacier back plates, frostglass tusks, ice whiskers, and territorial stare. It remains a rarer catch than Frosthulk across level 5–7 Frostglass and level 7–11 Aurorashard encounters, now with correct inward-facing battle staging.
+
 ## Carlos content pulse — Frosthulk battle pair (2026-08-01)
 
 Frosthulk now uses a clean transparent front portrait and dedicated rear player portrait. Both views preserve its snow-loaded polar-bear mass, organic glacier shoulder plates, blue ice fissures, icicle beard, heavy claws, and guarded temperament. The art supports its existing rare level 5–7 Frostglass Orchard placement and its later level 7–11 Aurorashard Tundra escalation, giving a desirable ice tank correct inward-facing battle staging without changing progression balance.
@@ -161,51 +173,123 @@ care station, small moss ring, irregular log-and-pool pens, cold frame, lantern
 reeds, split paths, caretaker lamps, and autumn trees. The symmetrical v1 arena
 remains registered for rollback; live nursery battles select v2.
 
+Runtime camera proof captured on 2026-08-02 confirms the complete Lantern Nursery
+V2 pair at a shared `1600x900` viewport. Exploration has a strict high, horizonless
+board view with readable paths and collision masses; battle lowers into the same
+yard while retaining the offset greenhouse, canvas canopy, circular moss ring,
+reed walls, timber pens, caretaker lamps, and autumn enclosure. The pair remains
+certified at 10/10, and the environment-pair validator passes all 32 locations.
+
 Environment pair certification is now tracked in
 [`docs/environment_pair_audit.md`](../docs/environment_pair_audit.md). Glassroot
 Burrow is the first unchanged v1 pair to pass the full standard: both images are
 `1536x1024`, and its low battle view preserves the glassroot cradle, warm lamps,
 teal pools, luminous root drips, moss shelves, mushrooms, and root enclosure.
 
+Runtime camera proof captured on 2026-08-02 confirms Glassroot Burrow's unchanged
+V1 pair at a shared `1600x900` viewport. The cave exploration view remains a high,
+horizonless navigation board with readable pools and paths; battle lowers into the
+same refuge while retaining the root cradle, teal water, paired warm lamps,
+luminous drips, moss shelves, mushrooms, and enclosing roots. The pair remains
+certified at 10/10.
+
 Moonfen Marsh is the second unchanged v1 pair to pass. Its top-down walking board
 and low battle stage retain the watchtower, root bridges, turquoise still pools,
 silver reeds, lantern blooms, moss lane, and plank crossings. The audit now has
 eight certified environment pairs and 24 awaiting full visual review.
+
+Runtime camera proof captured on 2026-08-02 confirms Moonfen Marsh's unchanged V1
+pair at a shared `1600x900` viewport. Exploration remains a high, horizonless
+wetland board with readable path, bridge, and pool topology; battle lowers into
+the same marsh while retaining the watchtower, root bridges, turquoise water,
+silver reeds, lantern blooms, moss lane, and plank construction. The pair remains
+certified at 10/10.
 
 Mirrorfen Flats is the third unchanged v1 pair to pass. Its lower battle camera
 preserves the exploration board's crescent mirror pool, pale mudflat lane,
 floating seed-pod islands, silver reed curtains, amber mirror post, and submerged
 tree silhouette. The audit now has nine certified pairs and 23 pending reviews.
 
+Runtime camera proof captured on 2026-08-02 confirms Mirrorfen Flats' unchanged V1
+pair at a shared `1600x900` viewport. Exploration remains a high, horizonless
+reflective-wetland board with clear route topology; battle lowers into the same
+flats while retaining the crescent pool, pale mud lane, seed-pod islands, silver
+reeds, amber mirror post, submerged tree reflection, and violet-blue palette. The
+pair remains certified at 10/10.
+
 Frostglass Orchard is the fourth unchanged v1 pair to pass. Its lower battle view
 retains the exploration board's frostglass well, crystal-fruit trees, blue-scarf
 scarecrow, broken gate, warm lamp, frostgrass, and packed-snow travel lane. The
 audit now has ten certified pairs and 22 pending reviews.
+
+Runtime camera proof captured on 2026-08-02 confirms Frostglass Orchard's
+unchanged V1 pair at a shared `1600x900` viewport. Exploration remains a high,
+horizonless orchard board with clear tree-row and snow-lane topology; battle
+lowers into the same orchard while retaining the frostglass well, crystal-fruit
+trees, blue-scarf scarecrow, broken gate, warm lamp, blue frostgrass, and
+packed-snow lane. The pair remains certified at 10/10.
 
 Aurorashard Tundra is the fifth unchanged v1 pair to pass. Its low battle camera
 retains the crescent crystal ridge, branching blue ice veins, three amber posts,
 frostgrass, bent polar limb, snow lane, and reflected green-pink aurora. The audit
 now has eleven certified pairs and 21 pending reviews.
 
+Runtime camera proof captured on 2026-08-02 confirms Aurorashard Tundra's
+unchanged V1 pair at a shared `1600x900` viewport. Exploration uses a dominant
+high board projection with readable snow-lane and blue-vein topology; battle
+lowers into the same tundra while retaining the crescent shard ridge, three amber
+posts, frostgrass, bent polar limb, packed snow, and green-pink aurora. The pair
+remains certified at 10/10.
+
 Coppervine Runoff is the sixth unchanged v1 pair to pass. Its low battle view
 retains the cracked sluice, broken gutter arch, blue runoff, coppervine roots,
 barred drain, half-sunk lamp, and wet-stone maintenance lane. The audit now has
 twelve certified pairs and 20 pending reviews.
+
+Runtime camera proof captured on 2026-08-02 confirms Coppervine Runoff's unchanged
+V1 pair at a shared `1600x900` viewport. Exploration remains a high, horizonless
+drainage board with readable channel and wet-stone topology; battle lowers down
+the same flooded lane while retaining the cracked sluice, broken gutter arch,
+blue runoff, living copper roots, barred drain, and half-sunk lamp. The pair
+remains certified at 10/10.
 
 Gloamrail Cut is the seventh unchanged v1 pair to pass. Its low battle camera
 retains the wet rails, broken sleepers, bent signal, amber lamps, bramble walls,
 barred crawlspace, and stone trench of the exploration board. The audit now has
 thirteen certified pairs and 19 pending reviews.
 
+Runtime camera proof captured on 2026-08-02 confirms Gloamrail Cut's unchanged V1
+pair at a shared `1600x900` viewport. Exploration remains a high, horizonless rail
+board with readable track and trench topology; a known-good Fenlight encounter
+loads the lower paired battle view with wet rails, broken sleepers, bramble
+masonry, barred crawlspace, amber lamps, and the damp stone lane. The pair remains
+certified at 10/10. A separate Shadecub debug encounter retained the world canvas
+behind its battle UI, isolating a species-specific presentation anomaly rather
+than an environment mapping failure.
+
 Sporebell Garden is the eighth unchanged v1 pair to pass. Its low battle view
 retains the giant bell blooms, warning ribbons, pollinator basin, stone arch,
 violet spore grass, pollen haze, and forked dirt path. The audit now has fourteen
 certified pairs and 18 pending reviews.
 
+Runtime camera proof captured on 2026-08-02 confirms Sporebell Garden's unchanged
+V1 pair at a shared `1600x900` viewport. Exploration remains a high, horizonless
+flower-field board with readable path and warning-zone topology; battle lowers
+into the same garden while retaining the giant bell blooms, red ribbons, stone
+pollinator basin, crooked arch, violet spore grass, golden pollen haze, and pale
+dirt lane. The pair remains certified at 10/10.
+
 Cadence Lab Annex is the ninth unchanged v1 pair to pass. Its low battle camera
 retains the cracked habitat glass, warning-light tree, cable-root nest, violet
 canisters, open door, nursery overgrowth, and fractured tile floor. The audit now
 has fifteen certified pairs and 17 pending reviews.
+
+Runtime camera proof captured on 2026-08-02 confirms Cadence Lab Annex's unchanged
+V1 pair at a shared `1600x900` viewport. Exploration remains a high, horizonless
+containment board; battle lowers into the same reclaimed lab while retaining the
+cracked habitat glass, warning-light tree, cable-root nest, violet canisters,
+open door, nursery overgrowth, and fractured tile floor. The pair remains
+certified at 10/10.
 
 Mireglass Swamp is the tenth unchanged v1 pair to pass. Its low battle view
 retains the blackwater pool, mossy log bridge, cypress-root arch, lantern fungi,
@@ -217,10 +301,29 @@ retains the fossil-root arch, amber obelisk, blue shade awning, sandstone ribs,
 dry grass, heat-glass crystals, and packed-sand lane. The audit now has seventeen
 certified pairs and 15 pending reviews.
 
+Runtime camera evidence reviewed on 2026-08-02 confirms that Sunspindle Dunes
+keeps a consistent authored top-down walking board and shifts cleanly to the
+standard low battle camera. The blue shade awning, fossil-root arches and ribs,
+amber stones, dry grass, heat-glass crystals, and packed-sand ground remain
+recognizable across both views, so the pair passes the same-place cohesion gate.
+
 Redglass Saltpan is the twelfth unchanged v1 pair to pass. Its low battle view
 retains the red mineral sheet, pink salt polygons, blue-white mirage seams, shade
 canopy, sanctuary waystone, red crystals, and ruin arches. The audit now has
 eighteen certified pairs and 14 pending reviews.
+
+Full-resolution source review on 2026-08-02 reopened the Redglass walking side:
+its distant horizon makes it a high-oblique landscape rather than the required
+50–60° downward, horizonless walking board. The low battle backdrop remains the
+approved target and preserves the pair's canopy, waystone, crystals, mirage
+seams, salt polygons, and ruin arches. The next art pass must regenerate only the
+walking view around the existing looped route and shared landmarks.
+
+The corrective generation contract is now locked in
+`docs/environment_generation_packets/redglass-saltpan-walking-v2.md`. It fixes
+the camera at a horizonless 55° downward pitch, preserves the runtime route and
+five same-place anchors, and defines hard rejection gates before any generated
+candidate can replace V1.
 
 Quartzroot Vault is the thirteenth unchanged v1 pair to pass. Its low battle view
 retains the heart-root arch, turquoise pool, bronze lanterns, crystal ledges,
@@ -246,6 +349,64 @@ Prismfall Ravine is the seventeenth unchanged v1 pair to pass. Its high canyon
 walking board and low battle stage retain seven prismatic route anchors and clear
 combat staging without a generic arena conversion. The audit now has 23
 certified pairs and nine pending reviews.
+
+Echobloom Canopy is the eighteenth unchanged v1 pair to pass. Its high forest
+walking board and low battle stage retain seven bioluminescent route anchors
+with clear staging and cohesive organic materials. The audit now has 24
+certified pairs and eight pending reviews.
+
+Lumenveil Grove is the nineteenth unchanged v1 pair to pass. Its high nocturnal
+walking board and low battle stage share seven authored grove landmarks with
+clear opposing lanes. The audit now has 25 certified pairs and seven pending
+reviews.
+
+Tidegate Causeway is the twentieth unchanged v1 pair to pass. Its high waterway
+board and low battle stage preserve seven crossing landmarks and a clear wet
+stone combat lane. The audit now has 26 certified pairs and six pending reviews.
+
+Asterwake Shoals is the twenty-first unchanged v1 pair to pass, scoring 9/10.
+Seven coastal landmarks survive the camera change; the sole deduction records
+the battle view's night lighting against the daylight walking board. The audit
+now has 27 certified pairs and five pending reviews.
+
+Thunderhead Mesa now uses `thunderhead-mesa-painted-v2.png`, replacing a walking
+painting that failed the no-horizon camera gate. The new 55-degree board keeps
+seven battle-linked landmarks and roughly 80 percent readable ground. The audit
+now has 28 certified pairs and four pending reviews.
+
+Magmaheart Caldera is the twenty-second unchanged v1 pair to pass. Its high lava
+board and low battle stage share seven fire-biome landmarks without sacrificing
+staging clarity. The audit now has 29 certified pairs and three pending reviews.
+
+Basalt Bloom Caldera now uses `basalt-bloom-caldera-painted-v2.png`. The former
+walking painting failed the no-horizon gate; the corrected all-ground board
+retains nine exact-place anchors from the existing low battle backdrop. The
+audit now has 30 certified pairs and two pending reviews.
+
+Cinderlake Basin is certified unchanged at 10/10. Its horizon-free high board
+and low battle stage share the lava lake, obsidian ribs, heat lantern, waystone,
+red crystals, and cracked basalt language. The audit now has 31 certified pairs
+and one pending review.
+
+Cindershore Strand is certified unchanged at 10/10. Its horizon-free high beach
+board and low battle stage share seven unmistakable coastal-volcanic landmarks.
+The environment perspective audit is now complete: all 32 production pairs are
+certified and none remain pending.
+
+The certification is guarded by `npm run validate:environment-pairs`, which
+checks all 32 ledger rows, 64 image files, required 1536x1024 dimensions,
+documented landmark anchors, unique versioned filenames, and runtime asset
+registry references. This validator now runs inside every production build.
+
+The validator's first run found two legacy square exploration canvases. Briar
+Gym and Lantern Nursery now use generated landscape v2 boards at 1536x1024;
+their original high-camera compositions and battle-linked landmarks are
+preserved, and both runtime imports are versioned for rollback safety.
+
+Deterministic packaged-runtime captures at 1600x900 verify both v2 boards in
+actual exploration presentation. Player placement, scene narration, entrance
+routes, landmark framing, and top-down readability remain intact after the
+landscape conversion.
 
 ## 2026-07-30 Carlos Asterwake Weirfang Mentor
 
@@ -1917,7 +2078,13 @@ The promoted current-source artifact is `release/Anima-Codex-0.1.0-Windows-x64.e
 
 ## Steam Campaign Scope
 
-The promoted candidate is represented as a first-gym campaign. The authored source currently contains one gym leader, Senka, and the release arc closes after that victory and its patrol resolution. Steam validation rejects plural-gym or league promises until matching shipped content exists; see `release/qa/campaign-scope-report.json`.
+The current source is represented as a two-gym preview. It contains Senka's Briar
+Steward chapter and Tamsin's Sporebell habitat-adaptation chapter, with the patrol
+aftermath and Cadence field study connecting them. Steam validation requires both
+authored leaders, requires public copy to name the first two gyms, and rejects
+league or ten-gym promises until matching shipped content exists; see
+`release/qa/campaign-scope-report.json`. The promoted executable must be refreshed
+before this expanded scope is treated as a release candidate.
 
 ## Player Options
 
@@ -1978,3 +2145,112 @@ Tidehorn's revised front portrait and dedicated rear battle view now ship in bot
 Verdaconda's revised front portrait and dedicated rear battle view now ship in both distributions. They match the 201-file runtime fingerprint `0443DCBE079314EA27696557882AD84D1DA3DB5233EF692FCE7C950C98FBC952`; the depot median is 11.757 seconds and all 30 checks pass.
 
 Magmadon's revised front portrait and dedicated rear battle view now ship in both distributions. They match the 203-file runtime fingerprint `03FCA472C80B6993FA67E7E05EA26E96F59D2F9B32CD69E8670AEE7A673718FA`; the depot median is 11.145 seconds and all 30 checks pass.
+
+Frosthulk's border-free revised portrait and dedicated rear battle view now ship in both distributions. They match the 205-file runtime fingerprint `13F808F31B8319F2AAD614DFE46747277FA94F32881C32AF2E56324C006CEACB`; the depot median is 10.264 seconds and all 30 checks pass.
+
+## Campaign Progression Source
+
+[`docs/progression_roadmap.md`](../docs/progression_roadmap.md) now defines the path from the current Gym 1/Rhis chapter boundary through ten gyms, the league, and a persistent postgame ending. It also maps Peter's live machine-oriented terminology onto Anima Codex's sanctuary ledger, field log, and battle-study surfaces without introducing an unrelated base-building loop.
+
+The first reusable progression increment is live: `GameState` evaluates the opening-to-`gym1Complete` chapter path from existing trainer and readiness state, exposes the result in the field log, and persists it through the shared save contract. Older saves reconcile chapter state from their existing flags.
+
+Progression is now visible at both return points: save-slot summaries name the saved chapter and completion state, and the sanctuary ledger displays the same current objective alongside roster management. Both use the shared evaluator rather than parallel UI gates.
+
+Every production build now runs a six-state desktop campaign audit against the same `GameState` evaluator and stores its result at `release/qa/campaign-progression-report.json`. This guards the opening-to-Gym-1 contract as later chapters are added.
+
+Save slots now carry active playtime, excluding hidden-window time, so chapter pacing can be measured against the campaign roadmap. The same value appears in save and sanctuary summaries, and the campaign audit verifies pause and persistence behavior.
+
+Gym 1 now records a persistent first-clear milestone when Patrol Rhis falls. Save and sanctuary summaries show the clear time, and the campaign audit verifies that the milestone survives the normal isolated save path.
+
+That milestone now produces a shared pacing verdict against the provisional 3–5 active-hour Gym 1 target. `GameState` owns the comparison, both return surfaces display it, and the desktop campaign audit locks the unmeasured, below-band, inclusive-boundary, and above-band outcomes.
+
+Senka's reward is now the durable `briarSteward` campaign badge rather than an increment-only counter. The shared save contract persists unique badge IDs, derives the count, names the Briar Steward Badge at return surfaces, and migrates older Gym 1 saves. The production audit verifies idempotent award, save-summary parity, and the legacy migration path.
+
+The first two league-facing stewardship records now use that same architecture: a completed scripted rescue awards the Sanctuary Rescue Record, and Patrol Rhis awards Briar Defense Testimony. Both persist as unique IDs, migrate from existing resolution flags, appear in progression return surfaces, and are covered by the desktop campaign audit.
+
+## Gym 2: Sporebell Adaptation
+
+The playable campaign now continues beyond Briar. Defeating Patrol Rhis opens Sporebell Garden from Lantern Nursery. The player must cross the garden, inspect the living Warning Light Tree inside Cadence Lab Annex, and return before Garden Warden Tamsin accepts a level 11–13 two-Vivo adaptation trial.
+
+Clearing Tamsin awards the persistent Sporebell Adaptation Badge, records the Habitat Adaptation Study for the eventual league case, and stores a Gym 2 completion milestone. Save/field-log/sanctuary surfaces consume the same chapter, badge, evidence, and pacing metadata. The production campaign audit covers eight chapter boundaries through the new completion state plus persistence and legacy migration.
+
+## Environment Art Certification Guard
+
+All 32 reviewed exploration/battle location pairs are now protected by 64
+SHA-256 fingerprints in
+[`docs/environment_pair_certification_hashes.json`](../docs/environment_pair_certification_hashes.json).
+The standard build rejects missing, resized, unregistered, stale, or silently
+replaced certified scene art. Refresh fingerprints only after Emma completes a
+new visual perspective, staging, landmark, style, and geometry review.
+
+Asterwake Shoals now has live 1600x900 battle proof for its daylight V2
+backdrop. The runtime crop retains the starfish arch, five-point tidepool,
+shoreline habitat, open combat sand, and daylight palette behind the active
+creature and command layers.
+
+Thunderhead Mesa now also has paired live 1600x900 proof. Its corrected V2
+walking scene reads as a horizon-free high board with a continuous loop around
+the storm-rod array, while its battle view drops to a low storm horizon and
+retains the rod/tower silhouettes, charged blue ground veins, stormgrass, and
+orange plateau material.
+
+Basalt Bloom Caldera now has the same paired runtime proof. Its corrected V2
+walking scene is an all-ground high board with a continuous loop around the
+central crystal bloom; the battle camera drops to a low volcanic stage while
+retaining the bloom, three steam cages, heat vines, ember flora, basalt columns,
+and lava-fissure material language.
+
+Briar Gym now has paired live 1600x900 proof after its legacy square walking
+canvas was replaced. The runtime exploration view is an unmistakable high board
+with a readable entrance-to-dais carpet axis, practice ring, and bench lane; the
+battle view lowers through the same mossed stone hall while retaining the carpet,
+ring ropes, banners, dais steps, arched window, and vegetation.
+# Carlos content pulse — Frostmane evolution battle pair (2026-08-02)
+
+- Replaced Frostmane Uncia's framed field-guide card with a border-free transparent enemy portrait and a dedicated rear three-quarter player portrait.
+- Preserved the evolved line's thick mane, glacier spine, oversized tail, long ice claws, and calm apex-predator identity across both inward-facing battle angles.
+- The level-7 ice-attuned evolution now has a visual payoff that arrives alongside its awakened `Frostmane Rend` signature attack.
+# Carlos content pulse — Bogmantle evolution battle pair (2026-08-02)
+
+- Replaced Bogmantle Ursus's framed swamp plate with a border-free transparent enemy portrait and a dedicated rear three-quarter player portrait.
+- Preserved its wet moss-and-lily mantle, huge natural claws, root-grown limbs, and luminous turquoise water channels across both inward-facing battle angles.
+- The level-7 water-attuned evolution now has a visual payoff that arrives alongside its awakened `Bogmantle Crash` signature attack.
+# Carlos content pulse — Noctis evolution battle pair (2026-08-02)
+
+- Replaced Noctis Panthera's parchment-backed plate with a border-free transparent enemy portrait and a dedicated rear three-quarter player portrait.
+- Preserved its void chest organ, violet biological vein lattice, translucent ears, oversized paws, and one attached shadow-fringed tail across both inward-facing battle angles.
+- The rare Glassroot Burrow line's level-8 shadow-attuned evolution now has a visual payoff that arrives alongside awakened `Void Latch`.
+# Carlos content pulse — Lantern Panthera identity pass (2026-08-02)
+
+- Replaced Lantern Panthera's parchment-backed plate with a border-free transparent enemy portrait and a dedicated rear three-quarter player portrait.
+- Preserved its tall translucent ears, paired prism shoulder organs, luminous whiskers, heavy golden claws, and single lantern-tipped tail across both inward-facing battle angles.
+- Replaced its borrowed corvid awakening with `Prismfang Pounce`, a feline-specific level-9 light attack that cracks guarded lanes.
+# Carlos content pulse — Prismur ram evolution pair (2026-08-02)
+
+- Reworked Prismur from a parchment-backed antelope-like plate into a compact young prism ram with a heavier chest, rooted cloven hooves, and thick rearward-curving faceted horns.
+- Added border-free transparent enemy and dedicated rear player portraits with coherent inward-facing battle angles.
+- Registered `Prism Ram` at level 7 alongside the two-mark light evolution so wild previews and player-raised Prismur share the same guard-cracking signature.
+
+# Carlos content pulse — Titan Lupus final evolution pair (2026-08-02)
+
+- Replaced Titan Lupus's framed, armor-heavy plate with a border-free transparent enemy portrait and dedicated rear player portrait.
+- Reframed the final form as a mount-scale engineered wolf whose steel is grown keratin biology: heavy natural paws, amber tissue seams, plated shoulders and hips, and a deliberate rider-safe valley across the back without manufactured tack.
+- Preserved the three-stage steel progression: Grimweld reaches Ironjaw Lupus at level 5, then Titan Lupus at level 8 after four steel attunement marks and awakens `Anvil Pounce`.
+
+# Carlos content pulse — Tempestram Ovis evolution (2026-08-02)
+
+- Expanded Stormwool into a complete two-stage electric line with `Tempestram Ovis`, unlocked at level 10 after an electric victory and three electric habitat marks gathered naturally through Coppervine Runoff progression.
+- Added `Ball Lightning Stampede`, a 25-power guard-cracking signature charge that can regather static guard after exploiting an exposed target.
+- Added border-free transparent front/rear battle portraits with correct inward-facing angles, enormous spiral conductor horns, and two unmistakable spherical ball-lightning flank glands.
+
+# Carlos content pulse — Bastion Testudo evolution (2026-08-02)
+
+- Completed Rivetshell's level-7 steel evolution payoff with a dedicated border-free transparent front/rear battle pair for `Bastion Testudo`; the enemy view faces lower-left and the player rear view faces upper-right with matched shell plates, cyan living seams, organic shoulder clamp, four legs, and one short tail.
+- Replaced the evolution's duplicate `Shell Clamp` awakening with `Bastion Clamp`, a 20-power steel impact attack that cracks guard and regathers shell guard after exploiting an exposed opening.
+- Kept Bastion trained-only in the current slice: rare Foundry Horizon Rivetshell encounters naturally supply the steel win and two attunement marks required at level 7, preserving believable chapter placement while leaving `Citadel Testudo` as the line's later visual payoff.
+
+# Carlos content pulse — Stormvault Columba evolution (2026-08-02)
+
+- Promoted the existing Stormvault Columba concept art into a live Voltpip evolution at level 11 after an electric victory and three Coppervine habitat marks, keeping the mature form trained-only in the current slice.
+- Added `Skyvault Bolt`, a 31-power focus attack that preserves the line's one-stored-discharge identity while making the evolved payoff meaningfully stronger.
+- Added a matched transparent rear player portrait derived from the existing front identity, preserving the asymmetric enlarged storm wing, exactly three cyan wing-root capacitors, copper-blue feather veins, and correct inward-facing battle direction.
